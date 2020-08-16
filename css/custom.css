@@ -1,0 +1,62 @@
+/* your styles go here */
+/* Change navbar styling on scroll */
+.navbar {
+    transition: all 0.4s;
+    box-shadow: none !important;
+}
+
+.navbar .nav-link {
+    color: #fff;
+}
+
+.navbar .nav-link:hover,
+.navbar .nav-link:focus {
+    color: #fff;
+    text-decoration: none;
+}
+
+.navbar .navbar-brand {
+    color: #fff;
+}
+
+.navbar.active {
+    background: #ffffff;
+    box-shadow: 1px 2px 10px rgba(0, 0, 0, 0.1) !important;
+}
+
+.navbar.active .nav-link {
+    color: #555;
+}
+
+.navbar.active .nav-link:hover,
+.navbar.active .nav-link:focus {
+    color: #555;
+    text-decoration: none;
+}
+
+.navbar.active .navbar-brand {
+    color: #555;
+}
+
+/* Change section background */
+section.hero-home::before {
+    width: 100%;
+    height: calc(100% + 12rem);
+    background-color: orange;
+}
+
+@media screen and (max-device-width: 412px) {
+
+    .btn-center-custom {
+        margin-top: 30px;
+        position: absolute;
+        left: 50%;
+        margin-right: -50%;
+        transform: translate(-50%, -50%)
+    }
+
+    .text-center-custom {
+        /* display: none; */
+        text-align: center;
+    }
+}
