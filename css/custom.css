@@ -1,136 +1,221 @@
 /* your styles go here */
 /* Change navbar styling on scroll */
+@import url('https://fonts.googleapis.com/css2?family=Alata&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Alata', sans-serif;
+}
+
 .navbar {
     transition: all 0.4s;
     box-shadow: none !important;
+    margin-top: -10px;
 }
 
-.navbar .nav-link {
-    color: #fff;
-}
-
-.navbar .nav-link:hover,
-.navbar .nav-link:focus {
-    color: #fff;
-    text-decoration: none;
-}
-
-.navbar .navbar-brand {
-    color: #fff;
-}
-
-.navbar.active {
-    background: #ffffff;
-    box-shadow: 1px 2px 10px rgba(0, 0, 0, 0.1) !important;
-}
-
-.navbar.active .nav-link {
-    color: #555;
-}
-
-.navbar.active .nav-link:hover,
-.navbar.active .nav-link:focus {
-    color: #555;
-    text-decoration: none;
-}
-
-.navbar.active .navbar-brand {
-    color: #555;
-}
-
-/* Change section background */
-section.hero-home::before {
+.navigation {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
-    height: calc(100% + 12rem);
-    background-color: orange;
-}
-
-.img-hero {
-    position: relative;
+    height: 100%;
+    background-color: white;
     display: flex;
     justify-content: center;
+    align-items: center;
+    visibility: hidden;
+    transition: cubic-bezier(0.895, 0.03, 0.685, 0.22);
 }
 
-.text-hero {
-    padding: 75px;
+.activenavigation {
+    visibility: visible !important;
 }
+
+.navigation ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.navigation ul li {
+    list-style: none;
+}
+
+.navigation ul li a {
+    display: inline-block;
+    color: #491c01;
+    font-style: inherit;
+    font-size: 2em;
+    text-decoration: none;
+    font-weight: 300;
+    margin: 10%;
+
+}
+
+.navigation ul li a:hover {
+    display: inline-block;
+    color: rgb(255, 72, 0);
+    font-size: 2em;
+    text-decoration: none;
+    font-weight: 300;
+    margin: 10%;
+
+}
+
+.logo {
+    font-family: 'Alata', sans-serif;
+    transition: ease-out;
+    font-size: xx-large;
+}
+
+.hide {
+    visibility: hidden;
+}
+
+.view {
+    visibility: visible;
+}
+
+.l54 {
+    font-size: 2em;
+    vertical-align: sub;
+    background: -webkit-linear-gradient(rgb(255, 72, 0), rgb(255, 196, 0));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+#wrapper {
+    cursor: pointer;
+    width: 40px;
+    height: 30px;
+}
+
+.toggle {
+    display: block;
+    width: 100%;
+    height: 20%;
+    margin-top: 20%;
+    transition: 0.25s;
+    background: rgb(255, 72, 0);
+    user-select: none;
+    border-radius: 10px;
+}
+
+.toggle:nth-child(1) {
+    width: 100%;
+}
+
+.toggle:nth-child(2) {
+    width: 80%;
+    margin-left: 20%;
+}
+
+.toggle:nth-child(3) {
+    width: 50%;
+    margin-left: 50%;
+}
+
+.animation .toggle:nth-child(1) {
+    width: 100%;
+    transform: rotate(135deg);
+    margin-bottom: -15px;
+}
+
+.animation .toggle:nth-child(2) {
+    width: 100%;
+    transform: rotate(-135deg);
+    margin-bottom: 15px;
+    margin-left: 0;
+}
+
+.animation .toggle:nth-child(3) {
+    width: 100%;
+    margin-left: 0;
+}
+
+#section {
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    top: 5%;
+    height: 80%;
+    left: 30%;
+    width: 80%;
+    min-height: 100vh;
+    background: url('../img/bg.jpg'), url('../img/splash.jpg');
+    /* -webkit-background-clip: border-box; */
+    background-blend-mode: screen;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+
 
 /* @media screen and (max-device-width: 981px) { */
-@media (max-device-width: 981px) {
-
-    .btn-center-custom {
-        margin-top: 30px;
-        position: absolute;
-        left: 50%;
-        margin-right: -50%;
-        transform: translate(-50%, -50%)
-    }
-
-    .text-center-custom {
-        /* display: none; */
-        text-align: center;
-    }
-
-    .navbar-collapse::after {
-        height: 100%;
-
-    }
-
-    nav .navbar-nav {
-        position: fixed;
-        z-index: 99;
-        top: 0;
-        left: 0;
-        width: 100% !important;
-        height: 100%;
-        text-align: center !important;
-        background: #fff !important;
-        display: flex;
-        justify-content: center;
-        transition: top 1s ease !important;
-        /* position: absolute; */
-        /* flex-direction: column !important; */
-    }
-
-    .ok {
-        position: absolute;
-        top: 3.7%;
-        right: 3.7%;
-    }
-
-    .navbar-toggler {
-        border: none;
-    }
-
-    section.hero-home::before {
-        /* position: fixed; */
+@media (max-device-width: 919px) {
+    #section {
+        left: 10%;
         width: 100%;
-        height: calc(100% + 12rem);
-        background-color: orange;
+        background-size: cover;
+    }
+}
+
+@media (max-device-width: 470px) {
+    #section {
+        left: 0;
+        width: 100%;
+        background-size: cover;
+        min-height: auto;
+        /* min-height: 3vh; */
     }
 
-    .img {
-        position: fixed;
-        display: flex;
-        justify-content: center;
-        text-align: center;
+    .logo {
+        font-family: 'Alata', sans-serif;
+        transition: ease-out;
+        font-size: large;
     }
 
-    .img-hero {
-        position: absolute;
-        display: flex;
-        justify-content: center;
+    #wrapper {
+        cursor: pointer;
+        right: 0 !important;
+        width: 28px;
+        height: 20px;
     }
 
-    .text-hero {
-        text-size-adjust: 20px;
-        top: 100px;
-        margin-top: 200px;
-        padding: 75px;
+    .navigation ul li a {
+        display: inline-block;
+        color: #491c01;
+        font-size: 1.5em;
+        text-decoration: none;
+        font-weight: 300;
+        margin: 10%;
+
     }
 
-    h1 {
-        font-size: x-large;
+    .navigation ul li a:hover {
+        display: inline-block;
+        color: rgb(255, 72, 0);
+        font-size: 1.5em;
+        text-decoration: none;
+        font-weight: 300;
+        margin: 10%;
     }
 
+    .animation .toggle:nth-child(1) {
+        width: 100%;
+        transform: rotate(135deg);
+        margin-bottom: -10px;
+    }
+
+    .animation .toggle:nth-child(2) {
+        width: 100%;
+        transform: rotate(-135deg);
+        margin-bottom: 10px;
+        margin-left: 0;
+    }
 }
