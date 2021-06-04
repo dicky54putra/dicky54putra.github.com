@@ -1,0 +1,225 @@
+/*!
+ * Bootstrap v5.0.1 (https://getbootstrap.com/)
+ * Copyright 2011-2021 The Bootstrap Authors
+ * Copyright 2011-2021 Twitter, Inc.
+ * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
+ */
+
+// scss-docs-start import-stack
+// Configuration
+@import url("https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700&display=swap");
+@import "functions";
+@import "variables";
+@import "mixins";
+@import "utilities";
+
+// Layout & components
+@import "root";
+@import "reboot";
+@import "type";
+@import "images";
+@import "containers";
+@import "grid";
+@import "tables";
+@import "forms";
+@import "buttons";
+@import "transitions";
+@import "dropdown";
+@import "button-group";
+@import "nav";
+@import "navbar";
+@import "card";
+@import "accordion";
+@import "breadcrumb";
+@import "pagination";
+@import "badge";
+@import "alert";
+@import "progress";
+@import "list-group";
+@import "close";
+@import "toasts";
+@import "modal";
+@import "tooltip";
+@import "popover";
+@import "carousel";
+@import "spinners";
+@import "offcanvas";
+
+// Helpers
+@import "helpers";
+
+// Utilities
+@import "utilities/api";
+// scss-docs-end import-stack
+
+
+html {
+    height: 100%;
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+body {
+    position: relative;
+    margin: 0;
+    min-height: 100%;
+    font-family: 'Poppins', sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+.navbar {
+    height: 80px;
+
+    .brand {
+        color: $black;
+        font-size: 26px;
+        font-weight: 500;
+        font-family: 'Poppins', sans-serif;
+
+        .brand-end {
+            color: $primary;
+        }
+
+        &:hover {
+            .brand-end {
+                color: $black;
+            }
+
+            color: $primary;
+        }
+
+    }
+}
+
+.brand {
+    font-size: 48px;
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+
+    .brand-end {
+        color: $primary;
+    }
+}
+
+.icon-social {
+    width: 40px;
+}
+
+.my-dicky {
+    .job {
+        font-size: 36px;
+        font-weight: 500;
+        font-style: normal;
+    }
+
+    .place {
+        font-size: 24px;
+        font-weight: 300;
+        font-style: normal;
+    }
+}
+
+.menu {
+    position: absolute;
+    top: 62%;
+    right: -155px;
+    transform: rotate(90deg);
+
+    .text-menu {
+        color: $black;
+        font-weight: 600;
+        font-size: 22px;
+        font-style: normal;
+        text-decoration: none;
+        margin-left: 20px;
+
+        &:hover {
+            color: $primary;
+        }
+    }
+}
+
+.primary {
+    color: $primary;
+}
+
+.footer {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 1rem;
+    // background-color: $white;
+    text-align: center;
+}
+
+.title-component {
+    font-size: 18px;
+    font-weight: 600;
+    font-style: normal;
+}
+
+.img-round {
+    border-radius: 50%;
+    height: 150px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: relative;
+    width: 150px;
+    box-shadow: 0px 0px 13px 0px rgba(0, 0, 0, 0.1);
+    -webkit-box-shadow: 0px 0px 13px 0px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 0px 0px 13px 0px rgba(0, 0, 0, 0.1);
+
+    img {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
+
+.img-grid-4 {
+    height: 200px;
+    width: 100%;
+    border-radius: 15px;
+}
+
+.card-project {
+    opacity: 1;
+    border-radius: 16px;
+    transition: ease-out 1s;
+
+    img,
+    h3 {
+        opacity: 1;
+        transition: ease-out 1s;
+    }
+
+    .card-project-child {
+        opacity: 0;
+        transition: ease-out 1s;
+    }
+
+    &:hover {
+
+        img,
+        h3 {
+            opacity: 0;
+            transition: ease-out 1s;
+        }
+
+        .card-project-child {
+            transition: ease-out 1s;
+            opacity: 1;
+        }
+    }
+}

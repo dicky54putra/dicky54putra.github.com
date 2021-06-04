@@ -1,0 +1,42 @@
+{
+    "title":"Portofolio",
+    "subtitle":"My Currented Work",
+    "project":[
+        {
+            "title":"Sistem E-learning menggunakan ci3",
+            "cover":"elearning.jpg",
+            "demo":"http://elearning.klikgss.com",
+            "desc":"e-learning system for vocational schools to send and do assignments easily through the system"
+        },
+        {
+            "title":"Sistem POS khusus koperasi menggunakan yii2",
+            "cover":"koperasi.jpg",
+            "demo":"http://koperasitni.klikgss.com",
+            "desc":"Point of sale system for cashiers to record sales and purchases in building stores. and savings loan module"
+        },
+        {
+            "title":"Sistem Manajemen Angkutan menggunakan yii2",
+            "cover":"angkutan.jpg",
+            "demo":"-",
+            "desc":"used to manage trucks that are loaded or not, and there is also an accounting system in it."
+        },
+        {
+            "title":"Sistem Akuntansi menggunakan yii2",
+            "cover":"akuntansi.jpg",
+            "demo":"http://demo.gss-accounting.com",
+            "desc":"complete accounting system with FIFO method, and there are various modules in it."
+        },
+        {
+            "title":"Staycation",
+            "cover":"staycation.jpg",
+            "demo":"https://dicky54putra.github.io/mern-learning",
+            "desc":"Web booking hotel, villa or apartemen, make with MERN Stack technology"
+        },
+        {
+            "title":"Sistem POS store building with yii2",
+            "cover":"pos-tokobangunan.jpg",
+            "demo":"http://tokobangunan.klikgss.com",
+            "desc":"Point of sale system for cashiers to record sales and purchases in building stores"
+        }
+    ]
+}
