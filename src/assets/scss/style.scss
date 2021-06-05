@@ -7,7 +7,7 @@
 
 // scss-docs-start import-stack
 // Configuration
-@import url("https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700&display=swap");
 @import "functions";
 @import "variables";
 @import "mixins";
@@ -110,7 +110,7 @@ a {
 }
 
 .icon-social {
-    width: 40px;
+    width: 30px;
 }
 
 .my-dicky {
@@ -144,6 +144,17 @@ a {
         &:hover {
             color: $primary;
         }
+    }
+}
+
+.menu-bottom {
+    color: $black;
+    font-weight: 400;
+    font-size: 28;
+    margin-inline: 20px;
+
+    &:hover {
+        color: $primary;
     }
 }
 
