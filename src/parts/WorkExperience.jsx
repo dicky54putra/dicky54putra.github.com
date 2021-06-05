@@ -1,5 +1,6 @@
 import React from 'react'
 import Fade from 'react-reveal/Fade'
+import { IMAGE_URL } from 'utils/link'
 
 export default function WorkExperience(props) {
     const data = props.data
@@ -15,7 +16,7 @@ export default function WorkExperience(props) {
                         <div className="row mx-auto mt-2 mb-2" style={{ borderTop: border }}>
                             <div className="col-auto">
                                 <figure className="img-round">
-                                    <img className="mt-50" src={`images/${item.logo}`} alt={props.company} width="150" />
+                                    <img className="mt-50" src={`${IMAGE_URL}${item.logo}`} alt={props.company} width="150" />
                                 </figure>
                             </div>
                             <div className="col-auto d-flex align-items-center">

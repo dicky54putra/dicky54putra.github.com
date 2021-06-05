@@ -32,8 +32,8 @@ export default class About extends Component {
                 <div className="container">
                     <Navbar breadcrumb={breadcrumbList} />
                     <TitlePage title={data.title} subTitle={data.subtitle} />
+                    <p>{data.desc}</p>
                 </div>
-                <div style={{ height: 400 }}></div>
                 <Footer></Footer>
             </>
         )
