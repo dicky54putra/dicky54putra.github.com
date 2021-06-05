@@ -11,8 +11,8 @@ export default function Education(props) {
             {data.map((item, index) => {
                 const border = (index > 0) ? '1px solid rgba(108, 117, 125, 0.23)' : ''
                 return (
-                    <Fade bottom delay={200 * index}>
-                        <div key={`${index}`} className="row mt-2 mb-2" style={{ borderTop: border }}>
+                    <Fade bottom delay={200 * index} key={`${index}`} >
+                        <div className="row mt-2 mb-2" style={{ borderTop: border }}>
                             <div className="col-auto">
                                 <figure className="img-round">
                                     <img className="mt-50 p-3" src={`images/${item.logo}`} alt={props.company} width="150" />

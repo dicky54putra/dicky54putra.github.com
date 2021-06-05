@@ -32,97 +32,116 @@
         {
             "name":"Yii",
             "startDate":"2020",
-            "image":"https://raw.githubusercontent.com/devicons/devicon/master/icons/yii/yii-plain-wordmark.svg"
+            "image":"https://raw.githubusercontent.com/devicons/devicon/master/icons/yii/yii-plain-wordmark.svg",
+            "isActive": true
         },
         {
             "name":"Codeignaiter",
             "startDate":"2019",
-            "image":"https://cdn.worldvectorlogo.com/logos/codeigniter.svg"
+            "image":"https://cdn.worldvectorlogo.com/logos/codeigniter.svg",
+            "isActive": true
         },
         {
             "name":"HTML",
             "startDate":"2018",
-            "image":"https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original-wordmark.svg"
+            "image":"https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original-wordmark.svg",
+            "isActive": false
         },
         {
             "name":"CSS",
             "startDate":"2018",
-            "image":"https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original-wordmark.svg"
+            "image":"https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original-wordmark.svg",
+            "isActive": false
         },
         {
             "name":"Javascript",
             "startDate":"2019",
-            "image":"https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg"
+            "image":"https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg",
+            "isActive": true
         },
         {
             "name":"Git",
             "startDate":"2020",
-            "image":"https://www.vectorlogo.zone/logos/git-scm/git-scm-icon.svg"
+            "image":"https://www.vectorlogo.zone/logos/git-scm/git-scm-icon.svg",
+            "isActive": true
         },
         {
             "name":"Php",
             "startDate":"2018",
-            "image":"https://raw.githubusercontent.com/devicons/devicon/master/icons/php/php-original.svg"
+            "image":"https://raw.githubusercontent.com/devicons/devicon/master/icons/php/php-original.svg",
+            "isActive": true
         },
         {
             "name":"Bootstrap",
             "startDate":"2018",
-            "image":"https://raw.githubusercontent.com/devicons/devicon/master/icons/bootstrap/bootstrap-plain-wordmark.svg"
+            "image":"https://raw.githubusercontent.com/devicons/devicon/master/icons/bootstrap/bootstrap-plain-wordmark.svg",
+            "isActive": true
         },
         {
             "name":"React",
             "startDate":"2021",
-            "image":"https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg"
+            "image":"https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg",
+            "isActive": true
         },
         {
             "name":"Nodejs",
             "startDate":"2021",
-            "image":"https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original-wordmark.svg"
+            "image":"https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original-wordmark.svg",
+            "isActive": false
         },
         {
             "name":"Expressjs",
             "startDate":"2021",
-            "image":"https://raw.githubusercontent.com/devicons/devicon/master/icons/express/express-original-wordmark.svg"
+            "image":"https://raw.githubusercontent.com/devicons/devicon/master/icons/express/express-original-wordmark.svg",
+            "isActive": false
         },
         {
             "name":"Chartjs",
             "startDate":"2020",
-            "image":"https://www.chartjs.org/media/logo-title.svg"
+            "image":"https://www.chartjs.org/media/logo-title.svg",
+            "isActive": false
         },
         {
             "name":"Figma",
             "startDate":"2020",
-            "image":"https://www.vectorlogo.zone/logos/figma/figma-icon.svg"
+            "image":"https://www.vectorlogo.zone/logos/figma/figma-icon.svg",
+            "isActive": false
         },
         {
             "name":"Invision",
             "startDate":"2021",
-            "image":"https://www.vectorlogo.zone/logos/invisionapp/invisionapp-icon.svg"
+            "image":"https://www.vectorlogo.zone/logos/invisionapp/invisionapp-icon.svg",
+            "isActive": false
         },
         {
             "name":"Laravel",
             "startDate":"2021",
-            "image":"https://raw.githubusercontent.com/devicons/devicon/master/icons/laravel/laravel-plain-wordmark.svg"
+            "image":"https://raw.githubusercontent.com/devicons/devicon/master/icons/laravel/laravel-plain-wordmark.svg",
+            "isActive": false
         },
         {
             "name":"Linux",
             "startDate":"2020",
-            "image":"https://raw.githubusercontent.com/devicons/devicon/master/icons/linux/linux-original.svg"
+            "image":"https://raw.githubusercontent.com/devicons/devicon/master/icons/linux/linux-original.svg",
+            "isActive": true
         },
         {
             "name":"Mongodb",
             "startDate":"2021",
-            "image":"https://raw.githubusercontent.com/devicons/devicon/master/icons/mongodb/mongodb-original-wordmark.svg"
+            "image":"https://raw.githubusercontent.com/devicons/devicon/master/icons/mongodb/mongodb-original-wordmark.svg",
+            "isActive": false
         },
         {
             "name":"MySql",
             "startDate":"2018",
-            "image":"https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original-wordmark.svg"
+            "image":"https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original-wordmark.svg",
+            "isActive": true
         },
         {
             "name":"Nextjs",
             "startDate":"2021",
-            "image":"https://cdn.worldvectorlogo.com/logos/nextjs-3.svg"
+            "image":"https://cdn.worldvectorlogo.com/logos/nextjs-3.svg",
+            "isActive": false
         },
         {
             "name":"Photoshop",
@@ -132,17 +151,21 @@
         {
             "name":"Illustrator",
             "startDate":"2019",
-            "image":"https://www.vectorlogo.zone/logos/adobe_illustrator/adobe_illustrator-icon.svg"
+            "image":"https://www.vectorlogo.zone/logos/adobe_illustrator/adobe_illustrator-icon.svg",
+            "isActive": false
         },
         {
             "name":"Postman",
             "startDate":"2021",
-            "image":"https://www.vectorlogo.zone/logos/getpostman/getpostman-icon.svg"
+            "image":"https://www.vectorlogo.zone/logos/getpostman/getpostman-icon.svg",
+            "isActive": true
         },
         {
             "name":"Sass",
             "startDate":"2021",
-            "image":"https://raw.githubusercontent.com/devicons/devicon/master/icons/sass/sass-original.svg"
+            "image":"https://raw.githubusercontent.com/devicons/devicon/master/icons/sass/sass-original.svg",
+            "isActive": false
         }
-    ]
+    ],
+    "isExperience":false
 }

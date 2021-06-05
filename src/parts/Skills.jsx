@@ -20,16 +20,21 @@ export default function Skills(props) {
             </Fade>
             <div className="row">
                 {skill.map((item, index) => {
+                    console.log(item.isActive);
                     return (
-                        <Fade bottom delay={100 * index}>
-                            <div key={`skill-image-${index}`} className="col-auto mx-auto">
-                                <div className="card mb-2 mt-2" style={{ height: 150, border: 'none' }}>
-                                    <img src={item.image} alt={item.name} width="70" className="mx-auto" />
-                                    <div className="card-body">
-                                        {experience(item.startDate)}
+                        <Fade bottom delay={100 * index} key={`skill-image-${index}`}>
+                            {item.isActive === true && (
+                                <div className="col-auto mx-auto">
+                                    <div className="card mb-2 mt-2" style={{ height: 150, border: 'none' }}>
+                                        <img src={item.image} alt={item.name} width="70" className="mx-auto" />
+                                        {props.isExperience && (
+                                            <div className="card-body">
+                                                {experience(item.startDate)}
+                                            </div>
+                                        )}
                                     </div>
                                 </div>
-                            </div>
+                            )}
                         </Fade>
                     )
                 })}

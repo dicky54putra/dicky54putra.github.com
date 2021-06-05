@@ -11,8 +11,8 @@ export default function WorkExperience(props) {
             {data.map((item, index) => {
                 const border = (index > 0) ? '1px solid rgba(108, 117, 125, 0.23)' : ''
                 return (
-                    <Fade bottom delay={200 * index}>
-                        <div key={`${index}`} className="row mx-auto mt-2 mb-2" style={{ borderTop: border }}>
+                    <Fade bottom delay={200 * index} key={`${index}`}>
+                        <div className="row mx-auto mt-2 mb-2" style={{ borderTop: border }}>
                             <div className="col-auto">
                                 <figure className="img-round">
                                     <img className="mt-50" src={`images/${item.logo}`} alt={props.company} width="150" />
