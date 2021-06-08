@@ -147,17 +147,6 @@ a {
     }
 }
 
-.menu-bottom {
-    color: $black;
-    font-weight: 400;
-    font-size: 28;
-    margin-inline: 20px;
-
-    &:hover {
-        color: $primary;
-    }
-}
-
 .primary {
     color: $primary;
 }
@@ -170,6 +159,17 @@ a {
     padding: 1rem;
     // background-color: $white;
     text-align: center;
+
+    a {
+        color: $black;
+        font-weight: 400;
+        font-size: 28 !important;
+        margin-inline: 20px;
+
+        &:hover {
+            color: $primary;
+        }
+    }
 }
 
 .title-component {
@@ -233,4 +233,69 @@ a {
             opacity: 1;
         }
     }
+}
+
+
+#dicky-saputra {
+    font-size: 96px;
+    font-weight: 300;
+}
+
+#jepara-indonesia {
+    font-size: 23px;
+    font-weight: 300;
+    margin-right: auto;
+}
+
+#fullstack-web-developer {
+    font-size: 35px;
+    font-weight: 200;
+    margin-left: auto;
+}
+
+.my-dicky-img {
+    opacity: 0;
+}
+
+@media only screen and (max-width: 676px) {
+
+    .my-dicky {
+
+        #dicky-saputra {
+            font-size: 76px;
+        }
+
+        #jepara-indonesia {
+            font-size: 18px;
+        }
+
+        #fullstack-web-developer {
+            font-size: 27px;
+        }
+    }
+
+}
+
+@media only screen and (max-width: 576px) {
+
+    .my-dicky {
+
+        #dicky-saputra {
+            font-size: 45px;
+            margin-bottom: 10px;
+        }
+
+        #jepara-indonesia {
+            font-size: 11px;
+        }
+
+        #fullstack-web-developer {
+            font-size: 16px;
+        }
+    }
+
+    .footer a {
+        margin-inline: 10px;
+    }
+
 }

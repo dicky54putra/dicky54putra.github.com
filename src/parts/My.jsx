@@ -1,5 +1,6 @@
 import React from 'react'
 import Fade from 'react-reveal/Fade'
+import myPng from 'assets/images/my-dicky.png'
 
 export default function My() {
     return (
@@ -26,14 +27,19 @@ export const My2 = () => {
         <div className="col-12 text-center my-dicky">
             <div className="position-absolute top-50 start-50 translate-middle">
                 <Fade bottom delay={300}>
-                    <h1 style={{ fontSize: 96, fontWeight: 300 }}>
+                    <h1 id="dicky-saputra">
                         Dicky<span className="primary">Saputra</span>
                     </h1>
                     <div className="d-flex mt-n3">
-                        <p style={{ fontSize: 22, fontWeight: 300, marginRight: 5 }}>Jepara, Indonesia</p>
-                        <p style={{ fontSize: 35, fontWeight: 200 }}>Fullstack Web Developer</p>
+                        <p id="jepara-indonesia">Jepara, Indonesia</p>
+                        <p id="fullstack-web-developer">Fullstack Web Developer</p>
                     </div>
                 </Fade>
+            </div>
+            <div className="text-center my-dicky-img">
+                <div className="position-absolute top-50 start-50 translate-middle">
+                    <img src={myPng} alt="my" srcset="" width="100%" style={{ minWidth: 350 }} />
+                </div>
             </div>
         </div>
     )
