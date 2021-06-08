@@ -36,11 +36,6 @@ export const My2 = () => {
                     </div>
                 </Fade>
             </div>
-            <div className="text-center my-dicky-img">
-                <div className="position-absolute top-50 start-50 translate-middle">
-                    <img src={myPng} alt="my" srcset="" width="100%" style={{ minWidth: 350 }} />
-                </div>
-            </div>
         </div>
     )
 }
