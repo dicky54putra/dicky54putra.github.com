@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/static/css/main.8fdef40d.chunk.css",
-    "main.js": "/static/js/main.ab39898b.chunk.js",
-    "main.js.map": "/static/js/main.ab39898b.chunk.js.map",
+    "main.css": "/static/css/main.06d3820c.chunk.css",
+    "main.js": "/static/js/main.f23c6eba.chunk.js",
+    "main.js.map": "/static/js/main.f23c6eba.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.fad07d3f.js",
     "runtime-main.js.map": "/static/js/runtime-main.fad07d3f.js.map",
     "static/js/2.57fd685e.chunk.js": "/static/js/2.57fd685e.chunk.js",
@@ -12,7 +12,7 @@
     "index.html": "/index.html",
     "service-worker.js": "/service-worker.js",
     "service-worker.js.map": "/service-worker.js.map",
-    "static/css/main.8fdef40d.chunk.css.map": "/static/css/main.8fdef40d.chunk.css.map",
+    "static/css/main.06d3820c.chunk.css.map": "/static/css/main.06d3820c.chunk.css.map",
     "static/js/2.57fd685e.chunk.js.LICENSE.txt": "/static/js/2.57fd685e.chunk.js.LICENSE.txt",
     "static/media/index.scss": "/static/media/bg-banner.0ab478a0.png",
     "static/media/my-dicky.3622c4ab.png": "/static/media/my-dicky.3622c4ab.png"
@@ -20,7 +20,7 @@
   "entrypoints": [
     "static/js/runtime-main.fad07d3f.js",
     "static/js/2.57fd685e.chunk.js",
-    "static/css/main.8fdef40d.chunk.css",
-    "static/js/main.ab39898b.chunk.js"
+    "static/css/main.06d3820c.chunk.css",
+    "static/js/main.f23c6eba.chunk.js"
   ]
 }
