@@ -3,6 +3,12 @@
     "subtitle":"My Currented Work",
     "project":[
         {
+            "title":"MR-XI Landing Page",
+            "cover":"mr-xi.jpg",
+            "demo":"https://clone-mr-xi.vercel.app/",
+            "desc":"mr-xi landing page is website company profile for a restaurant"
+        },
+        {
             "title":"Sistem E-learning menggunakan ci3",
             "cover":"elearning.jpg",
             "demo":"http://elearning.klikgss.com",
