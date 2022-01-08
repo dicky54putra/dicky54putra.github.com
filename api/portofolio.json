@@ -3,6 +3,12 @@
     "subtitle":"My Currented Work",
     "project":[
         {
+            "title":"Tacontech Landing Page",
+            "cover":"tacontech.jpg",
+            "demo":"https://tacontechdigital.com/",
+            "desc":"Tacontech is website company profile for a it solution"
+        },
+        {
             "title":"MR-XI Landing Page",
             "cover":"mr-xi.jpg",
             "demo":"https://clone-mr-xi.vercel.app/",
