@@ -1,0 +1,17 @@
+@use "/src/assets/scss/base/typography";
+@use "/src/assets/scss/base/var";
+.role {
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 16px 0;
+  mix-blend-mode: difference;
+}
+
+.role-title {
+  @include typography.role;
+  color: var.$white;
+}

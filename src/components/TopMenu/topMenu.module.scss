@@ -1,0 +1,41 @@
+@use "/src/assets/scss/base/typography";
+@use "/src/assets/scss/base/var";
+
+.top-menu {
+  display: flex;
+  justify-content: space-between;
+  z-index: 999;
+  padding: 32px 40px;
+  color: inherit;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  mix-blend-mode: difference;
+  color: var.$white;
+}
+
+.title {
+  @include typography.title;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: inherit;
+}
+
+.menu-items {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 40px;
+
+  @media (max-width: 1024px) {
+    gap: 20px;
+  }
+}
+
+.menu-item {
+  @include typography.menu;
+  text-transform: uppercase;
+  color: inherit;
+  text-decoration: none;
+}
