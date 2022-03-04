@@ -1,10 +1,14 @@
+import CLink from "components/CLink/CLink";
 import React from "react";
 import styles from "./topMenu.module.scss";
 
 export default function TopMenu() {
+  // return "";
   return (
     <div className={styles["top-menu"]}>
-      <div className={styles.title}>Dicky54putra</div>
+      <div className={styles.title}>
+        <CLink to="/">Dicky54putra </CLink>
+      </div>
       <div className={styles["menu-items"]}>
         <a
           href="https://id.linkedin.com/in/dicky54putra"

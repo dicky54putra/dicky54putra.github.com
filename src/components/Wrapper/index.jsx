@@ -1,6 +1,6 @@
 import Footer from "components/Footer";
 import Role from "components/Role";
-import SideMenu from "components/SideMenu";
+import SideMenu from "components/SideMenu/SideMenu";
 import Title from "components/Title";
 import TopMenu from "components/TopMenu";
 import React from "react";

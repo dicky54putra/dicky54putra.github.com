@@ -1,0 +1,290 @@
+@use "/src/assets/scss/base/typography";
+.name-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  inset: 0;
+  position: fixed;
+  z-index: 0;
+}
+
+.d {
+  animation: d infinite 20s;
+}
+@keyframes d {
+  0% {
+    transform: translate(0, 0);
+  }
+  40% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(285%, -43%) scale(1.5) rotate(-90deg);
+  }
+  80% {
+    transform: translate(285%, -43%) scale(1.5) rotate(-90deg);
+  }
+  90% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+.i {
+  animation: i infinite 20s;
+}
+@keyframes i {
+  0% {
+    transform: translate(0, 0);
+  }
+  40% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(910%, -86%) scale(1.5);
+  }
+  80% {
+    transform: translate(910%, -86%) scale(1.5);
+  }
+  90% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+.c {
+  animation: c infinite 20s;
+}
+@keyframes c {
+  0% {
+    transform: translate(0, 0);
+  }
+  40% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(252%, -112%) scale(1.5) rotate(90deg);
+  }
+  80% {
+    transform: translate(252%, -112%) scale(1.5) rotate(90deg);
+  }
+  90% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+.k {
+  animation: k infinite 20s;
+}
+@keyframes k {
+  0% {
+    transform: translate(0, 0);
+  }
+  40% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(331%, -32%) scale(1.5);
+  }
+  80% {
+    transform: translate(331%, -32%) scale(1.5);
+  }
+  90% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+.y {
+  animation: y infinite 20s;
+}
+@keyframes y {
+  0% {
+    transform: translate(0, 0);
+  }
+  40% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(358%, -3%) scale(1.5) rotate(-12.71deg);
+  }
+  80% {
+    transform: translate(358%, -3%) scale(1.5) rotate(-12.71deg);
+  }
+  90% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+.s5 {
+  animation: s5 infinite 20s;
+}
+@keyframes s5 {
+  0% {
+    transform: translate(0, 0);
+  }
+  40% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(-170%, 110%) scale(1.5);
+  }
+  80% {
+    transform: translate(-170%, 110%) scale(1.5);
+  }
+  90% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+.s4 {
+  animation: s4 infinite 20s;
+}
+@keyframes s4 {
+  0% {
+    transform: translate(0, 0);
+  }
+  40% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(-213%, 38%) scale(1.5);
+  }
+  80% {
+    transform: translate(-213%, 38%) scale(1.5);
+  }
+  90% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+.p {
+  animation: p infinite 20s;
+}
+@keyframes p {
+  0% {
+    transform: translate(0, 0);
+  }
+  40% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(-213%, 0) scale(1.5);
+  }
+  80% {
+    transform: translate(-213%, 0) scale(1.5);
+  }
+  90% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+.u {
+  animation: u infinite 20s;
+}
+@keyframes u {
+  0% {
+    transform: translate(0, 0);
+  }
+  40% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(-268%, 109%) scale(1.5);
+  }
+  80% {
+    transform: translate(-268%, 109%) scale(1.5);
+  }
+  90% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+.t {
+  animation: t infinite 20s;
+}
+@keyframes t {
+  0% {
+    transform: translate(0, 0);
+  }
+  40% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(-368.5%, 55%) scale(1.5);
+  }
+  80% {
+    transform: translate(-368.5%, 55%) scale(1.5);
+  }
+  90% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+.r {
+  animation: r infinite 20s;
+}
+@keyframes r {
+  0% {
+    transform: translate(0, 0);
+  }
+  40% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(-347%, 73%) scale(1.5);
+  }
+  80% {
+    transform: translate(-347%, 73%) scale(1.5);
+  }
+  90% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+.a {
+  animation: a infinite 20s;
+}
+@keyframes a {
+  0% {
+    transform: translate(0, 0);
+  }
+  40% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(-364%, 138%) scale(1.5) rotate(70.23deg);
+  }
+  80% {
+    transform: translate(-364%, 138%) scale(1.5) rotate(70.23deg);
+  }
+  90% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+.name-wrapper span {
+  @include typography.display;
+}
