@@ -1,7 +1,7 @@
 import Footer from "components/Footer";
 import Role from "components/Role/Role";
 import SideMenu from "components/SideMenu/SideMenu";
-import Title from "components/Title";
+import Title from "components/Title/Title";
 import TopMenu from "components/TopMenu";
 import { isLoader } from "helpers/GlobalState/CmRouter";
 import React from "react";
