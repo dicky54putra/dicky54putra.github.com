@@ -1,15 +1,23 @@
+import { isLoad } from "helpers/GlobalState/CmRouter";
 import { changepath } from "helpers/GlobalState/CmRouter";
 import React from "react";
 import { useDispatch } from "react-redux";
 
 export default function CLink({ to, children, className }) {
   const dispatch = useDispatch();
+
+  const handleClick = (e) => {
+    e.preventDefault();
+    dispatch(isLoad(true));
+    setTimeout(() => {
+      dispatch(isLoad(false));
+      dispatch(changepath(to));
+    }, 500);
+  };
+
   return (
-    <span
-      className={className}
-      onClick={() => dispatch(changepath(to))}
-      style={{ cursor: "pointer" }}>
+    <a href={to} className={className} onClick={handleClick}>
       {children}
-    </span>
+    </a>
   );
 }

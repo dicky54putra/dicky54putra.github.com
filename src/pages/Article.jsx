@@ -1,4 +1,4 @@
-import Wrapper from "components/Wrapper";
+import Wrapper from "components/Wrapper/Wrapper";
 import ArticleCom from "components/Article";
 import React from "react";
 

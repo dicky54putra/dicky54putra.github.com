@@ -51,3 +51,13 @@
 
   letter-spacing: 0.54em;
 }
+@mixin role-end {
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 27px;
+  /* identical to box height */
+
+  letter-spacing: 0.54em;
+}

@@ -1,5 +1,5 @@
 import Article from "components/Article";
-import Wrapper from "components/Wrapper";
+import Wrapper from "components/Wrapper/Wrapper";
 import React from "react";
 
 export default function Portfolio() {

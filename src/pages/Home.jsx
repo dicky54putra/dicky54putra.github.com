@@ -1,10 +1,10 @@
 import Name from "components/Name";
-import Wrapper from "components/Wrapper";
+import Wrapper from "components/Wrapper/Wrapper";
 import React from "react";
 
 export default function Home() {
   return (
-    <Wrapper>
+    <Wrapper isCenterRole>
       <Name />
     </Wrapper>
   );

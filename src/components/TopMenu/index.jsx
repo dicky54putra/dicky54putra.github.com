@@ -3,11 +3,12 @@ import React from "react";
 import styles from "./topMenu.module.scss";
 
 export default function TopMenu() {
-  // return "";
   return (
     <div className={styles["top-menu"]}>
       <div className={styles.title}>
-        <CLink to="/">Dicky54putra </CLink>
+        <CLink to="/" className={styles.title}>
+          Dicky54putra{" "}
+        </CLink>
       </div>
       <div className={styles["menu-items"]}>
         <a

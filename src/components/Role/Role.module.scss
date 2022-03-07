@@ -1,14 +1,26 @@
 @use "/src/assets/scss/base/typography";
 @use "/src/assets/scss/base/var";
-.role {
+
+%role_placeholder {
   display: flex;
-  justify-content: center;
   position: fixed;
   bottom: 0;
   left: 0;
   right: 0;
-  padding: 16px 0;
+  padding: 16px 30px;
   mix-blend-mode: difference;
+}
+.role {
+  @extend %role_placeholder;
+  justify-content: center;
+}
+.role-end {
+  @extend %role_placeholder;
+  justify-content: flex-end;
+
+  .role-title {
+    @include typography.role-end;
+  }
 }
 
 .role-title {
