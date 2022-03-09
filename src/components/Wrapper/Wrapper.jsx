@@ -1,4 +1,4 @@
-import Footer from "components/Footer";
+import Footer from "components/Footer/Footer";
 import Role from "components/Role/Role";
 import SideMenu from "components/SideMenu/SideMenu";
 import Title from "components/Title/Title";
@@ -21,10 +21,12 @@ export default function Wrapper({
     <>
       {isLoading && <div className={styles.loader}></div>}
       <TopMenu />
-      {hasTitle && <Title title={title} />}
       <SideMenu />
       <Role isEndAlign={isCenterRole ? false : true} />
-      {children}
+      <main className={styles.main}>
+        {hasTitle && <Title title={title} />}
+        {children}
+      </main>
       {hasFooter && <Footer />}
     </>
   );

@@ -6,7 +6,6 @@ export default function Article() {
   return (
     <Wrapper hasTitle title="Article" hasFooter>
       <ArticleCom />
-      sldl
     </Wrapper>
   );
 }

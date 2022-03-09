@@ -17,6 +17,17 @@
   letter-spacing: 0.12em;
 }
 
+@mixin heading-page {
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 48px;
+  line-height: 72px;
+  /* identical to box height */
+
+  letter-spacing: 0.12em;
+}
+
 @mixin title {
   font-family: "Poppins", sans-serif;
   font-style: normal;
@@ -31,6 +42,14 @@
   font-weight: 600;
   font-size: 18px;
   line-height: 27px;
+  /* identical to box height */
+}
+@mixin tag-article {
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 21px;
   /* identical to box height */
 }
 

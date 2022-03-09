@@ -1,4 +1,4 @@
-import Name from "components/Name";
+import Name from "components/Name/Name";
 import Wrapper from "components/Wrapper/Wrapper";
 import React from "react";
 

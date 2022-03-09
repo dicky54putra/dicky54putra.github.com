@@ -1,0 +1,22 @@
+.article {
+  padding-inline: 100px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  margin-block: 60px;
+  justify-content: space-between;
+  max-width: 1200px;
+  width: 100%;
+  margin-inline: auto;
+  transition: all 1s ease-in-out;
+  animation: load-article 1s normal;
+}
+
+@keyframes load-article {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
