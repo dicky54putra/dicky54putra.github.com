@@ -1,13 +1,39 @@
 @use "/src/assets/scss/base/typography";
+@use "/src/assets/scss/base/mixin";
+@use "/src/assets/scss/base/var";
+
 .name-wrapper {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  inset: 0;
-  position: fixed;
-  z-index: 0;
-  transition: all 1s ease-in-out;
-  animation: load-name 1s normal;
+  @media (min-width: 768px) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    inset: 0;
+    position: fixed;
+    z-index: 0;
+    transition: all 1s ease-in-out;
+    animation: load-name 1s normal;
+  }
+
+  @include mixin.mobile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    inset: 0;
+    position: fixed;
+    z-index: 0;
+    transition: all 1s ease-in-out;
+    animation: load-name-mobile 1s normal;
+    transform: scale(0.8) translate(7%, -2%);
+  }
+}
+
+@keyframes load-name-mobile {
+  0% {
+    transform: scale(0.8) translate(7%, -20%);
+  }
+  100% {
+    transform: scale(0.8) translate(7%, -2%);
+  }
 }
 
 @keyframes load-name {
@@ -23,6 +49,12 @@
 
 .d {
   animation: d infinite 20s;
+
+  @include mixin.mobile {
+    animation: none;
+    transition: all 0.3s ease-in-out;
+    transform: translate(285%, -43%) scale(1.5) rotate(-90deg);
+  }
 }
 @keyframes d {
   0% {
@@ -46,6 +78,11 @@
 }
 .i {
   animation: i infinite 20s;
+  @include mixin.mobile {
+    animation: none;
+    transition: all 0.3s ease-in-out;
+    transform: translate(897%, -86%) scale(1.5);
+  }
 }
 @keyframes i {
   0% {
@@ -69,6 +106,11 @@
 }
 .c {
   animation: c infinite 20s;
+  @include mixin.mobile {
+    animation: none;
+    transition: all 0.3s ease-in-out;
+    transform: translate(252%, -112%) scale(1.5) rotate(90deg);
+  }
 }
 @keyframes c {
   0% {
@@ -92,6 +134,11 @@
 }
 .k {
   animation: k infinite 20s;
+  @include mixin.mobile {
+    animation: none;
+    transition: all 0.3s ease-in-out;
+    transform: translate(331%, -32%) scale(1.5);
+  }
 }
 @keyframes k {
   0% {
@@ -115,6 +162,11 @@
 }
 .y {
   animation: y infinite 20s;
+  @include mixin.mobile {
+    animation: none;
+    transition: all 0.3s ease-in-out;
+    transform: translate(358%, -3%) scale(1.5) rotate(-12.71deg);
+  }
 }
 @keyframes y {
   0% {
@@ -138,6 +190,11 @@
 }
 .s5 {
   animation: s5 infinite 20s;
+  @include mixin.mobile {
+    animation: none;
+    transition: all 0.3s ease-in-out;
+    transform: translate(-170%, 110%) scale(1.5);
+  }
 }
 @keyframes s5 {
   0% {
@@ -161,6 +218,11 @@
 }
 .s4 {
   animation: s4 infinite 20s;
+  @include mixin.mobile {
+    animation: none;
+    transition: all 0.3s ease-in-out;
+    transform: translate(-213%, 38%) scale(1.5);
+  }
 }
 @keyframes s4 {
   0% {
@@ -184,6 +246,11 @@
 }
 .p {
   animation: p infinite 20s;
+  @include mixin.mobile {
+    animation: none;
+    transition: all 0.3s ease-in-out;
+    transform: translate(-213%, 0) scale(1.5);
+  }
 }
 @keyframes p {
   0% {
@@ -207,6 +274,11 @@
 }
 .u {
   animation: u infinite 20s;
+  @include mixin.mobile {
+    animation: none;
+    transition: all 0.3s ease-in-out;
+    transform: translate(-268%, 109%) scale(1.5);
+  }
 }
 @keyframes u {
   0% {
@@ -230,6 +302,11 @@
 }
 .t {
   animation: t infinite 20s;
+  @include mixin.mobile {
+    animation: none;
+    transition: all 0.3s ease-in-out;
+    transform: translate(-379.5%, 55%) scale(1.5);
+  }
 }
 @keyframes t {
   0% {
@@ -253,6 +330,11 @@
 }
 .r {
   animation: r infinite 20s;
+  @include mixin.mobile {
+    animation: none;
+    transition: all 0.3s ease-in-out;
+    transform: translate(-347%, 73%) scale(1.5);
+  }
 }
 @keyframes r {
   0% {
@@ -276,6 +358,11 @@
 }
 .a {
   animation: a infinite 20s;
+  @include mixin.mobile {
+    animation: none;
+    transition: all 0.3s ease-in-out;
+    transform: translate(-364%, 138%) scale(1.5) rotate(70.23deg);
+  }
 }
 @keyframes a {
   0% {

@@ -1,5 +1,6 @@
 @use "/src/assets/scss/base/var";
 @use "/src/assets/scss/base/typography";
+@use "/src/assets/scss/base/mixin";
 
 .wrapper {
   display: flex;
@@ -9,10 +10,18 @@
   background-color: var.$black;
   width: 100%;
   margin-top: auto;
+
+  @include mixin.mobile {
+    padding-bottom: 48px;
+  }
 }
 
 .footer {
   margin: 0;
   color: var.$white;
   @include typography.body;
+
+  @include mixin.mobile {
+    text-align: center;
+  }
 }

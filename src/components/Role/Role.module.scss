@@ -1,5 +1,6 @@
 @use "/src/assets/scss/base/typography";
 @use "/src/assets/scss/base/var";
+@use "/src/assets/scss/base/mixin";
 
 %role_placeholder {
   display: flex;
@@ -17,13 +18,26 @@
 .role-end {
   @extend %role_placeholder;
   justify-content: flex-end;
+  @include mixin.mobile {
+    justify-content: center;
+  }
 
   .role-title {
     @include typography.role-end;
+
+    @include mixin.mobile {
+      font-size: 16px;
+      letter-spacing: 0.2em;
+    }
   }
 }
 
 .role-title {
   @include typography.role;
   color: var.$white;
+
+  @include mixin.mobile {
+    font-size: 16px;
+    letter-spacing: 0.2em;
+  }
 }

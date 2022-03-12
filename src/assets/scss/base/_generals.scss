@@ -1,5 +1,19 @@
+@use "/src/assets/scss/base/mixin";
+@use "/src/assets/scss/base/var";
+
 body > div {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+}
+
+html,
+body {
+  overflow-x: hidden;
+}
+
+.menu-item {
+  @include mixin.mobile {
+    color: var.$black;
+  }
 }

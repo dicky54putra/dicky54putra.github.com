@@ -1,5 +1,6 @@
 @use "/src/assets/scss/base/typography";
 @use "/src/assets/scss/base/var";
+@use "/src/assets/scss/base/mixin";
 
 .top-menu {
   display: flex;
@@ -13,6 +14,10 @@
   right: 0;
   mix-blend-mode: difference;
   color: var.$white;
+
+  @include mixin.mobile {
+    padding: 20px;
+  }
 }
 
 .title {
@@ -21,6 +26,21 @@
   letter-spacing: 0.2em;
   color: inherit;
   text-decoration: none;
+
+  @include mixin.mobile {
+    letter-spacing: 0em;
+  }
+}
+
+.menu-mobile {
+  display: none;
+  @include mixin.mobile {
+    display: flex;
+    align-items: center;
+    @include typography.body;
+    cursor: pointer;
+    z-index: 999;
+  }
 }
 
 .menu-items {
@@ -31,6 +51,17 @@
 
   @media (max-width: 1024px) {
     gap: 20px;
+  }
+
+  @include mixin.mobile {
+    transform: translateX(-100%);
+    position: fixed;
+    inset: 0;
+    z-index: 19;
+    background-color: var.$white;
+    flex-direction: column;
+    justify-content: center;
+    transition: all 0.3s ease-in-out;
   }
 }
 
