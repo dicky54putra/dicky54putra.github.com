@@ -3,7 +3,11 @@ import styles from "./ArticleCard.module.scss";
 
 export default function ArticleCard({ isRight }) {
   return (
-    <div className={[styles.card, isRight && styles["c-end"]].join(" ")}>
+    <div
+      className={[
+        styles.card,
+        isRight ? styles["c-end"] : styles["c-start"],
+      ].join(" ")}>
       <div className={styles.img}>
         <img src="" alt="" />
       </div>

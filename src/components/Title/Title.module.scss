@@ -11,6 +11,10 @@
   transition: all 0.5s ease-in-out;
   animation: load-title 0.5s normal;
 
+  @include mixin.tablet {
+    font-size: 32px;
+  }
+
   @include mixin.mobile {
     font-size: 28px;
   }

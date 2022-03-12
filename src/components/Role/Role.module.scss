@@ -18,6 +18,9 @@
 .role-end {
   @extend %role_placeholder;
   justify-content: flex-end;
+  @include mixin.tablet {
+    padding: 20px 30px;
+  }
   @include mixin.mobile {
     justify-content: center;
   }
@@ -25,6 +28,10 @@
   .role-title {
     @include typography.role-end;
 
+    @include mixin.tablet {
+      font-size: 16px;
+      letter-spacing: 0.2em;
+    }
     @include mixin.mobile {
       font-size: 16px;
       letter-spacing: 0.2em;

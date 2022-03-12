@@ -1,3 +1,5 @@
+@use "/src/assets/scss/base/mixin";
+
 .article {
   padding-inline: 100px;
   display: flex;
@@ -10,6 +12,12 @@
   margin-inline: auto;
   transition: all 1s ease-in-out;
   animation: load-article 1s normal;
+
+  @include mixin.mobile {
+    gap: 40px;
+    padding-inline: 20px;
+    margin-block: 30px;
+  }
 }
 
 @keyframes load-article {

@@ -1,14 +1,23 @@
 @use "/src/assets/scss/base/var";
 @use "/src/assets/scss/base/typography";
+@use "/src/assets/scss/base/mixin";
 
 .card {
   display: flex;
   gap: 30px;
   align-items: center;
+
+  @include mixin.mobile {
+    gap: 15px;
+    flex-direction: column;
+  }
 }
 
 .c-end {
   margin-left: auto;
+}
+.c-start {
+  margin-right: auto;
 }
 
 .content {
