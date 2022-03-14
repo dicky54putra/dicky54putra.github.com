@@ -29,7 +29,13 @@
   width: 282px;
   height: 146px;
   background-color: var.$black;
+  border: 2px solid var.$black;
   position: relative;
+
+  @include mixin.mobile {
+    max-width: 282px;
+    width: 100%;
+  }
 
   &::before {
     content: "";

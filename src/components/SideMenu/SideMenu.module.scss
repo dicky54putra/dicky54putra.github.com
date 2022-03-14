@@ -1,5 +1,6 @@
 @use "/src/assets/scss/base/typography";
 @use "/src/assets/scss/base/var";
+@use "/src/assets/scss/base/mixin";
 
 .side-menu {
   display: flex;
@@ -18,10 +19,11 @@
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  gap: 40px;
+  gap: 20px;
+  margin-right: 40px;
 
-  @media (max-width: 1024px) {
-    gap: 20px;
+  @include mixin.mobile {
+    margin-right: 0;
   }
 }
 

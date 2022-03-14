@@ -10,6 +10,7 @@
   right: 0;
   padding: 16px 30px;
   mix-blend-mode: difference;
+  color: var.$white;
 }
 .role {
   @extend %role_placeholder;
