@@ -1,5 +1,5 @@
 import Wrapper from "components/Wrapper/Wrapper";
-import AboutMeCom from "components/AboutMe";
+import AboutMeCom from "components/AboutMe/AboutMe";
 import React from "react";
 import WorkExperience from "components/AboutMe/WorkExperience";
 import Education from "components/AboutMe/Education";

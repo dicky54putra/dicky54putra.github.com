@@ -31,6 +31,21 @@
   @include typography.menu;
   text-transform: uppercase;
   color: inherit;
+  position: relative;
   text-decoration: none;
   cursor: pointer;
+  white-space: nowrap;
+
+  &.active {
+    &::after {
+      content: "";
+      position: absolute;
+      right: 0;
+      bottom: -2px;
+      width: 30%;
+      height: 2px;
+      background: var.$white;
+      transition: width 0.3s ease-in-out;
+    }
+  }
 }
