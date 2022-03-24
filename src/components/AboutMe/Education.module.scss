@@ -17,4 +17,11 @@
     text-transform: uppercase;
     letter-spacing: 0.12em;
   }
+
+  .cards {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-direction: column;
+  }
 }

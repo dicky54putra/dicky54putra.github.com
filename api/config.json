@@ -1,0 +1,37 @@
+{
+  "title": "DICKY54PUTRA",
+  "socials": [
+    {
+      "title": "LinkedIn",
+      "url": "https://id.linkedin.com/in/dicky54putra"
+    },
+    {
+      "title": "Instagram",
+      "url": "https://instagram.com/dicky54putra"
+    },
+    {
+      "title": "Github",
+      "url": "https://github.com/dicky54putra"
+    },
+    {
+      "title": "E-mail",
+      "url": "mailto:saputradicky705@gmail.com"
+    }
+  ],
+  "menus": [
+    {
+      "title": "Article",
+      "url": "/article"
+    },
+    {
+      "title": "Portfolio",
+      "url": "/portfolio"
+    },
+    {
+      "title": "About me",
+      "url": "/about-me"
+    }
+  ],
+  "role": "frontend developer",
+  "copyright": "Made with love and ReactJS. Dicky54putra © 2016 -"
+}
