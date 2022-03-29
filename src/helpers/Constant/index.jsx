@@ -1,6 +1,7 @@
-const API_URL =
-  "https://raw.githubusercontent.com/dicky54putra/dicky54putra.github.io/v1/api/";
-const IMG_URL =
-  "https://github.com/dicky54putra/dicky54putra.github.io/blob/v1/public/images/";
+const IS_LOCAL = true;
 
-export { API_URL, IMG_URL };
+const API_URL = IS_LOCAL
+  ? "http://localhost:3003"
+  : "https://raw.githubusercontent.com/dicky54putra/dicky54putra.github.io/v1/api";
+
+export { API_URL };

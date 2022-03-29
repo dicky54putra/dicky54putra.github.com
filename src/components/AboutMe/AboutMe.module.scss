@@ -44,6 +44,7 @@
   .desc {
     margin-top: 48px;
     @include typography.body;
+    white-space: pre-wrap;
   }
 
   hr {

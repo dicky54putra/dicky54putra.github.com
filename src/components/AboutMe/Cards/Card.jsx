@@ -1,21 +1,19 @@
 import React from "react";
 import styles from "./Card.module.scss";
 
-export default function Card() {
+export default function Card(props) {
+  const { image, title, desc, footTitle, startDate, endDate } = props;
   return (
     <div className={styles.wrapper}>
       <div className={styles.img}>
-        <img src="" alt="" />
+        <img src={`images/${image}`} alt={image} />
       </div>
       <div className={styles.content}>
-        <h3 className={styles.title}>Tacontech Landing Page</h3>
-        <p className={styles.desc}>
-          Slicing the design form figma or Adobe XD to static web and make
-          responsive view.
-        </p>
+        <h3 className={styles.title}>{title}</h3>
+        <p className={styles.desc}>{desc}</p>
         <p className={styles.attr}>
-          <span className={styles.main}>MADEINDONESIA • </span>
-          Juny 2021 - Now
+          <span className={styles.main}>{footTitle} • </span>
+          {startDate} - {endDate}
         </p>
       </div>
     </div>
