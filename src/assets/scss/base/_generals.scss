@@ -17,3 +17,32 @@ body {
     color: var.$black;
   }
 }
+
+.loader {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  transition: all 0.5s ease-in-out;
+  animation: loader-animation 0.5s normal;
+}
+
+@keyframes loader-animation {
+  0% {
+    background-color: rgba($color: #000000, $alpha: 0.3);
+    filter: blur(5px);
+    transform: skew(-20deg, 0deg) translateX(-100%);
+    opacity: 0;
+  }
+  50% {
+    background-color: rgba($color: #ffffff, $alpha: 1);
+    filter: blur(0px);
+    transform: skew(0deg, 0deg) translateX(0);
+    opacity: 1;
+  }
+  100% {
+    background-color: rgba($color: #ffffff, $alpha: 1);
+    filter: blur(0px);
+    transform: skew(0deg, 0deg) translateX(0);
+    opacity: 1;
+  }
+}

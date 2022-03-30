@@ -89,5 +89,10 @@
       "name": "Tailwindcss",
       "image": "https://raw.githubusercontent.com/devicons/devicon/master/icons/tailwindcss/tailwindcss-original-wordmark.svg"
     }
-  ]
+  ],
+  "quote": {
+    "text": "if you are interested want to work with me, please email to",
+    "email": "saputradicky705@gmail.com",
+    "link": "mailto:saputradicky705@gmail.com"
+  }
 }

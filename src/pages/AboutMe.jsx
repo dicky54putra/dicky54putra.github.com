@@ -7,7 +7,6 @@ import Skills from "components/AboutMe/Skills";
 import Quote from "components/AboutMe/Quote";
 import axios from "axios";
 import { API_URL } from "helpers/Constant";
-
 export default function AboutMe() {
   const [data, setData] = useState([]);
 
@@ -17,16 +16,13 @@ export default function AboutMe() {
     });
   }, [setData]);
 
-  const { title, profile, desc, work_experience, education, skills, quote } =
-    data;
-
   return (
-    <Wrapper hasTitle title={title} hasFooter>
-      <AboutMeCom image={profile} desc={desc} />
-      <WorkExperience data={work_experience} />
-      <Education data={education} />
-      <Skills data={skills} />
-      <Quote data={quote} />
+    <Wrapper hasTitle title={data?.title} hasFooter>
+      <AboutMeCom image={data?.profile} desc={data?.desc} />
+      <WorkExperience data={data?.work_experience} />
+      <Education data={data?.education} />
+      <Skills data={data?.skills} />
+      <Quote data={data?.quote} />
     </Wrapper>
   );
 }

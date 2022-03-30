@@ -19,13 +19,13 @@ export default function Wrapper({
 
   useEffect(() => {
     if (isLoading) {
-      return <div className={styles.loader}></div>;
+      return <div className="loader"></div>;
     }
   }, [isLoading]);
 
   return (
     <>
-      {isLoading && <div className={styles.loader}></div>}
+      {isLoading && <div className="loader"></div>}
       <TopMenu />
       <SideMenu />
       <Role isEndAlign={isCenterRole ? false : true} />
