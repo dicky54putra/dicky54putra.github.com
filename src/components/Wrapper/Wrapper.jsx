@@ -34,7 +34,7 @@ export default function Wrapper({
   const thisYear = new Date().getFullYear();
 
   useEffect(() => {
-    axios.get(`${API_URL}/config`).then((res) => {
+    axios.get(`${API_URL}/config.json`).then((res) => {
       setData(res.data);
     });
   }, []);

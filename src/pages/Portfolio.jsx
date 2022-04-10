@@ -2,13 +2,13 @@ import axios from "axios";
 import PortfolioContent from "components/Portfolio/Portfolio";
 import Wrapper from "components/Wrapper/Wrapper";
 import { API_URL } from "helpers/Constant";
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 
 export default function Portfolio() {
   const [data, setData] = useState(null);
 
   useEffect(() => {
-    axios.get(`${API_URL}/portfolio`).then((res) => {
+    axios.get(`${API_URL}/portfolio.json`).then((res) => {
       setData(res.data);
     });
   }, [setData]);

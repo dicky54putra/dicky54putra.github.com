@@ -1,6 +1,6 @@
 import Wrapper from "components/Wrapper/Wrapper";
 import AboutMeCom from "components/AboutMe/AboutMe";
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import WorkExperience from "components/AboutMe/WorkExperience";
 import Education from "components/AboutMe/Education";
 import Skills from "components/AboutMe/Skills";
@@ -8,10 +8,10 @@ import Quote from "components/AboutMe/Quote";
 import axios from "axios";
 import { API_URL } from "helpers/Constant";
 export default function AboutMe() {
-  const [data, setData] = useState([]);
+  const [data, setData] = useState(null);
 
   useEffect(() => {
-    axios.get(`${API_URL}/about`).then((res) => {
+    axios.get(`${API_URL}/about.json`).then((res) => {
       setData(res.data);
     });
   }, [setData]);

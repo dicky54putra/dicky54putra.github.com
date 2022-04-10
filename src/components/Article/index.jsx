@@ -12,7 +12,6 @@ export default function Article() {
       setDatas(res.data);
     });
   }, []);
-  console.log(datas);
   return (
     <div className={styles.article}>
       {datas?.map((data, i) => {
