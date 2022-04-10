@@ -16,7 +16,7 @@ export default function Card(props) {
       </div>
       <div className={styles.content}>
         {demo ? (
-          <a href={demo} target="_blank" noopener="true" rel="noreferrer">
+          <a href={demo} target="_blank" rel="noopener noreferrer">
             <h2 className={styles.title}>{title}</h2>
           </a>
         ) : (

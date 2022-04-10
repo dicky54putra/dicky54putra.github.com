@@ -32,6 +32,13 @@
   border: 2px solid var.$black;
   position: relative;
 
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+  }
+
   @include mixin.mobile {
     max-width: 282px;
     width: 100%;
@@ -45,6 +52,7 @@
     width: 100%;
     height: 100%;
     border: solid 2px var.$black;
+    z-index: -1;
   }
 }
 

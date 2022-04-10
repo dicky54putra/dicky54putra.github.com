@@ -28,7 +28,7 @@
     {
       "title": "Sistem Manajemen Angkutan menggunakan yii2",
       "cover": "angkutan.jpg",
-      "demo": "-",
+      "demo": null,
       "desc": "used to manage trucks that are loaded or not, and there is also an accounting system in it."
     },
     {

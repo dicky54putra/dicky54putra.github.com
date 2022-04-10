@@ -1,7 +1,28 @@
 import React from "react";
 import styles from "./ArticleCard.module.scss";
 
-export default function ArticleCard({ isRight }) {
+/**
+ *
+ * @param {object} param0
+ * @param {boolean} [param0.isRight]
+ * @param {string} [param0.imgUrl]
+ * @param {string} param0.url
+ * @param {string} [param0.title]
+ * @param {string} [param0.published]
+ * @param {string} [param0.minutes]
+ * @param {array} [param0.tag]
+ * @returns
+ */
+
+export default function ArticleCard({
+  isRight,
+  imgUrl,
+  url,
+  title,
+  published,
+  minutes,
+  tag,
+}) {
   return (
     <div
       className={[
@@ -9,19 +30,17 @@ export default function ArticleCard({ isRight }) {
         isRight ? styles["c-end"] : styles["c-start"],
       ].join(" ")}>
       <div className={styles.img}>
-        <img src="" alt="" />
+        <img src={imgUrl} alt="" />
       </div>
       <div className={styles.content}>
-        <a href="/">
-          <h2 className={styles.title}>
-            How to make return loop for in ReactJs
-          </h2>
+        <a href={url} rel="noopener noreferrer" target="_blank">
+          <h2 className={styles.title}>{title}</h2>
         </a>
-        <p className={styles.tag}>#javascript #react #programming #beginners</p>
+        <p className={styles.tag}>{tag && "#" + tag?.join(" #")}</p>
         <p className={styles.attr}>
-          <span>Published:</span> Nov 23 '21
+          <span>Published:</span> {published}
         </p>
-        <p className={styles.attr}>1 min read</p>
+        <p className={styles.attr}>{minutes} min read</p>
       </div>
     </div>
   );
