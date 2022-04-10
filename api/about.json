@@ -1,6 +1,98 @@
 {
-    "title":"About",
-    "subtitle":"What I'm currently up to, now...",
-    "profile":"dicky.jpg",
-    "desc":"Hello, my name is Dicky Saputra and I'm from Jepara, Indonesia. I'm a FullStack\nWeb Developer and Now I work as a Freelancer in the field of FullStack Web Programmer. I like to learn new things and make my new experiences.\n\nIn the programming world I idolize many developers, for example: Sandhika Galih (web programming unpas), eko (programmer zaman now), samanthaming, frontendjoe, theprogrammingexpert, etc. someday I want to be like them, experts in their fields and share with others.\n\nnow I'm \"emptying my glass and looking for water from many sources\" and these are some of the things I've been enjoying quite a bit recently\n- Find more project as Freelancer\n- Reading article on Medium or Dev.to\n- Bought some online classes about Programming and got it done \n\nLast but not least, stay healthy and keep a safe distance!"
+  "title": "About Me",
+  "profile": "dicky.jpg",
+  "desc": "Hello, my name is Dicky Saputra and I'm from Jepara, Indonesia. I'm a FullStack\nWeb Developer and Now I work as a Freelancer in the field of FullStack Web Programmer. I like to learn new things and make my new experiences.\n\nIn the programming world I idolize many developers, for example: Sandhika Galih (web programming unpas), eko (programmer zaman now), samanthaming, frontendjoe, theprogrammingexpert, etc. someday I want to be like them, experts in their fields and share with others.\n\nnow I'm \"emptying my glass and looking for water from many sources\" and these are some of the things I've been enjoying quite a bit recently\n- Find more project as Freelancer\n- Reading article on Medium or Dev.to\n- Bought some online classes about Programming and got it done \n\nLast but not least, stay healthy and keep a safe distance!",
+  "work_experience": [
+    {
+      "position": "Frontend Web Developer",
+      "company": "Made Indonesia",
+      "startDate": "Juny 2021",
+      "endDate": "Now",
+      "jobdesk": "Slicing the design form figma or Adobe XD to web and make responsive view.",
+      "logo": "made-indonesia.jpg"
+    },
+    {
+      "position": "Programmer",
+      "company": "CV. Garuda Sarana Sejahtera",
+      "startDate": "June 2020",
+      "endDate": "May 2021",
+      "jobdesk": "Work as a Programmer for CV. Garuda Sarana Sejahtera, I made several projects, including e-learning, accounting, transportation, POS, and programs to control students in schools such as registering new students, payments, etc.",
+      "logo": "gss.png"
+    },
+    {
+      "position": "Magang as Helper Programmer",
+      "company": "CV. Garuda Sarana Sejahtera",
+      "startDate": "January 2019",
+      "endDate": "June 2019",
+      "jobdesk": "i help programmers in cv. Garuda sarana sejahtera to build a program. starting from the ui / ux design, solving the problem, and make the program.",
+      "logo": "gss.png"
+    }
+  ],
+  "education": [
+    {
+      "logo": "skansaba.png",
+      "name": "SMKN 1 BANGSRI",
+      "major": "Software Enginering",
+      "startDate": "2017",
+      "endDate": "2020"
+    }
+  ],
+  "skills": [
+    {
+      "name": "HTML",
+      "image": "https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original-wordmark.svg"
+    },
+    {
+      "name": "CSS",
+      "image": "https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original-wordmark.svg"
+    },
+    {
+      "name": "Javascript",
+      "image": "https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg"
+    },
+    {
+      "name": "Git",
+      "image": "https://www.vectorlogo.zone/logos/git-scm/git-scm-icon.svg"
+    },
+    {
+      "name": "Php",
+      "image": "https://raw.githubusercontent.com/devicons/devicon/master/icons/php/php-original.svg"
+    },
+    {
+      "name": "Bootstrap",
+      "image": "https://raw.githubusercontent.com/devicons/devicon/master/icons/bootstrap/bootstrap-plain-wordmark.svg"
+    },
+    {
+      "name": "React",
+      "startDate": "2021",
+      "image": "https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg"
+    },
+    {
+      "name": "Figma",
+      "startDate": "2020",
+      "image": "https://www.vectorlogo.zone/logos/figma/figma-icon.svg"
+    },
+    {
+      "name": "Laravel",
+      "image": "https://raw.githubusercontent.com/devicons/devicon/master/icons/laravel/laravel-plain-wordmark.svg"
+    },
+    {
+      "name": "Nextjs",
+      "startDate": "2021",
+      "image": "images/next-logo.png"
+    },
+    {
+      "name": "Sass",
+      "image": "https://raw.githubusercontent.com/devicons/devicon/master/icons/sass/sass-original.svg"
+    },
+    {
+      "name": "Tailwindcss",
+      "image": "https://raw.githubusercontent.com/devicons/devicon/master/icons/tailwindcss/tailwindcss-original-wordmark.svg"
+    }
+  ],
+  "quote": {
+    "text": "if you are interested want to work with me, please email to",
+    "email": "saputradicky705@gmail.com",
+    "link": "mailto:saputradicky705@gmail.com"
+  }
 }

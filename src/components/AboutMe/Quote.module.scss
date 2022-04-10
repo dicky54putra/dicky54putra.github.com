@@ -1,0 +1,27 @@
+@use "/src/assets/scss/base/typography";
+@use "/src/assets/scss/base/var";
+@use "/src/assets/scss/base/mixin";
+
+.wrapper {
+  max-width: 600px;
+  width: 100%;
+  margin-inline: auto;
+  margin-bottom: 60px;
+
+  @include mixin.mobile {
+    padding-right: 20px;
+    padding-left: 50px;
+  }
+
+  p {
+    margin-block: 24px;
+    @include typography.body;
+    font-weight: 500;
+    color: var.$black;
+
+    a {
+      color: inherit;
+      border-bottom: solid 1px var.$black;
+    }
+  }
+}

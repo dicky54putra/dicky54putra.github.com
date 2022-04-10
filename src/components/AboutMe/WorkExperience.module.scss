@@ -1,0 +1,27 @@
+@use "/src/assets/scss/base/typography";
+@use "/src/assets/scss/base/mixin";
+
+.wrapper {
+  max-width: 600px;
+  width: 100%;
+  margin-inline: auto;
+
+  @include mixin.mobile {
+    padding-right: 20px;
+    padding-left: 50px;
+  }
+
+  .title {
+    margin-block: 24px;
+    @include typography.title;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+  }
+
+  .cards {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-direction: column;
+  }
+}

@@ -1,0 +1,77 @@
+@use "/src/assets/scss/base/var";
+@use "/src/assets/scss/base/typography";
+@use "/src/assets/scss/base/mixin";
+
+.card {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+
+  @include mixin.mobile {
+    gap: 15px;
+    flex-direction: column;
+  }
+}
+
+.c-end {
+  margin-left: auto;
+}
+.c-start {
+  margin-right: auto;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+}
+
+.img {
+  width: 282px;
+  height: 146px;
+  background-color: var.$black;
+  border: 2px solid var.$black;
+  position: relative;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+  }
+
+  @include mixin.mobile {
+    max-width: 282px;
+    width: 100%;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -12px;
+    left: -12px;
+    width: 100%;
+    height: 100%;
+    border: solid 2px var.$black;
+    z-index: -1;
+  }
+}
+
+.title {
+  @include typography.heading-article;
+  text-decoration: none;
+  color: var.$black;
+  text-transform: uppercase;
+}
+
+.tag {
+  @include typography.tag-article;
+  margin-bottom: 15px;
+}
+
+.attr {
+  @include typography.body;
+
+  span {
+    font-weight: 600;
+  }
+}
