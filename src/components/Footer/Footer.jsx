@@ -1,12 +1,16 @@
 import React from "react";
 import styles from "./Footer.module.scss";
 
-export default function Footer() {
+/**
+ *
+ * @param {object} param0
+ * @param {string} param0.text
+ * @returns
+ */
+export default function Footer({ text }) {
   return (
     <div className={styles.wrapper}>
-      <p className={styles.footer}>
-        Made with love and ReactJS. Dicky54putra © 2016 - 2022.
-      </p>
+      <p className={styles.footer}>{text}</p>
     </div>
   );
 }

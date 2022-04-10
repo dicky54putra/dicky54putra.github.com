@@ -3,7 +3,6 @@ import Card from "./Card/Card";
 import styles from "./Portfolio.module.scss";
 
 export default function Portfolio({ data }) {
-  console.log(data);
   return (
     <div className={styles.portfolio}>
       {data?.map((item, i) => {

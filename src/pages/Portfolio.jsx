@@ -5,7 +5,7 @@ import { API_URL } from "helpers/Constant";
 import React, { useEffect, useState } from "react";
 
 export default function Portfolio() {
-  const [data, setData] = useState([]);
+  const [data, setData] = useState(null);
 
   useEffect(() => {
     axios.get(`${API_URL}/portfolio`).then((res) => {

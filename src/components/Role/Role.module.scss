@@ -16,6 +16,7 @@
 .role {
   @extend %role_placeholder;
   justify-content: center;
+  text-transform: uppercase;
 }
 .role-end {
   @extend %role_placeholder;
@@ -29,6 +30,7 @@
 
   .role-title {
     @include typography.role-end;
+    text-transform: uppercase;
 
     @include mixin.tablet {
       font-size: 16px;
