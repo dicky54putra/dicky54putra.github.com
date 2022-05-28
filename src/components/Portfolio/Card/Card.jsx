@@ -1,3 +1,4 @@
+import { RAW_IMAGES } from "helpers/Constant";
 import React from "react";
 import styles from "./Card.module.scss";
 
@@ -12,7 +13,7 @@ export default function Card(props) {
   return (
     <div className={[styles.card, styleType].join(" ")}>
       <div className={styles.img}>
-        <img src={`images/${image}`} alt={title} />
+        <img src={`${RAW_IMAGES}${image}`} alt={title} />
       </div>
       <div className={styles.content}>
         {demo ? (
