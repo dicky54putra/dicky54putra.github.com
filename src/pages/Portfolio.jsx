@@ -1,6 +1,6 @@
 import axios from "axios";
-import PortfolioContent from "components/Portfolio/Portfolio";
-import Wrapper from "components/Wrapper/Wrapper";
+import PortfolioContent from "components/organisms/Portfolio";
+import Wrapper from "components/moleculs/Wrapper";
 import { API_URL } from "helpers/Constant";
 import { useEffect, useState } from "react";
 

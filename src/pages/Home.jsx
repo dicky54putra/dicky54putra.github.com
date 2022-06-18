@@ -1,5 +1,5 @@
-import Name from "components/Name/Name";
-import Wrapper from "components/Wrapper/Wrapper";
+import Name from "components/atoms/Name";
+import Wrapper from "components/moleculs/Wrapper";
 
 export default function Home() {
   return (

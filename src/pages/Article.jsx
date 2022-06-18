@@ -1,5 +1,5 @@
-import Wrapper from "components/Wrapper/Wrapper";
-import ArticleCom from "components/Article";
+import Wrapper from "components/moleculs/Wrapper";
+import ArticleCom from "components/organisms/Article";
 
 export default function Article() {
   return (

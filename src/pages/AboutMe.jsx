@@ -1,12 +1,14 @@
-import Wrapper from "components/Wrapper/Wrapper";
-import AboutMeCom from "components/AboutMe/AboutMe";
+import Wrapper from "components/moleculs/Wrapper";
 import { useEffect, useState } from "react";
-import WorkExperience from "components/AboutMe/WorkExperience";
-import Education from "components/AboutMe/Education";
-import Skills from "components/AboutMe/Skills";
-import Quote from "components/AboutMe/Quote";
 import axios from "axios";
 import { API_URL } from "helpers/Constant";
+import {
+  Education,
+  Quote,
+  Skills,
+  Intro,
+  WorkExperience,
+} from "components/organisms/AboutMe";
 export default function AboutMe() {
   const [data, setData] = useState(null);
 
@@ -18,7 +20,7 @@ export default function AboutMe() {
 
   return (
     <Wrapper hasTitle title={data?.title} hasFooter>
-      <AboutMeCom image={data?.profile} desc={data?.desc} />
+      <Intro image={data?.profile} desc={data?.desc} />
       <WorkExperience data={data?.work_experience} />
       <Education data={data?.education} />
       <Skills data={data?.skills} />
