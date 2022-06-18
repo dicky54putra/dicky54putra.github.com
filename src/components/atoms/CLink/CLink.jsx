@@ -1,5 +1,5 @@
-import { isLoad } from "helpers/GlobalState/CmRouter";
-import { changepath } from "helpers/GlobalState/CmRouter";
+import { isLoad } from "helpers/GlobalState/CmRouterSlice";
+import { changepath } from "helpers/GlobalState/CmRouterSlice";
 import React from "react";
 import { useDispatch } from "react-redux";
 
@@ -8,8 +8,10 @@ const CLink = ({ to, children, className }) => {
 
   const handleClick = (e) => {
     e.preventDefault();
+    // @ts-ignore
     dispatch(isLoad(true));
     setTimeout(() => {
+      // @ts-ignore
       dispatch(isLoad(false));
       dispatch(changepath(to));
     }, 500);

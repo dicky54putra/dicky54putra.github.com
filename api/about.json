@@ -1,7 +1,9 @@
 {
+  "name": "Dicky Saputra",
   "title": "About Me",
   "profile": "dicky.jpg",
-  "desc": "Hello, my name is Dicky Saputra and I'm from Jepara, Indonesia. I'm a FullStack\nWeb Developer and Now I work as a Freelancer in the field of FullStack Web Programmer. I like to learn new things and make my new experiences.\n\nIn the programming world I idolize many developers, for example: Sandhika Galih (web programming unpas), eko (programmer zaman now), samanthaming, frontendjoe, theprogrammingexpert, etc. someday I want to be like them, experts in their fields and share with others.\n\nnow I'm \"emptying my glass and looking for water from many sources\" and these are some of the things I've been enjoying quite a bit recently\n- Find more project as Freelancer\n- Reading article on Medium or Dev.to\n- Bought some online classes about Programming and got it done \n\nLast but not least, stay healthy and keep a safe distance!",
+  "desc": "Hello, my name is Dicky Saputra and I'm from Jepara, Indonesia. I'm a Frontend\nWeb Developer and Now I work as a Freelancer in the field of Frontend Web Developer. I like to learn new things and make my new experiences.\n\nIn the programming world I idolize many developers, for example: Sandhika Galih (web programming unpas), eko (programmer zaman now), samanthaming, frontendjoe, theprogrammingexpert, etc. someday I want to be like them, experts in their fields and share with others.\n\nnow I'm \"emptying my glass and looking for water from many sources\" and these are some of the things I've been enjoying quite a bit recently\n- Find more project as Freelancer\n- Reading article on Medium or Dev.to\n- Bought some online classes about Programming and got it done \n\nLast but not least, stay healthy and keep a safe distance!",
+  "short_desc": "Hello,  My Name is Dicky Saputra and I'm from Jepara, Indonesia.  I'm a Frontend Web Developer and Currently a Frontend Web Developer in Madeindonesia. I like Learning a new Something and making it a new Experience in My Life.  My portfolio can check at https://dicky54putra.github.io",
   "work_experience": [
     {
       "position": "Frontend Web Developer",
@@ -33,6 +35,7 @@
       "logo": "skansaba.png",
       "name": "SMKN 1 BANGSRI",
       "major": "Software Enginering",
+      "jobdesk": "algorithms, basic programming, oop, databases, flowcharts, frameworks, git.",
       "startDate": "2017",
       "endDate": "2020"
     }

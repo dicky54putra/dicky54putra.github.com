@@ -9,13 +9,19 @@ import {
   Intro,
   WorkExperience,
 } from "components/organisms/AboutMe";
+import CV from "components/organisms/AboutMe/CV";
 export default function AboutMe() {
   const [data, setData] = useState(null);
 
   useEffect(() => {
+    let isMounted = true;
     axios.get(`${API_URL}/about.json`).then((res) => {
-      setData(res.data);
+      if (isMounted) setData(res.data);
     });
+
+    return () => {
+      isMounted = false;
+    };
   }, [setData]);
 
   return (
@@ -25,6 +31,7 @@ export default function AboutMe() {
       <Education data={data?.education} />
       <Skills data={data?.skills} />
       <Quote data={data?.quote} />
+      <CV data={data} />
     </Wrapper>
   );
 }

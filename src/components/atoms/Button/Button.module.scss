@@ -1,0 +1,33 @@
+@use "/src/assets/scss/base/var";
+@use "/src/assets/scss/base/typography";
+
+.button {
+  display: inline-block;
+  padding: 4px 16px;
+  border-radius: 0px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  color: var.$black;
+  background-color: var.$white;
+  border: solid 2px var.$black;
+  position: relative;
+  box-shadow: 2px 2px 0 var.$black;
+  @include typography.body;
+
+  &:hover {
+    transform: translate(2px, 2px);
+    transition: all 0.2s ease-in-out;
+    box-shadow: 0px 0px 0 var.$black;
+  }
+
+  &.active {
+    transform: translate(2px, 2px);
+    box-shadow: 0 0 0 var.$black;
+
+    &:hover {
+      transform: translate(0px, 0px);
+      transition: all 0.2s ease-in-out;
+      box-shadow: 2px 2px 0 var.$black;
+    }
+  }
+}

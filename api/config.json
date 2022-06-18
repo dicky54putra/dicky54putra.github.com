@@ -20,6 +20,10 @@
   ],
   "menus": [
     {
+      "title": "Home",
+      "url": "/"
+    },
+    {
       "title": "Article",
       "url": "/article"
     },

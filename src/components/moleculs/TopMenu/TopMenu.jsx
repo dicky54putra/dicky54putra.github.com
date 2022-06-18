@@ -2,7 +2,7 @@ import CLink from "components/atoms/CLink";
 import React from "react";
 import { useSelector } from "react-redux";
 import styles from "./TopMenu.module.scss";
-import { selectComp } from "helpers/GlobalState/CmRouter";
+import { selectComp } from "helpers/GlobalState/CmRouterSlice";
 import ToggleMenuMobile from "./ToggleMenuMobile";
 
 /**
@@ -34,7 +34,11 @@ export default function TopMenu({ datas, title }) {
             <CLink
               key={`menu-item-${index}`}
               to={data.url}
-              className={[styles["menu-item"], isActive(data.url)].join(" ")}>
+              className={[
+                styles["menu-item"],
+                "menu-item",
+                isActive(data.url),
+              ].join(" ")}>
               {data.title}
             </CLink>
           );

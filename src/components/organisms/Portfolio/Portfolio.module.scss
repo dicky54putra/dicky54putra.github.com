@@ -1,7 +1,43 @@
 @use "/src/assets/scss/base/mixin";
+@use "/src/assets/scss/base/typography";
+
+.wrapper {
+  padding-inline: 100px;
+  gap: 10px;
+  margin-block: 60px;
+  max-width: 1200px;
+  width: 100%;
+  margin-inline: auto;
+  transition: all 1s ease-in-out;
+  animation: load-portfolio 1s normal;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+
+  &.button {
+    @include mixin.mobile {
+      display: none;
+    }
+  }
+
+  &.select {
+    display: none;
+    @include mixin.mobile {
+      display: flex;
+    }
+  }
+}
 
 .portfolio {
   padding-inline: 100px;
+  gap: 30px;
+  margin-block: 60px;
+  max-width: 1200px;
+  width: 100%;
+  margin-inline: auto;
+  transition: all 1s ease-in-out;
+  animation: load-portfolio 1s normal;
 
   @include mixin.desktop {
     display: grid;
@@ -26,14 +62,6 @@
     padding-inline: 100px;
     margin-block: 60px;
   }
-
-  gap: 30px;
-  margin-block: 60px;
-  max-width: 1200px;
-  width: 100%;
-  margin-inline: auto;
-  transition: all 1s ease-in-out;
-  animation: load-portfolio 1s normal;
 }
 
 @keyframes load-portfolio {
@@ -42,5 +70,21 @@
   }
   100% {
     opacity: 1;
+  }
+}
+
+.datanotfound {
+  @include typography.heading-article;
+  padding-inline: 100px;
+  gap: 30px;
+  margin-block: 60px;
+  max-width: 1200px;
+  width: 100%;
+  margin-inline: auto;
+  transition: all 1s ease-in-out;
+  animation: load-portfolio 1s normal;
+
+  @include mixin.mobile {
+    padding-inline: 50px 20px;
   }
 }

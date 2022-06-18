@@ -3,7 +3,7 @@ import Role from "components/atoms/Role";
 import SideMenu from "components/moleculs/SideMenu/SideMenu";
 import Title from "components/atoms/Title";
 import TopMenu from "components/moleculs/TopMenu/TopMenu";
-import { isLoader } from "helpers/GlobalState/CmRouter";
+import { isLoader } from "helpers/GlobalState/CmRouterSlice";
 import { useEffect, useState } from "react";
 import styles from "./Wrapper.module.scss";
 import { useSelector } from "react-redux";
@@ -34,9 +34,14 @@ export default function Wrapper({
   const thisYear = new Date().getFullYear();
 
   useEffect(() => {
+    let isMounted = true;
     axios.get(`${API_URL}/config.json`).then((res) => {
-      setData(res.data);
+      if (isMounted) setData(res.data);
     });
+
+    return () => {
+      isMounted = false;
+    };
   }, []);
 
   return (

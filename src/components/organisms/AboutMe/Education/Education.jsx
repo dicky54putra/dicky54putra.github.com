@@ -9,13 +9,13 @@ export default function Education(props) {
       <h2 className={styles.title}>Education</h2>
       <div className={styles.cards}>
         {data?.map((item, i) => {
-          const { logo, name, startDate, endDate, major } = item;
+          const { logo, name, startDate, endDate, major, jobdesk } = item;
           return (
             <Card
               key={i}
               title={name}
               footTitle={major}
-              desc=""
+              desc={jobdesk}
               image={logo}
               startDate={startDate}
               endDate={endDate}

@@ -1,4 +1,4 @@
-import { selectComp } from "helpers/GlobalState/CmRouter";
+import { selectComp } from "helpers/GlobalState/CmRouterSlice";
 import { useSelector } from "react-redux";
 import RouterList from "./RouterList";
 

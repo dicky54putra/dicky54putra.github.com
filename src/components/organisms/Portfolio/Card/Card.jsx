@@ -3,7 +3,7 @@ import React from "react";
 import styles from "./Card.module.scss";
 
 export default function Card(props) {
-  const { models, image, title, desc, demo } = props;
+  const { models, image, title, desc, demo, tech } = props;
   const modelsType = [1, 2, 3];
 
   let styleType = "";
@@ -24,6 +24,7 @@ export default function Card(props) {
           <h2 className={styles.title}>{title}</h2>
         )}
         <p className={styles.desc}>{desc}</p>
+        <span className={styles.tech}>{tech}</span>
       </div>
     </div>
   );

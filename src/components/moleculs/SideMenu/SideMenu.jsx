@@ -17,7 +17,7 @@ export default function SideMenu({ datas }) {
             <a
               key={`menu-item-${index}`}
               href={data.url}
-              className={[styles["menu-item"], "menu-item"].join(" ")}
+              className={[styles["menu-item"]].join(" ")}
               target="_blank"
               rel="noopener noreferrer">
               {data.title}

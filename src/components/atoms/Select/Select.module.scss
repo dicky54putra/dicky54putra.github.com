@@ -1,0 +1,13 @@
+@use "/src/assets/scss/base/var";
+
+.select {
+  padding: 8px 16px;
+  border: solid 1px var.$black;
+  width: 100%;
+  background-color: var.$white;
+  box-shadow: 2px 2px 0 var.$black;
+
+  &:focus-visible {
+    outline: none;
+  }
+}

@@ -8,9 +8,14 @@ export default function Article() {
   const [datas, setDatas] = useState(null);
 
   useEffect(() => {
+    let isMounted = true;
     axios.get(DEVTO_URL).then((res) => {
-      setDatas(res.data);
+      if (isMounted) setDatas(res.data);
     });
+
+    return () => {
+      isMounted = false;
+    };
   }, []);
   return (
     <div className={styles.article}>
