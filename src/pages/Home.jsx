@@ -1,10 +1,10 @@
-import Name from "components/atoms/Name";
+import HomeCom from "components/organisms/Home";
 import Wrapper from "components/moleculs/Wrapper";
 
 export default function Home() {
   return (
-    <Wrapper isCenterRole>
-      <Name />
+    <Wrapper hasFooter>
+      <HomeCom />
     </Wrapper>
   );
 }

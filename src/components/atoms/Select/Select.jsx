@@ -21,8 +21,10 @@ const Select = ({ lists, value, onChange }) => {
       <option value="">Tech Filter</option>
       {lists?.map((item, i) => {
         return (
-          <option key={`select-${item}-${i}`} value={item.toLowerCase()}>
-            {item}
+          <option
+            key={`select-${item.name}-${i}`}
+            value={item.name?.toLowerCase()}>
+            {item.name}
           </option>
         );
       })}

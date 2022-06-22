@@ -4,11 +4,9 @@ import SideMenu from "components/moleculs/SideMenu/SideMenu";
 import Title from "components/atoms/Title";
 import TopMenu from "components/moleculs/TopMenu/TopMenu";
 import { isLoader } from "helpers/GlobalState/CmRouterSlice";
-import { useEffect, useState } from "react";
 import styles from "./Wrapper.module.scss";
 import { useSelector } from "react-redux";
-import axios from "axios";
-import { API_URL } from "helpers/Constant";
+import { getConfig } from "helpers/GlobalState/ContentSlice";
 
 /**
  *
@@ -29,32 +27,26 @@ export default function Wrapper({
   isCenterRole,
 }) {
   const isLoading = useSelector(isLoader);
-  const [data, setData] = useState(null);
+  const config = useSelector(getConfig);
 
   const thisYear = new Date().getFullYear();
-
-  useEffect(() => {
-    let isMounted = true;
-    axios.get(`${API_URL}/config.json`).then((res) => {
-      if (isMounted) setData(res.data);
-    });
-
-    return () => {
-      isMounted = false;
-    };
-  }, []);
 
   return (
     <>
       {isLoading && <div className="loader"></div>}
-      <TopMenu title={data?.title} datas={data?.menus} />
-      <SideMenu datas={data?.socials} />
-      <Role text={`${data?.role}`} isEndAlign={isCenterRole ? false : true} />
+      <TopMenu
+        title={config?.title}
+        datas={config?.menus}
+        open={config?.menu_open}
+        close={config?.menu_close}
+      />
+      <SideMenu datas={config?.socials} />
+      <Role text={`${config?.role}`} isEndAlign={isCenterRole ? false : true} />
       <main className={styles.main}>
         {hasTitle && <Title title={title} />}
         {children}
       </main>
-      {hasFooter && <Footer text={`${data?.copyright} ${thisYear}`} />}
+      {hasFooter && <Footer text={`${config?.copyright} ${thisYear}`} />}
     </>
   );
 }

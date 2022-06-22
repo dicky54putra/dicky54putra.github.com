@@ -54,10 +54,10 @@ export default function Portfolio({ data, tech }) {
         {tech?.map((item, i) => {
           return (
             <Button
-              key={`${item}-${i}`}
-              onClick={handleFilter(item)}
-              isActive={filter?.toLowerCase() === item.toLowerCase()}>
-              {item}
+              key={`${item.name}-${i}`}
+              onClick={handleFilter(item.name)}
+              isActive={filter?.toLowerCase() === item.name?.toLowerCase()}>
+              {item.name}
             </Button>
           );
         })}

@@ -1,0 +1,59 @@
+@use "/src/assets/scss/base/var";
+@use "/src/assets/scss/base/typography";
+
+.container {
+  padding-inline: 100px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  margin-block: 60px;
+  justify-content: space-between;
+  max-width: 1200px;
+  width: 100%;
+  margin-inline: auto;
+  transition: all 1s ease-in-out;
+  animation: load-article 1s normal;
+
+  .head {
+    position: relative;
+
+    .iam {
+      display: inline-block;
+      background-color: var.$black;
+      color: var.$white;
+      @include typography.title;
+      transform: rotate(-90deg);
+      position: absolute;
+      padding: 0 12px;
+      left: 0;
+      top: 0;
+
+      &::before {
+        content: "";
+        height: 100%;
+        width: calc(100% - 4px);
+        background-color: var.$white;
+        border: solid 1px var.$black;
+      }
+    }
+
+    .dicky {
+      @include typography.title;
+      font-size: 32px;
+      line-height: 1;
+      letter-spacing: 0;
+    }
+
+    .role {
+      @include typography.heading-page;
+      line-height: 1;
+      letter-spacing: 0;
+    }
+  }
+
+  .body {
+    p {
+      @include typography.body;
+    }
+  }
+}

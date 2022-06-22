@@ -4,16 +4,19 @@ import { useSelector } from "react-redux";
 import styles from "./TopMenu.module.scss";
 import { selectComp } from "helpers/GlobalState/CmRouterSlice";
 import ToggleMenuMobile from "./ToggleMenuMobile";
+import Translate from "components/atoms/Translate";
 
 /**
  *
  * @param {object} param0
  * @param {array} [param0.datas]
  * @param {string} param0.title
+ * @param {string} param0.open
+ * @param {string} param0.close
  * @returns
  */
 
-export default function TopMenu({ datas, title }) {
+export default function TopMenu({ datas, title, open, close }) {
   const route = useSelector(selectComp);
 
   const isActive = (link) => {
@@ -27,7 +30,7 @@ export default function TopMenu({ datas, title }) {
           {title}
         </CLink>
       </div>
-      <ToggleMenuMobile />
+      <ToggleMenuMobile open={open} close={close} />
       <div className={styles["menu-items"]} id="menu">
         {datas?.map((data, index) => {
           return (
@@ -43,6 +46,8 @@ export default function TopMenu({ datas, title }) {
             </CLink>
           );
         })}
+        <span className={styles.divider}></span>
+        <Translate />
       </div>
     </div>
   );

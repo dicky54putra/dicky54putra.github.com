@@ -1,7 +1,14 @@
 import React, { useState } from "react";
 import styles from "../TopMenu.module.scss";
 
-export default function ToggleMenuMobile() {
+/**
+ *
+ * @param {object} param0
+ * @param {string} param0.open
+ * @param {string} param0.close
+ * @returns
+ */
+export default function ToggleMenuMobile({ open, close }) {
   const [State, setState] = useState(false);
 
   const handleClick = () => {
@@ -20,7 +27,7 @@ export default function ToggleMenuMobile() {
       id="toggleMenuMobile"
       className={styles["menu-mobile"]}
       onClick={handleClick}>
-      {State ? "CLOSE" : "FIND ME"}
+      {State ? close : open}
     </span>
   );
 }
