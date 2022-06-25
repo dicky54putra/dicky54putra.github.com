@@ -3,29 +3,29 @@ import CLink from "../CLink";
 import styles from "./Button.module.scss";
 
 /**
- * @typedef {Object} InitialPropLink
- * @property {true} [isLink]
- * @property {boolean} [isActive]
- * @property {'primary' | 'secondary'} [variant]
- * @property {string} to
+ * @typedef {import("./ButtonT").ButtonProp} ButtonProp
+ * @typedef {import("./ButtonT").LinkProp} LinkProp
  *
- * @typedef {Object} InitialProp
- * @property {any} children
- * @property {boolean} [isActive]
- * @property {false} [isLink]
- * @property {'primary' | 'secondary'} [variant]
- * @property {string} [to]
- *
- * @typedef {React.ButtonHTMLAttributes} ReactBtn
- *
- * @param  { InitialProp | InitialPropLink & ReactBtn} props
+ * @param  { ButtonProp | LinkProp & React.ButtonHTMLAttributes & React.AnchorHTMLAttributes} props
  * @returns
  */
-const Button = ({ children, isActive, isLink, variant, to, ...attr }) => {
+const Button = (props) => {
+  const {
+    children,
+    isActive,
+    isLink,
+    variant,
+    isAnchor,
+    to,
+    className,
+    ...attr
+  } = props;
+
   const cls = [
     styles.button,
     isActive ? styles.secondary : null,
     styles[variant],
+    className,
   ];
 
   return !isLink ? (
@@ -33,7 +33,7 @@ const Button = ({ children, isActive, isLink, variant, to, ...attr }) => {
       {children}
     </button>
   ) : (
-    <CLink to={""} className={cls.join(" ")} {...attr}>
+    <CLink to={to} isAnchor={isAnchor} className={cls.join(" ")} {...attr}>
       {children}
     </CLink>
   );
@@ -43,6 +43,7 @@ Button.defaultProps = {
   isActive: false,
   isLink: false,
   variant: "primary",
+  isAnchor: false,
 };
 
 export default Button;

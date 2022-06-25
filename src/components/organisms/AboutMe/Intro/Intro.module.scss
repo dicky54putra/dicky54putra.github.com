@@ -7,6 +7,7 @@
   max-width: 600px;
   width: 100%;
   margin-inline: auto;
+  margin-bottom: 50px;
 
   @include mixin.mobile {
     padding-right: 20px;

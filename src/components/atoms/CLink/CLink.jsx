@@ -3,7 +3,17 @@ import { changepath } from "helpers/GlobalState/CmRouterSlice";
 import React from "react";
 import { useDispatch } from "react-redux";
 
-const CLink = ({ to, children, className }) => {
+/**
+ * @typedef  { Object } props
+ * @property  { string } to
+ * @property  { any } children
+ * @property  { string } [className]
+ * @property  { boolean } [isAnchor]
+ *
+ * @param {props & React.AnchorHTMLAttributes} props
+ * @returns
+ */
+const CLink = ({ to, children, className, isAnchor, ...attr }) => {
   const dispatch = useDispatch();
 
   const handleClick = (e) => {
@@ -17,11 +27,23 @@ const CLink = ({ to, children, className }) => {
     }, 500);
   };
 
+  if (isAnchor) {
+    return (
+      <a href={to} className={className} {...attr}>
+        {children}
+      </a>
+    );
+  }
+
   return (
     <a href={to} className={className} onClick={handleClick}>
       {children}
     </a>
   );
+};
+
+CLink.defaultProps = {
+  isAnchor: false,
 };
 
 export default CLink;

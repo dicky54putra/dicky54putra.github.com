@@ -2,6 +2,18 @@ import { RAW_IMAGES } from "helpers/Constant";
 import React from "react";
 import styles from "./Card.module.scss";
 
+/**
+ *
+ * @param {object} props
+ * @param {number} props.models
+ * @param {string} props.image
+ * @param {string} props.title
+ * @param {string} props.desc
+ * @param {string} props.demo
+ * @param {string} props.tech
+ * @returns
+ */
+
 export default function Card(props) {
   const { models, image, title, desc, demo, tech } = props;
   const modelsType = [1, 2, 3];

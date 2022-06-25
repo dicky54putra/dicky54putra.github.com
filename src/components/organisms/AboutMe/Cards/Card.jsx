@@ -2,6 +2,17 @@ import { RAW_IMAGES } from "helpers/Constant";
 import React from "react";
 import styles from "./Card.module.scss";
 
+/**
+ *
+ * @param {object} props
+ * @param {string} props.title
+ * @param {string} props.image
+ * @param {string} props.desc
+ * @param {string} props.footTitle
+ * @param {string} props.startDate
+ * @param {string} props.endDate
+ * @returns
+ */
 export default function Card(props) {
   const { image, title, desc, footTitle, startDate, endDate } = props;
   return (

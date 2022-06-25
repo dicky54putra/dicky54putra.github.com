@@ -1,3 +1,4 @@
+import CLink from "components/atoms/CLink";
 import React from "react";
 import styles from "./SideMenu.module.scss";
 
@@ -14,14 +15,15 @@ export default function SideMenu({ datas }) {
       <div className={styles["menu-items"]}>
         {datas?.map((data, index) => {
           return (
-            <a
+            <CLink
+              isAnchor
               key={`menu-item-${index}`}
-              href={data.url}
+              to={data.url}
               className={[styles["menu-item"]].join(" ")}
               target="_blank"
               rel="noopener noreferrer">
               {data.title}
-            </a>
+            </CLink>
           );
         })}
       </div>

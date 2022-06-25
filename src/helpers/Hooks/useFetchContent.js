@@ -1,7 +1,8 @@
 import axios from "axios";
-import { API_URL } from "helpers/Constant";
+import { API_URL, DEVTO_URL } from "helpers/Constant";
 import {
   ChangeAbout,
+  ChangeArticle,
   ChangeConfig,
   ChangePortfolio,
 } from "helpers/GlobalState/ContentSlice";
@@ -23,6 +24,10 @@ const useFetchContent = () => {
 
     axios.get(`${API_URL}/about.json`).then((res) => {
       if (isMounted) dispatch(ChangeAbout(res.data));
+    });
+
+    axios.get(DEVTO_URL).then((res) => {
+      if (isMounted) dispatch(ChangeArticle(res.data));
     });
 
     return () => {
