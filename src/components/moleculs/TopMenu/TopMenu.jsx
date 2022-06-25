@@ -13,10 +13,11 @@ import Translate from "components/atoms/Translate";
  * @param {string} param0.title
  * @param {string} param0.open
  * @param {string} param0.close
+ * @param {boolean} param0.isLangDark
  * @returns
  */
 
-export default function TopMenu({ datas, title, open, close }) {
+export default function TopMenu({ datas, title, open, close, isLangDark }) {
   const route = useSelector(selectComp);
 
   const isActive = (link) => {
@@ -46,9 +47,17 @@ export default function TopMenu({ datas, title, open, close }) {
             </CLink>
           );
         })}
-        <span className={styles.divider}></span>
-        <Translate />
+        {isLangDark && (
+          <>
+            <span className={styles.divider}></span>
+            <Translate />
+          </>
+        )}
       </div>
     </div>
   );
 }
+
+TopMenu.defaultProps = {
+  isLangDark: false,
+};

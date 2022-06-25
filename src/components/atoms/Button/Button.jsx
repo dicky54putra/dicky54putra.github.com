@@ -3,28 +3,46 @@ import CLink from "../CLink";
 import styles from "./Button.module.scss";
 
 /**
+ * @typedef {Object} InitialPropLink
+ * @property {true} [isLink]
+ * @property {boolean} [isActive]
+ * @property {'primary' | 'secondary'} [variant]
+ * @property {string} to
  *
- * @param {object} param0
- * @param {boolean} [param0.isActive] - className of button
- * @param {any} param0.children - children of button
- * @param {boolean} [param0.isLink]
- * @param {() => void} [param0.onClick]
+ * @typedef {Object} InitialProp
+ * @property {any} children
+ * @property {boolean} [isActive]
+ * @property {false} [isLink]
+ * @property {'primary' | 'secondary'} [variant]
+ * @property {string} [to]
+ *
+ * @typedef {React.ButtonHTMLAttributes} ReactBtn
+ *
+ * @param  { InitialProp | InitialPropLink & ReactBtn} props
  * @returns
  */
-const Button = ({ children, isActive = false, isLink = false, onClick }) => {
+const Button = ({ children, isActive, isLink, variant, to, ...attr }) => {
+  const cls = [
+    styles.button,
+    isActive ? styles.secondary : null,
+    styles[variant],
+  ];
+
   return !isLink ? (
-    <button
-      className={[styles.button, isActive ? styles.active : ""].join(" ")}
-      onClick={onClick}>
+    <button className={cls.join(" ")} {...attr}>
       {children}
     </button>
   ) : (
-    <CLink
-      to={""}
-      className={[styles.button, isActive ? styles.active : ""].join(" ")}>
+    <CLink to={""} className={cls.join(" ")} {...attr}>
       {children}
     </CLink>
   );
+};
+
+Button.defaultProps = {
+  isActive: false,
+  isLink: false,
+  variant: "primary",
 };
 
 export default Button;

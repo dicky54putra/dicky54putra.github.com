@@ -7,17 +7,12 @@
   border-radius: 0px;
   cursor: pointer;
   transition: all 0.2s ease-in-out;
-  color: var.$black;
-  background-color: var.$white;
-  border: solid 2px var.$black;
   position: relative;
-  box-shadow: 2px 2px 0 var.$black;
   @include typography.body;
 
   &:hover {
     transform: translate(2px, 2px);
     transition: all 0.2s ease-in-out;
-    box-shadow: 0px 0px 0 var.$black;
   }
 
   &.active {
@@ -28,6 +23,28 @@
       transform: translate(0px, 0px);
       transition: all 0.2s ease-in-out;
       box-shadow: 2px 2px 0 var.$black;
+    }
+  }
+
+  &.primary {
+    color: var.$black;
+    background-color: var.$white;
+    border: solid 2px var.$black;
+    box-shadow: 2px 2px 0 var.$black;
+
+    &:hover {
+      box-shadow: 0px 0px 0 var.$black;
+    }
+  }
+
+  &.secondary {
+    color: var.$white;
+    background-color: var.$black;
+    border: solid 2px var.$black;
+    box-shadow: 1px 1px 0 var.$white, 3px 3px 0 var.$black;
+
+    &:hover {
+      box-shadow: 0px 0px 0 var.$white;
     }
   }
 }
