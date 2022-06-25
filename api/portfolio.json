@@ -1,15 +1,6 @@
 {
   "title": "Portfolio",
-  "tech": [
-    "PHP",
-    "Javascript",
-    "Mysql",
-    "Wordpress",
-    "Yii2",
-    "Sass",
-    "Reactjs",
-    "Bootstrap"
-  ],
+  "tech": ["Wordpress", "Yii2", "Reactjs", "Tailwind", "bootstrap"],
   "project": [
     {
       "title": "Tacontech Landing Page",

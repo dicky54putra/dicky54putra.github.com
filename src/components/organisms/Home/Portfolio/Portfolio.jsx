@@ -15,7 +15,7 @@ const Portfolio = () => {
         <>
           <div className={styles.portfolio}>
             {dataList?.map((item, i) => {
-              const models = i % 2 ? 2 : 3;
+              const models = i % 2 ? 2 : 0;
               return (
                 <Card
                   key={i}

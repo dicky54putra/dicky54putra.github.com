@@ -19,7 +19,15 @@ export default function ToggleMenuMobile({ open, close }) {
     setState((State) => !State);
     toggleMenuMobile.style.color = State ? "#fff" : "#000";
     menu.style.transform = State ? "translateX(-100%)" : "translateX(0%)";
-    wrapperTopMenu.style.mixBlendMode = State ? "difference" : "unset";
+    if (State) {
+      setTimeout(() => {
+        wrapperTopMenu.style.mixBlendMode = "difference";
+      }, 300);
+    } else {
+      wrapperTopMenu.style.mixBlendMode = "unset";
+    }
+    // @ts-ignore
+    wrapperTopMenu.style.backdropFilter = State ? "2px" : "none";
   };
 
   return (
