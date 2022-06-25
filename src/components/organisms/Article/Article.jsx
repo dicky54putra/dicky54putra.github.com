@@ -1,22 +1,11 @@
-import axios from "axios";
-import { DEVTO_URL } from "helpers/Constant";
-import { useEffect, useState } from "react";
 import ArticleCard from "./Card";
 import styles from "./Article.module.scss";
+import { getArticle } from "helpers/GlobalState/ContentSlice";
+import { useSelector } from "react-redux";
 
 export default function Article() {
-  const [datas, setDatas] = useState(null);
+  const datas = useSelector(getArticle);
 
-  useEffect(() => {
-    let isMounted = true;
-    axios.get(DEVTO_URL).then((res) => {
-      if (isMounted) setDatas(res.data);
-    });
-
-    return () => {
-      isMounted = false;
-    };
-  }, []);
   return (
     <div className={styles.article}>
       {datas?.map((data, i) => {

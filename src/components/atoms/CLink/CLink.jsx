@@ -24,7 +24,7 @@ const CLink = ({ to, children, className, isAnchor, ...attr }) => {
       // @ts-ignore
       dispatch(isLoad(false));
       dispatch(changepath(to));
-    }, 500);
+    }, 100);
   };
 
   if (isAnchor) {

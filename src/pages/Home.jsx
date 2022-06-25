@@ -1,6 +1,7 @@
-import HomeCom from "components/organisms/Home";
-import Wrapper from "components/moleculs/Wrapper";
-import { useEffect } from "react";
+import { lazy, Suspense, useEffect } from "react";
+
+const Wrapper = lazy(() => import("components/moleculs/Wrapper"));
+const HomeCom = lazy(() => import("components/organisms/Home"));
 
 export default function Home() {
   useEffect(() => {
@@ -8,8 +9,10 @@ export default function Home() {
   }, []);
 
   return (
-    <Wrapper hasFooter>
-      <HomeCom />
-    </Wrapper>
+    <Suspense fallback={<></>}>
+      <Wrapper hasFooter>
+        <HomeCom />
+      </Wrapper>
+    </Suspense>
   );
 }
