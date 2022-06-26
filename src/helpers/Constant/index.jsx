@@ -1,4 +1,4 @@
-const IS_LOCAL = true;
+const IS_LOCAL = false;
 
 const API_URL = IS_LOCAL
   ? "http://localhost:3003"

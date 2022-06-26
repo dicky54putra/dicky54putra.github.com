@@ -30,7 +30,7 @@ export default function Card({
         isRight ? styles["c-end"] : styles["c-start"],
       ].join(" ")}>
       <div className={styles.img}>
-        <img src={imgUrl} alt="" />
+        <img src={imgUrl} alt="" height={80} width={80} />
       </div>
       <div className={styles.content}>
         <a href={url} rel="noopener noreferrer" target="_blank">

@@ -18,7 +18,16 @@ export default function Skills(props) {
       <div className={styles.skills}>
         {datas?.map((item, i) => {
           const { name, image } = item;
-          return <img key={i} className={styles.img} src={image} alt={name} />;
+          return (
+            <img
+              key={i}
+              className={styles.img}
+              src={image}
+              alt={name}
+              height={80}
+              width={80}
+            />
+          );
         })}
       </div>
     </div>

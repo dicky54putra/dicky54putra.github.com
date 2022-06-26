@@ -18,7 +18,7 @@ export default function Card(props) {
   return (
     <div className={styles.wrapper}>
       <div className={styles.img}>
-        <img src={`${RAW_IMAGES}${image}`} alt={image} />
+        <img src={`${RAW_IMAGES}${image}`} alt={image} height={80} width={80} />
       </div>
       <div className={styles.content}>
         <h3 className={styles.title}>{title}</h3>

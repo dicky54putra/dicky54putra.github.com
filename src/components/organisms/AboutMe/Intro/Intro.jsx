@@ -6,7 +6,12 @@ export default function Intro(props) {
   return (
     <div className={styles.wrapper}>
       <div className={styles.profile}>
-        <img src={`${RAW_IMAGES}${image}`} alt="Profile" />
+        <img
+          src={`${RAW_IMAGES}${image}`}
+          alt="Profile"
+          height={80}
+          width={80}
+        />
       </div>
       <p className={styles.desc}>{desc}</p>
       <hr />

@@ -25,7 +25,7 @@ export default function Card(props) {
   return (
     <div className={[styles.card, styleType].join(" ")}>
       <div className={styles.img}>
-        <img src={`${RAW_IMAGES}${image}`} alt={title} />
+        <img src={`${RAW_IMAGES}${image}`} alt={title} height={80} width={80} />
       </div>
       <div className={styles.content}>
         {demo ? (
