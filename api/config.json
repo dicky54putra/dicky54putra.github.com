@@ -20,6 +20,10 @@
   ],
   "menus": [
     {
+      "title": "Home",
+      "url": "/"
+    },
+    {
       "title": "Article",
       "url": "/article"
     },
@@ -33,5 +37,7 @@
     }
   ],
   "role": "frontend developer",
-  "copyright": "Made with love and ReactJS. Dicky54putra © 2016 -"
+  "copyright": "Made with love and ReactJS. Dicky54putra © 2016 -",
+  "menu_open": "MENU",
+  "menu_close": "CLOSE"
 }

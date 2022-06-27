@@ -1,10 +1,18 @@
-import Name from "components/Name/Name";
-import Wrapper from "components/Wrapper/Wrapper";
+import { lazy, Suspense, useEffect } from "react";
+
+const Wrapper = lazy(() => import("components/moleculs/Wrapper"));
+const HomeCom = lazy(() => import("components/organisms/Home"));
 
 export default function Home() {
+  useEffect(() => {
+    window.scroll(0, 0);
+  }, []);
+
   return (
-    <Wrapper isCenterRole>
-      <Name />
-    </Wrapper>
+    <Suspense fallback={<></>}>
+      <Wrapper hasFooter>
+        <HomeCom />
+      </Wrapper>
+    </Suspense>
   );
 }

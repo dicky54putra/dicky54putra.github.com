@@ -1,28 +1,31 @@
-import Wrapper from "components/Wrapper/Wrapper";
-import AboutMeCom from "components/AboutMe/AboutMe";
-import { useEffect, useState } from "react";
-import WorkExperience from "components/AboutMe/WorkExperience";
-import Education from "components/AboutMe/Education";
-import Skills from "components/AboutMe/Skills";
-import Quote from "components/AboutMe/Quote";
-import axios from "axios";
-import { API_URL } from "helpers/Constant";
+import { useSelector } from "react-redux";
+import { getAbout } from "helpers/GlobalState/ContentSlice";
+import { lazy, Suspense, useEffect } from "react";
+
+const Wrapper = lazy(() => import("components/moleculs/Wrapper"));
+const Education = lazy(() => import("components/organisms/AboutMe/Education"));
+const Intro = lazy(() => import("components/organisms/AboutMe/Intro"));
+const WorkExperience = lazy(() =>
+  import("components/organisms/AboutMe/WorkExperience"),
+);
+const Skills = lazy(() => import("components/organisms/AboutMe/Skills"));
+const Quote = lazy(() => import("components/organisms/AboutMe/Quote"));
 export default function AboutMe() {
-  const [data, setData] = useState(null);
+  const about = useSelector(getAbout);
 
   useEffect(() => {
-    axios.get(`${API_URL}/about.json`).then((res) => {
-      setData(res.data);
-    });
-  }, [setData]);
+    window.scroll(0, 0);
+  }, []);
 
   return (
-    <Wrapper hasTitle title={data?.title} hasFooter>
-      <AboutMeCom image={data?.profile} desc={data?.desc} />
-      <WorkExperience data={data?.work_experience} />
-      <Education data={data?.education} />
-      <Skills data={data?.skills} />
-      <Quote data={data?.quote} />
-    </Wrapper>
+    <Suspense fallback={<></>}>
+      <Wrapper hasTitle title={about?.title} hasFooter>
+        <Intro image={about?.profile} desc={about?.desc} />
+        <WorkExperience datas={about?.work_experience} title="Positions" />
+        <Education datas={about?.education} title="Education" />
+        <Skills datas={about?.skills} title="Tech Stack" />
+        <Quote data={about?.quote} />
+      </Wrapper>
+    </Suspense>
   );
 }

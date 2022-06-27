@@ -1,53 +1,62 @@
 {
   "title": "Portfolio",
+  "tech": ["Wordpress", "Yii2", "Reactjs", "Tailwind", "bootstrap"],
   "project": [
     {
       "title": "Tacontech Landing Page",
       "cover": "tacontech.jpg",
       "demo": "https://tacontechdigital.com/",
-      "desc": "Tacontech is website company profile for a it solution"
+      "desc": "Tacontech is website company profile for a it solution",
+      "tech": "Sass, PHP, MySQL, Wordpress"
     },
     {
       "title": "MR-XI Landing Page",
       "cover": "mr-xi.jpg",
       "demo": "https://clone-mr-xi.vercel.app/",
-      "desc": "mr-xi landing page is website company profile for a restaurant"
+      "desc": "mr-xi landing page is website company profile for a restaurant",
+      "tech": "Sass, PHP, MySQL, Wordpress"
     },
     {
       "title": "Sistem E-learning menggunakan ci3",
       "cover": "elearning.jpg",
       "demo": "http://elearning.klikgss.com",
-      "desc": "e-learning system for vocational schools to send and do assignments easily through the system"
+      "desc": "e-learning system for vocational schools to send and do assignments easily through the system",
+      "tech": "PHP, MySQL, Codeignaiter"
     },
     {
-      "title": "Sistem POS khusus koperasi menggunakan yii2",
+      "title": "Sistem POS khusus koperasi",
       "cover": "koperasi.jpg",
       "demo": "http://koperasitni.klikgss.com",
-      "desc": "Point of sale system for cashiers to record sales and purchases in building stores. and savings loan module"
+      "desc": "Point of sale system for cashiers to record sales and purchases in building stores. and savings loan module",
+      "tech": "PHP, MySQL, Yii2"
     },
     {
-      "title": "Sistem Manajemen Angkutan menggunakan yii2",
+      "title": "Sistem Manajemen Angkutan",
       "cover": "angkutan.jpg",
       "demo": null,
-      "desc": "used to manage trucks that are loaded or not, and there is also an accounting system in it."
+      "desc": "used to manage trucks that are loaded or not, and there is also an accounting system in it.",
+      "tech": "PHP, MySQL, Yii2"
     },
     {
-      "title": "Sistem Akuntansi menggunakan yii2",
+      "title": "Sistem Akuntansi menggunakan",
       "cover": "akuntansi.jpg",
       "demo": "http://demo.gss-accounting.com",
-      "desc": "complete accounting system with FIFO method, and there are various modules in it."
+      "desc": "complete accounting system with FIFO method, and there are various modules in it.",
+      "tech": "PHP, MySQL, Yii2"
     },
     {
       "title": "Staycation",
       "cover": "staycation.jpg",
       "demo": "https://dicky54putra.github.io/mern-learning",
-      "desc": "Web booking hotel, villa or apartemen, make with MERN Stack technology"
+      "desc": "Web booking hotel, villa or apartemen, make with MERN Stack technology",
+      "tech": "Javascript, Reactjs, Sass, Bootstrap"
     },
     {
-      "title": "Sistem POS store building with yii2",
+      "title": "Sistem POS store building",
       "cover": "pos-tokobangunan.jpg",
       "demo": "http://tokobangunan.klikgss.com",
-      "desc": "Point of sale system for cashiers to record sales and purchases in building stores"
+      "desc": "Point of sale system for cashiers to record sales and purchases in building stores",
+      "tech": "PHP, MySQL, Yii2"
     }
   ]
 }

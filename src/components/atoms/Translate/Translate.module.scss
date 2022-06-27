@@ -1,0 +1,11 @@
+@use "/src/assets/scss/base/var";
+@use "/src/assets/scss/base/mixin";
+
+.icon {
+  cursor: pointer;
+  color: var.$white;
+
+  @include mixin.mobile {
+    color: var.$black;
+  }
+}

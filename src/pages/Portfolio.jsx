@@ -1,21 +1,25 @@
-import axios from "axios";
-import PortfolioContent from "components/Portfolio/Portfolio";
-import Wrapper from "components/Wrapper/Wrapper";
-import { API_URL } from "helpers/Constant";
-import { useEffect, useState } from "react";
+import { getAbout, getPortfolio } from "helpers/GlobalState/ContentSlice";
+import { useSelector } from "react-redux";
+import { lazy, Suspense, useEffect } from "react";
+
+const Wrapper = lazy(() => import("components/moleculs/Wrapper"));
+const PortfolioContent = lazy(() => import("components/organisms/Portfolio"));
 
 export default function Portfolio() {
-  const [data, setData] = useState(null);
+  const portfolio = useSelector(getPortfolio);
+  const skills = useSelector(getAbout)?.skills;
+
+  const tech = skills?.filter((skill) => skill.all_project === false) ?? [];
 
   useEffect(() => {
-    axios.get(`${API_URL}/portfolio.json`).then((res) => {
-      setData(res.data);
-    });
-  }, [setData]);
+    window.scroll(0, 0);
+  }, []);
 
   return (
-    <Wrapper hasTitle title={data?.title} hasFooter>
-      <PortfolioContent data={data?.project} />
-    </Wrapper>
+    <Suspense fallback={<></>}>
+      <Wrapper hasTitle title={portfolio?.title} hasFooter>
+        <PortfolioContent data={portfolio?.project} tech={tech} />
+      </Wrapper>
+    </Suspense>
   );
 }
