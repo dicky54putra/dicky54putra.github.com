@@ -10,7 +10,7 @@ const Portfolio = () => {
 
   return (
     <div className={styles.container}>
-      <h2 className={styles.title}>Portfolio</h2>
+      <h2 className={styles.title}>{portfolio?.title}</h2>
       {dataList?.length > 0 ? (
         <>
           <div className={styles.portfolio}>
