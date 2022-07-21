@@ -3,11 +3,18 @@
   "tech": ["Wordpress", "Yii2", "Reactjs", "Tailwind", "bootstrap"],
   "project": [
     {
+      "title": "Luxspace BWA",
+      "cover": "luxspace-react.jpg",
+      "demo": "https://luxspace-bwa-dicky54putra.netlify.app/",
+      "desc": "Tacontech is website company profile for a it solution",
+      "tech": "Javascript, React, Tailwindcss"
+    },
+    {
       "title": "Tacontech Landing Page",
       "cover": "tacontech.jpg",
       "demo": "https://tacontechdigital.com/",
       "desc": "Tacontech is website company profile for a it solution",
-      "tech": "Sass, PHP, MySQL, Wordpress"
+      "tech": "Sass, PHP, MySQL, Wordpress, Figma"
     },
     {
       "title": "MR-XI Landing Page",
