@@ -1,0 +1,54 @@
+@use "src/styles/abstracts/typo-mixins" as t;
+@use "src/styles/abstracts/mixins" as m;
+@use "src/styles/abstracts/variables" as v;
+
+%role_placeholder {
+  display: flex;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 16px 30px;
+  mix-blend-mode: difference;
+  color: v.$white;
+  z-index: 2;
+}
+._Wrapper {
+  @extend %role_placeholder;
+  justify-content: center;
+  text-transform: uppercase;
+}
+._WrapperEnd {
+  @extend %role_placeholder;
+  justify-content: flex-end;
+  @include m.tablet {
+    padding: 20px 30px;
+  }
+  @include m.mobile {
+    justify-content: center;
+  }
+
+  ._Title {
+    @include t.role-end;
+    text-transform: uppercase;
+
+    @include m.tablet {
+      font-size: 16px;
+      letter-spacing: 0.2em;
+    }
+    @include m.mobile {
+      font-size: 16px;
+      letter-spacing: 0.2em;
+    }
+  }
+}
+
+._Title {
+  @include t.role;
+  color: v.$white;
+
+  @include m.mobile {
+    font-size: 16px;
+    letter-spacing: 0.2em;
+  }
+}

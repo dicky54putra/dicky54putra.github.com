@@ -3,15 +3,15 @@
   "title": "About Me",
   "role": "a Frontend Developer",
   "profile": "dicky.jpg",
-  "desc": "Hello, my name is Dicky Saputra and I'm from Jepara, Indonesia. I'm a Frontend\nWeb Developer and Now I work as a Freelancer in the field of Frontend Web Developer. I like to learn new things and make my new experiences.\n\nIn the programming world I idolize many developers, for example: Sandhika Galih (web programming unpas), eko (programmer zaman now), samanthaming, frontendjoe, theprogrammingexpert, etc. someday I want to be like them, experts in their fields and share with others.\n\nnow I'm \"emptying my glass and looking for water from many sources\" and these are some of the things I've been enjoying quite a bit recently\n- Find more project as Freelancer\n- Reading article on Medium or Dev.to\n- Bought some online classes about Programming and got it done \n\nLast but not least, stay healthy and keep a safe distance!",
-  "short_desc": "Hello,  My Name is Dicky Saputra and I’m from Jepara, Indonesia.  I’m a Frontend Web Developer and Currently a Frontend Web Developer in Madeindonesia. I like Learning a new Something and making it a new Experience in My Life.  My portfolio can check at https://dicky54putra.github.io",
+  "desc": "Hello, my name is Dicky Saputra. I'm a Frontend Developer that sometimes do the backend, sometime do the devops. but I still a Frontender. Always interested about the new technology. Hope I can share my knowledge as much as possible.",
+  "short_desc": "Hello, my name is Dicky Saputra. I'm a Frontend Developer that sometimes do the backend, sometime do the devops. but I still a Frontender. Always interested about the new technology. Hope I can share my knowledge as much as possible.  My portfolio can check at https://dicky54putra.github.io",
   "work_experience": [
     {
       "position": "Frontend Web Developer",
       "company": "Made Indonesia",
       "startDate": "Juny 2021",
       "endDate": "Now",
-      "jobdesk": "Slicing the design form figma or Adobe XD to web and make responsive view.",
+      "jobdesk": "Slicing the design form figma or Adobe XD to web and make responsive view. [ReactJs, Wordpress, Wass, Webpack, Laravel]",
       "logo": "made-indonesia.jpg"
     },
     {
@@ -19,7 +19,7 @@
       "company": "CV. Garuda Sarana Sejahtera",
       "startDate": "June 2020",
       "endDate": "May 2021",
-      "jobdesk": "Work as a Programmer for CV. Garuda Sarana Sejahtera, I made several projects, including e-learning, accounting, transportation, POS, and programs to control students in schools such as registering new students, payments, etc.",
+      "jobdesk": "Work as a Programmer for CV. Garuda Sarana Sejahtera, I made several projects, including e-learning, accounting, transportation, POS, and programs to control students in schools such as registering new students, payments, etc. [Yii2, Codeignaiter]",
       "logo": "gss.png"
     },
     {
@@ -27,7 +27,7 @@
       "company": "CV. Garuda Sarana Sejahtera",
       "startDate": "January 2019",
       "endDate": "June 2019",
-      "jobdesk": "i help programmers in cv. Garuda sarana sejahtera to build a program. starting from the ui / ux design, solving the problem, and make the program.",
+      "jobdesk": "I help programmers in cv. Garuda sarana sejahtera to build a program. starting from the ui / ux design, solving the problem, and make the program. [Codeignaiter]",
       "logo": "gss.png"
     }
   ],
@@ -70,6 +70,11 @@
     {
       "name": "Bootstrap",
       "image": "https://raw.githubusercontent.com/devicons/devicon/master/icons/bootstrap/bootstrap-plain-wordmark.svg",
+      "all_project": false
+    },
+    {
+      "name": "Jenkins",
+      "image": "https://raw.githubusercontent.com/devicons/devicon/master/icons/jenkins/jenkins-line.svg",
       "all_project": false
     },
     {

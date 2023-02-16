@@ -1,15 +1,10 @@
 {
-	"compilerOptions": {
-		"composite": true,
-		"module": "ESNext",
-		"moduleResolution": "Node",
-		"allowSyntheticDefaultImports": true,
-		"baseUrl": ".",
-		"paths": {
-			"@router/*": ["./src/router/*"],
-			"@types/*": ["./src/types/*"],
-			"@store/*": ["./src/store/*"]
-		}
-	},
-	"include": ["vite.config.ts"]
+  "compilerOptions": {
+    "composite": true,
+    "module": "ESNext",
+    "moduleResolution": "Node",
+    "allowSyntheticDefaultImports": true,
+    "baseUrl": "."
+  },
+  "include": ["vite.config.ts"]
 }

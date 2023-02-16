@@ -1,0 +1,50 @@
+@use "src/styles/abstracts/typo-mixins" as t;
+@use "src/styles/abstracts/variables" as v;
+
+.button {
+  display: inline-block;
+  padding: 4px 16px;
+  border-radius: 0px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  position: relative;
+  @include t.body;
+
+  &:hover {
+    transform: translate(2px, 2px);
+    transition: all 0.2s ease-in-out;
+  }
+
+  &.active {
+    transform: translate(2px, 2px);
+    box-shadow: 0 0 0 v.$black;
+
+    &:hover {
+      transform: translate(0px, 0px);
+      transition: all 0.2s ease-in-out;
+      box-shadow: 2px 2px 0 v.$black;
+    }
+  }
+
+  &.primary {
+    color: v.$black;
+    background-color: v.$white;
+    border: solid 2px v.$black;
+    box-shadow: 2px 2px 0 v.$black;
+
+    &:hover {
+      box-shadow: 0px 0px 0 v.$black;
+    }
+  }
+
+  &.secondary {
+    color: v.$white;
+    background-color: v.$black;
+    border: solid 0px v.$black;
+    box-shadow: 1px 1px 0 v.$white, 3px 3px 0 v.$black;
+
+    &:hover {
+      box-shadow: 0px 0px 0 v.$white;
+    }
+  }
+}

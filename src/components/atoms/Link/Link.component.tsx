@@ -23,7 +23,7 @@ const Link: FC<ILink> = (props) => {
   }
 
   return (
-    <a href={to} className={className} onClick={handleClick}>
+    <a href={to} className={className} onClick={handleClick} {...attr}>
       {children}
     </a>
   );

@@ -1,4 +1,4 @@
 export type TRoutes = {
-	value: string;
-	loader: boolean;
+  value: string;
+  loader: boolean;
 };

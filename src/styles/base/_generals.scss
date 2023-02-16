@@ -1,0 +1,35 @@
+@use "src/styles/abstracts/variables" as v;
+@use "src/styles/abstracts/mixins" as m;
+
+body > div {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+html,
+body {
+  overflow-x: hidden;
+}
+
+.menu-item {
+  @include m.mobile {
+    color: v.$black;
+  }
+}
+
+@mixin text {
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 36px;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: inherit;
+  text-decoration: none;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
