@@ -1,4 +1,5 @@
 import { setContent } from "@store/content/content";
+import { useEffect } from "react";
 import { useDispatch } from "react-redux";
 import useSWR from "swr";
 
@@ -31,9 +32,11 @@ const useGetAllContent = () => {
     about.isLoading ||
     article.isLoading;
 
-  if (!isError) {
-    dispatch(setContent(data));
-  }
+  useEffect(() => {
+    if (!isError) {
+      dispatch(setContent(data));
+    }
+  }, [data]);
 
   return { isLoading, data };
 };

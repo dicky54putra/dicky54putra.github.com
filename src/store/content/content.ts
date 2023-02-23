@@ -13,7 +13,10 @@ export const contentSlice = createSlice({
   initialState,
   reducers: {
     setContent: (state, action) => {
-      state = { ...state, ...action.payload };
+      state.about = action.payload.about;
+      state.config = action.payload.config;
+      state.article = action.payload.article;
+      state.portfolio = action.payload.portfolio;
     },
   },
 });
