@@ -1,0 +1,14 @@
+@use "src/styles/abstracts/typo-mixins"as t;
+@use "src/styles/abstracts/mixins"as m;
+
+.menu-mobile {
+    display: none;
+
+    @include m.mobile {
+        display: flex;
+        align-items: center;
+        @include t.body;
+        cursor: pointer;
+        z-index: 999;
+    }
+}

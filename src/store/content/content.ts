@@ -9,7 +9,7 @@ const initialState: TContent = {
 };
 
 export const contentSlice = createSlice({
-  name: "route",
+  name: "content",
   initialState,
   reducers: {
     setContent: (state, action) => {

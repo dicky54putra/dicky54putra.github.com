@@ -1,0 +1,39 @@
+@use "src/styles/abstracts/typo-mixins"as t;
+@use "src/styles/abstracts/variables"as v;
+@use "src/styles/abstracts/mixins"as m;
+
+.side-menu {
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    top: auto;
+    bottom: 0;
+    left: 0;
+    transform: rotate(-90deg) translate(200px, -116px);
+    mix-blend-mode: difference;
+    color: v.$white;
+    z-index: 999;
+}
+
+.menu-items {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 20px;
+    margin-right: 0;
+    transform: translateY(-20px);
+
+    @include m.mobile {
+        transform: translateY(-36px);
+    }
+}
+
+.menu-item {
+    @include t.menu;
+    text-transform: uppercase;
+    color: inherit;
+    position: relative;
+    text-decoration: none;
+    cursor: pointer;
+    white-space: nowrap;
+}

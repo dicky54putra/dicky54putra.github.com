@@ -1,0 +1,59 @@
+@use "src/styles/abstracts/typo-mixins"as t;
+@use "src/styles/abstracts/mixins"as m;
+
+@mixin container {
+    .container {
+        padding-inline: 100px;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        margin-block: 60px;
+        justify-content: space-between;
+        max-width: 1200px;
+        width: 100%;
+        margin-inline: auto;
+        transition: all 1s ease-in-out;
+        animation: load 1s normal;
+
+        @include m.tablet {
+            padding-inline: 72px 30px;
+            gap: 24px;
+        }
+
+        @include m.mobile {
+            padding-inline: 42px 16px;
+            gap: 16px;
+        }
+
+        @include m.desktop {
+            padding-block: 40px;
+        }
+
+        @content;
+    }
+
+    @keyframes load {
+        0% {
+            transform: translateY(-50px);
+            opacity: 0;
+        }
+
+        100% {
+            transform: translateY(0);
+            opacity: 1;
+        }
+    }
+}
+
+@mixin title {
+    .title {
+        @include t.title;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        align-self: center;
+
+        @include m.desktop {
+            font-size: 32px;
+        }
+    }
+}

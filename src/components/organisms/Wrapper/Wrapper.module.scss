@@ -1,0 +1,11 @@
+@use "src/styles/abstracts/mixins"as m;
+
+.main {
+    position: relative;
+    display: block;
+    margin-top: 110px;
+
+    @include m.mobile {
+        margin-top: 65px;
+    }
+}

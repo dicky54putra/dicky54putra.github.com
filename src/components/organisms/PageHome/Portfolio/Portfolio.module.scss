@@ -1,0 +1,23 @@
+@use "../PageHome.scss";
+@use "src/styles/abstracts/typo-mixins"as t;
+
+@include PageHome.container {
+    @include PageHome.title;
+
+    .portfolio {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        max-width: 800px;
+        margin-inline: auto;
+    }
+
+    .button {
+        width: fit-content;
+        align-self: center;
+    }
+
+    .datanotfound {
+        @include t.heading-article;
+    }
+}

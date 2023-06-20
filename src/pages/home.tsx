@@ -1,12 +1,19 @@
-import Link from "@components/atoms/Link";
-import Wrapper from "@components/organisms/Wrapper";
+import { lazy, Suspense, useEffect } from "react";
+
+const Wrapper = lazy(() => import("@components/organisms/Wrapper"));
+const PageHome = lazy(() => import("@components/organisms/PageHome"));
 
 const Home = () => {
+  useEffect(() => {
+    window.scroll(0, 0);
+  }, []);
+
   return (
-    <Wrapper>
-      <Link to="/about-me">about</Link>
-      <Link to="/about-me">about</Link>
-    </Wrapper>
+    <Suspense fallback={<></>}>
+      <Wrapper hasFooter>
+        <PageHome />
+      </Wrapper>
+    </Suspense>
   );
 };
 

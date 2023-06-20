@@ -1,0 +1,78 @@
+@use "src/styles/abstracts/typo-mixins"as t;
+@use "src/styles/abstracts/variables"as v;
+@use "src/styles/abstracts/mixins"as m;
+
+.card {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+
+    @include m.mobile {
+        gap: 15px;
+        flex-direction: column;
+    }
+}
+
+.c-end {
+    margin-left: auto;
+}
+
+.c-start {
+    margin-right: auto;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+}
+
+.img {
+    width: 282px;
+    height: 146px;
+    background-color: v.$black;
+    border: 2px solid v.$black;
+    position: relative;
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: top;
+    }
+
+    @include m.mobile {
+        max-width: 282px;
+        width: 100%;
+    }
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: -12px;
+        left: -12px;
+        width: 100%;
+        height: 100%;
+        border: solid 2px v.$black;
+        z-index: -1;
+    }
+}
+
+.title {
+    @include t.heading-article;
+    text-decoration: none;
+    color: v.$black;
+    text-transform: uppercase;
+}
+
+.tag {
+    @include t.tag-article;
+    margin-bottom: 15px;
+}
+
+.attr {
+    @include t.body;
+
+    span {
+        font-weight: 600;
+    }
+}

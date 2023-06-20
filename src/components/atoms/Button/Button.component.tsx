@@ -20,14 +20,15 @@ const Button: FC<TButton> = (props) => {
     s.button,
     isActive ? s.secondary : null,
     s[variant],
-    className,
+    className
   );
 
   return !isLink ? (
     <button
       type="button"
       className={cls}
-      {...(attr as ButtonHTMLAttributes<HTMLButtonElement>)}>
+      {...(attr as ButtonHTMLAttributes<HTMLButtonElement>)}
+    >
       {children}
     </button>
   ) : (
@@ -35,7 +36,8 @@ const Button: FC<TButton> = (props) => {
       to={to}
       isAnchor={isAnchor}
       className={cls}
-      {...(attr as AnchorHTMLAttributes<HTMLAnchorElement>)}>
+      {...(attr as AnchorHTMLAttributes<HTMLAnchorElement>)}
+    >
       {children}
     </Link>
   );

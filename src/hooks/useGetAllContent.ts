@@ -14,7 +14,7 @@ const useGetAllContent = () => {
   const article = useSWR(DEV_TO_URL, fetcher);
   const config = useSWR(`${BASE_URL}config.json`, fetcher);
   const portfolio = useSWR(`${BASE_URL}portfolio.json`, fetcher);
-  const about = useSWR(`${BASE_URL}portfolio.json`, fetcher);
+  const about = useSWR(`${BASE_URL}about.json`, fetcher);
 
   const data = {
     portfolio: portfolio.data,

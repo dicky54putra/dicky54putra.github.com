@@ -1,6 +1,6 @@
 import { TDevToArticle } from "./content.types.devTo";
 
-interface IContentPortfolioProject {
+export interface IContentPortfolioProject {
   title: string;
   cover: string;
   demo: string;
@@ -24,7 +24,7 @@ interface IContentAboutEducation {
   startDate: string;
   endDate: string;
 }
-interface IContentAboutSkills {
+export interface IContentAboutSkills {
   name: string;
   image: string;
   all_project: boolean;
@@ -42,6 +42,11 @@ export type TContent = {
     role: string;
     profile: string;
     desc: string;
+    quote: {
+      email: string;
+      link: string;
+      text: string;
+    };
     short_desc: string;
     work_experience: IContentAboutWorkExperience[];
     education: IContentAboutEducation[];

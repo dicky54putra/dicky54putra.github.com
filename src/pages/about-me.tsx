@@ -1,16 +1,17 @@
-import Button from "@components/atoms/Button";
-import Link from "@components/atoms/Link";
 import Wrapper from "@components/organisms/Wrapper";
-import useStore from "@hooks/useStore";
+import { Suspense, useEffect } from "react";
 
 const AboutMe = () => {
-  const store = useStore();
-  console.log(store.content);
+  useEffect(() => {
+    window.scroll(0, 0);
+  }, []);
   return (
-    <Wrapper>
-      <Link to="/">Homes</Link>
-      <Button>asdf</Button>
-    </Wrapper>
+    <Suspense fallback={<></>}>
+      <Wrapper hasFooter>
+        {/* <PageHome /> */}
+        PageArticle
+      </Wrapper>
+    </Suspense>
   );
 };
 

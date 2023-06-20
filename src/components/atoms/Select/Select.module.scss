@@ -1,0 +1,13 @@
+@use "src/styles/abstracts/variables"as v;
+
+.select {
+    padding: 8px 16px;
+    border: solid 1px v.$black;
+    width: 100%;
+    background-color: v.$white;
+    box-shadow: 2px 2px 0 v.$black;
+
+    &:focus-visible {
+        outline: none;
+    }
+}
