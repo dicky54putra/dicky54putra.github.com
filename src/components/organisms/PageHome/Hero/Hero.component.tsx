@@ -11,7 +11,7 @@ const Hero = () => {
       <div className={s.head}>
         <span className={s.iam}>I am</span>
         <div className={s.wrapperNameRole}>
-          <h1 className={s.dicky}>{about?.name}</h1>
+          <h2 className={s.dicky}>{about?.name}</h2>
           <h2 className={s.role}>{about?.role}</h2>
         </div>
       </div>
@@ -25,8 +25,7 @@ const Hero = () => {
           isLink
           to={about?.quote?.link}
           target={"_blank"}
-          rel="noopener noreferrer"
-        >
+          rel="noopener noreferrer">
           Email Me
         </Button>
         <Button variant="primary">Download CV</Button>

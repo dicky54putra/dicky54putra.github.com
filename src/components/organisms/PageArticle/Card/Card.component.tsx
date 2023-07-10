@@ -7,7 +7,14 @@ const Card: FC<TCard> = (props) => {
   return (
     <div className={[s.card, isRight ? s["c-end"] : s["c-start"]].join(" ")}>
       <div className={s.img}>
-        <img src={imgUrl} alt="" height={80} width={80} />
+        <img
+          src={imgUrl}
+          loading="lazy"
+          alt={title}
+          title={title}
+          height={80}
+          width={80}
+        />
       </div>
       <div className={s.content}>
         <a href={url} rel="noopener noreferrer" target="_blank">
