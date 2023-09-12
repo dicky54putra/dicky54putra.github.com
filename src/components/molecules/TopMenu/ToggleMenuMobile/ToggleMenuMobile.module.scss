@@ -1,7 +1,7 @@
 @use "src/styles/abstracts/typo-mixins"as t;
 @use "src/styles/abstracts/mixins"as m;
 
-.menu-mobile {
+.MenuMobile {
     display: none;
 
     @include m.mobile {

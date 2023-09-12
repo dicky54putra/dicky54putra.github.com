@@ -9,7 +9,7 @@ const Button: FC<TButton> = (props) => {
     children,
     isActive = false,
     isLink = false,
-    variant = "primary",
+    variant = "Primary",
     isAnchor = false,
     to = "/",
     className,
@@ -17,8 +17,8 @@ const Button: FC<TButton> = (props) => {
   } = props;
 
   const cls = clsx(
-    s.button,
-    isActive ? s.secondary : null,
+    s.Button,
+    isActive ? s.Secondary : null,
     s[variant],
     className
   );

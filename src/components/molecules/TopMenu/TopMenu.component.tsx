@@ -13,24 +13,24 @@ const TopMenu: FC<TTopMenu> = (props) => {
   const route = store.route.value;
 
   const isActive = (link: string) => {
-    return link === route ? s.active : "";
+    return link === route ? s.Active : "";
   };
 
   return (
-    <div className={s["top-menu"]} id="wrapper-top-menu">
-      <div className={s.title}>
-        <Link to="/" className={s.title}>
+    <div className={s.TopMenu} id="wrapper-top-menu">
+      <div className={s.Title}>
+        <Link to="/" className={s.Title}>
           {title}
         </Link>
       </div>
       <ToggleMenuMobile open={open} close={close} />
-      <div className={s["menu-items"]} id="menu">
+      <div className={s.MenuItems} id="menu">
         {datas?.map((data, index) => {
           return (
             <Link
               key={`menu-item-${index}`}
               to={data.url}
-              className={[s["menu-item"], "menu-item", isActive(data.url)].join(
+              className={[s.MenuItem, "menu-item", isActive(data.url)].join(
                 " "
               )}
             >
@@ -40,7 +40,7 @@ const TopMenu: FC<TTopMenu> = (props) => {
         })}
         {isLangDark && (
           <>
-            <span className={s.divider}></span>
+            <span className={s.Divider}></span>
             <Translate />
           </>
         )}

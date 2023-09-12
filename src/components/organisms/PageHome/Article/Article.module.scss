@@ -4,7 +4,7 @@
 @include PageHome.container {
     @include PageHome.title;
 
-    .portfolio {
+    .Portfolio {
         display: flex;
         flex-direction: column;
         gap: 30px;
@@ -12,12 +12,12 @@
         margin-inline: auto;
     }
 
-    .button {
+    .Button {
         width: fit-content;
         align-self: center;
     }
 
-    .datanotfound {
+    .DataNotFound {
         @include t.heading-article;
     }
 }

@@ -2,7 +2,7 @@
 @use "src/styles/abstracts/variables"as v;
 @use "src/styles/abstracts/mixins"as m;
 
-.card {
+.Card {
     display: flex;
     gap: 30px;
     align-items: center;
@@ -13,20 +13,20 @@
     }
 }
 
-.c-end {
+.C__End {
     margin-left: auto;
 }
 
-.c-start {
+.C__Start {
     margin-right: auto;
 }
 
-.content {
+.Content {
     display: flex;
     flex-direction: column;
 }
 
-.img {
+.Img {
     width: 282px;
     height: 146px;
     background-color: v.$black;
@@ -57,19 +57,19 @@
     }
 }
 
-.title {
+.Title {
     @include t.heading-article;
     text-decoration: none;
     color: v.$black;
     text-transform: uppercase;
 }
 
-.tag {
+.Tag {
     @include t.tag-article;
     margin-bottom: 15px;
 }
 
-.attr {
+.Attr {
     @include t.body;
 
     span {

@@ -1,6 +1,6 @@
-@use "src/styles/abstracts/typo-mixins" as t;
-@use "src/styles/abstracts/mixins" as m;
-@use "src/styles/abstracts/variables" as v;
+@use "src/styles/abstracts/typo-mixins"as t;
+@use "src/styles/abstracts/mixins"as m;
+@use "src/styles/abstracts/variables"as v;
 
 %role_placeholder {
   display: flex;
@@ -13,22 +13,26 @@
   color: v.$white;
   z-index: 2;
 }
-._Wrapper {
+
+.Wrapper {
   @extend %role_placeholder;
   justify-content: center;
   text-transform: uppercase;
 }
-._WrapperEnd {
+
+.WrapperEnd {
   @extend %role_placeholder;
   justify-content: flex-end;
+
   @include m.tablet {
     padding: 20px 30px;
   }
+
   @include m.mobile {
     justify-content: center;
   }
 
-  ._Title {
+  .Title {
     @include t.role-end;
     text-transform: uppercase;
 
@@ -36,6 +40,7 @@
       font-size: 16px;
       letter-spacing: 0.2em;
     }
+
     @include m.mobile {
       font-size: 16px;
       letter-spacing: 0.2em;
@@ -43,7 +48,7 @@
   }
 }
 
-._Title {
+.Title {
   @include t.role;
   color: v.$white;
 

@@ -4,7 +4,7 @@
 @use "../PageHome.scss";
 
 @include PageHome.container {
-    .head {
+    .Head {
         display: flex;
         flex-direction: row;
         align-items: center;
@@ -13,7 +13,7 @@
 
         position: relative;
 
-        .iam {
+        .Iam {
             font-family: "Poppins";
             font-style: normal;
             font-weight: 600;
@@ -40,7 +40,7 @@
             }
         }
 
-        .wrapperNameRole {
+        .WrapperNameRole {
             transform: translateX(-48px);
 
             @include m.mobile {
@@ -48,14 +48,14 @@
             }
         }
 
-        .dicky {
+        .Dicky {
             @include t.title;
             font-size: 32px;
             line-height: 1;
             letter-spacing: 0;
         }
 
-        .role {
+        .Role {
             @include t.heading-page;
             line-height: 1;
             letter-spacing: 0;
@@ -67,13 +67,13 @@
         }
     }
 
-    .body {
+    .Body {
         p {
             @include t.body;
         }
     }
 
-    .cta {
+    .Cta {
         display: flex;
         flex-wrap: wrap;
         gap: 16px;

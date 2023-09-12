@@ -1,7 +1,8 @@
 import Button from "@components/atoms/Button";
 import Select from "@components/atoms/Select";
 import useStore from "@hooks/useStore";
-import { FC, useState } from "react";
+import { changePortfolioFilterValue } from "@store/portfolioFilter/portfolioFilter";
+import { FC, useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
 import Card from "./Card/Card.component";
 import s from "./PagePortfolio.module.scss";
@@ -13,18 +14,45 @@ const PagePortfolio: FC<TPagePortfolio> = (props) => {
 
   const store = useStore();
   const dispatch = useDispatch();
-  const filter = <store className="content"></store>;
+  const filter = store.portfolioFilter.value;
+
+  const handleFilter = (name: string) => (e: any) => {
+    const newName = name === "select-version" ? e.target.value : name;
+    let newData;
+    if (newName.toLowerCase() === filter?.toLowerCase()) {
+      newData = data;
+      dispatch(changePortfolioFilterValue(null));
+    } else {
+      newData = data?.filter((item) => {
+        return item.tech.toLowerCase().match(newName.toLowerCase());
+      });
+      dispatch(changePortfolioFilterValue(newName.toLowerCase()));
+    }
+
+    setDataList(newData);
+  };
+
+  useEffect(() => {
+    if (filter === null) {
+      setDataList(data);
+    } else {
+      const newData = data?.filter((item) => {
+        return item.tech.toLowerCase().match(filter.toLowerCase());
+      });
+      setDataList(newData);
+    }
+  }, [data, filter]);
 
   return (
     <>
-      <div className={[s.wrapper, s.select].join(" ")}>
+      <div id="page-portfolio" className={[s.Wrapper, s.Select].join(" ")}>
         <Select
           lists={tech}
-          value={filter}
+          value={filter ?? ""}
           onChange={handleFilter("select-version")}
         />
       </div>
-      <div className={[s.wrapper, s.button].join(" ")}>
+      <div className={[s.Wrapper, s.Button].join(" ")}>
         {tech?.map((item, i) => {
           return (
             <Button
@@ -37,25 +65,29 @@ const PagePortfolio: FC<TPagePortfolio> = (props) => {
           );
         })}
       </div>
-      {dataList?.length > 0 ? (
-        <div className={s.portfolio}>
-          {dataList?.map((item, i) => {
-            const models = i % 3;
-            return (
-              <Card
-                key={i}
-                models={models}
-                image={item.cover}
-                demo={item.demo}
-                desc={item.desc}
-                title={item.title}
-                tech={item.tech}
-              />
-            );
-          })}
-        </div>
+      {dataList ? (
+        dataList.length > 0 ? (
+          <div className={s.Portfolio}>
+            {dataList?.map((item, i) => {
+              const models = i % 3;
+              return (
+                <Card
+                  key={i}
+                  models={models}
+                  image={item.cover}
+                  demo={item.demo}
+                  desc={item.desc}
+                  title={item.title}
+                  tech={item.tech}
+                />
+              );
+            })}
+          </div>
+        ) : (
+          <h2 className={s.DataNotFound}>Data not found!</h2>
+        )
       ) : (
-        <h2 className={s.datanotfound}>Data not found!</h2>
+        <h2 className={s.DataNotFound}>Data not found!</h2>
       )}
     </>
   );

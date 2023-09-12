@@ -1,7 +1,7 @@
-@use "src/styles/abstracts/typo-mixins" as t;
-@use "src/styles/abstracts/variables" as v;
+@use "src/styles/abstracts/typo-mixins"as t;
+@use "src/styles/abstracts/variables"as v;
 
-.button {
+.Button {
   display: inline-block;
   padding: 4px 16px;
   border-radius: 0px;
@@ -15,7 +15,7 @@
     transition: all 0.2s ease-in-out;
   }
 
-  &.active {
+  &.Active {
     transform: translate(2px, 2px);
     box-shadow: 0 0 0 v.$black;
 
@@ -26,7 +26,7 @@
     }
   }
 
-  &.primary {
+  &.Primary {
     color: v.$black;
     background-color: v.$white;
     border: solid 2px v.$black;
@@ -37,7 +37,7 @@
     }
   }
 
-  &.secondary {
+  &.Secondary {
     color: v.$white;
     background-color: v.$black;
     border: solid 0px v.$black;

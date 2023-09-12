@@ -13,8 +13,8 @@ const Card: FC<TCard> = (props) => {
   }
 
   return (
-    <div className={[s.card, styleType].join(" ")}>
-      <div className={s.img}>
+    <div className={[s.Card, styleType].join(" ")}>
+      <div className={s.Img}>
         <img
           src={`${RAW_IMAGES}${image}`}
           loading="lazy"
@@ -24,16 +24,16 @@ const Card: FC<TCard> = (props) => {
           width={80}
         />
       </div>
-      <div className={s.content}>
+      <div className={s.Content}>
         {demo ? (
           <a href={demo} target="_blank" rel="noopener noreferrer">
-            <h2 className={s.title}>{title}</h2>
+            <h2 className={s.Title}>{title}</h2>
           </a>
         ) : (
-          <h2 className={s.title}>{title}</h2>
+          <h2 className={s.Title}>{title}</h2>
         )}
-        <p className={s.desc}>{desc}</p>
-        <span className={s.tech}>{tech}</span>
+        <p className={s.Desc}>{desc}</p>
+        <span className={s.Tech}>{tech}</span>
       </div>
     </div>
   );

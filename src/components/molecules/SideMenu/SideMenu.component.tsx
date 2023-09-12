@@ -6,15 +6,15 @@ import { TSideMenu } from "./SideMenu.types";
 const SideMenu: FC<TSideMenu> = (props) => {
   const { datas } = props;
   return (
-    <div className={s["side-menu"]}>
-      <div className={s["menu-items"]}>
+    <div className={s.SideMenu}>
+      <div className={s.MenuItems}>
         {datas?.map((data, index) => {
           return (
             <Link
               isAnchor
               key={`menu-item-${index}`}
               to={data.url}
-              className={[s["menu-item"]].join(" ")}
+              className={[s.MenuItem].join(" ")}
               target="_blank"
               rel="noopener noreferrer"
             >

@@ -1,0 +1,27 @@
+@use "src/styles/abstracts/typo-mixins"as t;
+@use "src/styles/abstracts/variables"as v;
+@use "src/styles/abstracts/mixins"as m;
+
+.Wrapper {
+    max-width: 600px;
+    width: 100%;
+    margin-inline: auto;
+    margin-bottom: 60px;
+
+    @include m.mobile {
+        padding-right: 20px;
+        padding-left: 50px;
+    }
+
+    p {
+        margin-block: 24px;
+        @include t.body;
+        font-weight: 500;
+        color: v.$black;
+
+        a {
+            color: inherit;
+            border-bottom: solid 1px v.$black;
+        }
+    }
+}

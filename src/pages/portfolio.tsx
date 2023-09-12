@@ -1,3 +1,4 @@
+import PagePortfolio from "@components/organisms/PagePortfolio";
 import Wrapper from "@components/organisms/Wrapper/Wrapper.component";
 import useStore from "@hooks/useStore";
 import { Suspense, useEffect } from "react";
@@ -16,8 +17,7 @@ const Portfolio = () => {
   return (
     <Suspense fallback={<></>}>
       <Wrapper hasTitle title={portfolio?.title} hasFooter>
-        {/* <PortfolioContent data={portfolio?.project} tech={tech} /> */}
-        Portfolio
+        <PagePortfolio data={portfolio?.project} tech={tech} />
       </Wrapper>
     </Suspense>
   );

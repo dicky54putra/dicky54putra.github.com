@@ -7,8 +7,8 @@ interface ITitle {
 
 const Title: FC<ITitle> = ({ text }) => {
   return (
-    <div className={s._Wrapper}>
-      <p className={s._Text}>{text}</p>
+    <div className={s.Wrapper}>
+      <p className={s.Text}>{text}</p>
     </div>
   );
 };

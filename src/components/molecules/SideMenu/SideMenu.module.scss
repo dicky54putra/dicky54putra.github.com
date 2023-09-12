@@ -2,7 +2,7 @@
 @use "src/styles/abstracts/variables"as v;
 @use "src/styles/abstracts/mixins"as m;
 
-.side-menu {
+.SideMenu {
     display: flex;
     justify-content: space-between;
     position: fixed;
@@ -15,7 +15,7 @@
     z-index: 999;
 }
 
-.menu-items {
+.MenuItems {
     display: flex;
     justify-content: flex-end;
     align-items: center;
@@ -28,7 +28,7 @@
     }
 }
 
-.menu-item {
+.MenuItem {
     @include t.menu;
     text-transform: uppercase;
     color: inherit;

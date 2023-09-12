@@ -54,7 +54,7 @@ const Wrapper: FC<Iwrapper> = (props) => {
             text={`${config?.role}`}
             isEndAlign={isCenterRole ? false : true}
           />
-          <main className={s.main}>
+          <main className={s.Main}>
             {hasTitle && <Title text={title ?? ""} />}
             {children}
           </main>

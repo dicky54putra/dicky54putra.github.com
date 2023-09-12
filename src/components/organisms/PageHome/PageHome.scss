@@ -2,7 +2,7 @@
 @use "src/styles/abstracts/mixins"as m;
 
 @mixin container {
-    .container {
+    .Container {
         padding-inline: 100px;
         display: flex;
         flex-direction: column;
@@ -46,7 +46,7 @@
 }
 
 @mixin title {
-    .title {
+    .Title {
         @include t.title;
         text-transform: uppercase;
         letter-spacing: 0.05em;

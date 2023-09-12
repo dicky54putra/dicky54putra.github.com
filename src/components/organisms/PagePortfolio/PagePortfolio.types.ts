@@ -4,6 +4,6 @@ import {
 } from "@store/content/content.types";
 
 export type TPagePortfolio = {
-  data: IContentPortfolioProject[];
+  data?: IContentPortfolioProject[];
   tech: IContentAboutSkills[];
 };

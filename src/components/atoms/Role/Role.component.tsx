@@ -8,8 +8,8 @@ interface IRole {
 
 const Role: FC<IRole> = ({ isEndAlign, text }) => {
   return (
-    <div className={isEndAlign ? s._WrapperEnd : s._Wrapper}>
-      <span className={s._Title}>{text}</span>
+    <div className={isEndAlign ? s.WrapperEnd : s.Wrapper}>
+      <span className={s.Title}>{text}</span>
     </div>
   );
 };

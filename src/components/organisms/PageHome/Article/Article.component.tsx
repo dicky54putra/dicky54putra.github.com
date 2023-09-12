@@ -9,11 +9,11 @@ const Article = () => {
   const dataList = article?.slice(0, 3);
 
   return (
-    <div className={s.container}>
-      <h2 className={s.title}>Article</h2>
+    <div className={s.Container}>
+      <h2 className={s.Title}>Article</h2>
       {dataList?.length && dataList.length > 0 ? (
         <>
-          <div className={s.portfolio}>
+          <div className={s.Portfolio}>
             {dataList?.map((item, i) => {
               const isRight = i % 2 ? true : false;
               return (
@@ -30,12 +30,12 @@ const Article = () => {
               );
             })}
           </div>
-          <Button isLink to="/article" className={s.button}>
+          <Button isLink to="/article" className={s.Button}>
             See all Article
           </Button>
         </>
       ) : (
-        <h2 className={s.datanotfound}>Data not found!</h2>
+        <h2 className={s.DataNotFound}>Data not found!</h2>
       )}
     </div>
   );

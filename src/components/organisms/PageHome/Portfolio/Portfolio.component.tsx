@@ -9,11 +9,11 @@ const Portfolio = () => {
   const dataList = portfolio?.project.slice(0, 3);
 
   return (
-    <div className={s.container}>
-      <h2 className={s.title}>{portfolio?.title}</h2>
+    <div className={s.Container}>
+      <h2 className={s.Title}>{portfolio?.title}</h2>
       {dataList?.length && dataList.length > 0 ? (
         <>
-          <div className={s.portfolio}>
+          <div className={s.Portfolio}>
             {dataList?.map((item, i) => {
               const models = i % 2 ? 2 : 0;
               return (
@@ -29,12 +29,12 @@ const Portfolio = () => {
               );
             })}
           </div>
-          <Button isLink to="/portfolio" className={s.button}>
+          <Button isLink to="/portfolio" className={s.Button}>
             See all Project
           </Button>
         </>
       ) : (
-        <h2 className={s.datanotfound}>Data not found!</h2>
+        <h2 className={s.DataNotFound}>Data not found!</h2>
       )}
     </div>
   );

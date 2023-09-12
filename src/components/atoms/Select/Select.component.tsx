@@ -13,7 +13,7 @@ const Select: FC<TSelect> = (props) => {
   return (
     <select
       value={newValue.toLowerCase()}
-      className={s.select}
+      className={s.Select}
       onChange={handleChange}
     >
       <option value="">Tech Filter</option>

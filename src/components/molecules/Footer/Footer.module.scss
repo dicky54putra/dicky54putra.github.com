@@ -2,7 +2,7 @@
 @use "src/styles/abstracts/variables"as v;
 @use "src/styles/abstracts/mixins"as m;
 
-.wrapper {
+.Wrapper {
     display: flex;
     align-items: center;
     justify-content: flex-start;
@@ -16,7 +16,7 @@
     }
 }
 
-.footer {
+.Footer {
     margin: 0;
     color: v.$white;
     @include t.body;

@@ -8,7 +8,7 @@ export interface IContentPortfolioProject {
   tech: string;
 }
 
-interface IContentAboutWorkExperience {
+export interface IContentAboutWorkExperience {
   position: string;
   company: string;
   startDate: string;
@@ -16,7 +16,7 @@ interface IContentAboutWorkExperience {
   jobdesk: string;
   logo: string;
 }
-interface IContentAboutEducation {
+export interface IContentAboutEducation {
   logo: string;
   name: string;
   major: string;

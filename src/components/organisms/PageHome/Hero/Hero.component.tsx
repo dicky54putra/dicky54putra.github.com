@@ -7,28 +7,29 @@ const Hero = () => {
   const about = store.content.about;
 
   return (
-    <div className={s.container}>
-      <div className={s.head}>
-        <span className={s.iam}>I am</span>
-        <div className={s.wrapperNameRole}>
-          <h2 className={s.dicky}>{about?.name}</h2>
-          <h2 className={s.role}>{about?.role}</h2>
+    <div className={s.Container}>
+      <div className={s.Head}>
+        <span className={s.Iam}>I am</span>
+        <div className={s.WrapperNameRole}>
+          <h2 className={s.Dicky}>{about?.name}</h2>
+          <h2 className={s.Role}>{about?.role}</h2>
         </div>
       </div>
-      <div className={s.body}>
+      <div className={s.Body}>
         <p>{about?.short_desc}</p>
       </div>
-      <div className={s.cta}>
+      <div className={s.Cta}>
         <Button
           isAnchor
-          variant="secondary"
+          variant="Secondary"
           isLink
           to={about?.quote?.link}
           target={"_blank"}
-          rel="noopener noreferrer">
+          rel="noopener noreferrer"
+        >
           Email Me
         </Button>
-        <Button variant="primary">Download CV</Button>
+        <Button variant="Primary">Download CV</Button>
       </div>
     </div>
   );

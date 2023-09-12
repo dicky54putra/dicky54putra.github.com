@@ -1,0 +1,62 @@
+@use "src/styles/abstracts/typo-mixins"as t;
+@use "src/styles/abstracts/mixins"as m;
+@use "src/styles/abstracts/variables"as v;
+
+.Wrapper {
+    width: calc(100% - 12px);
+    background: v.$white;
+    border: 2px solid v.$black;
+    box-sizing: border-box;
+    padding: 15px;
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    box-shadow: 12px 12px 0 v.$black;
+
+    @include m.mobile {
+        flex-direction: column;
+    }
+
+    .Img {
+        width: 100%;
+        max-width: 115px;
+        height: 115px;
+        border: solid 2px v.$black;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
+        @include m.mobile {
+            flex-direction: column;
+            max-width: 100%;
+        }
+    }
+
+    .Content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 4px;
+
+        .Title {
+            @include t.body;
+            text-transform: uppercase;
+            font-weight: 600;
+        }
+
+        .Desc {
+            @include t.tag-article;
+        }
+
+        .Attr {
+            @include t.tag-article;
+
+            span {
+                font-weight: 500;
+            }
+        }
+    }
+}

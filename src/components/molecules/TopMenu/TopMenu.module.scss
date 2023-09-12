@@ -2,7 +2,7 @@
 @use "src/styles/abstracts/variables"as v;
 @use "src/styles/abstracts/mixins"as m;
 
-.top-menu {
+.TopMenu {
     display: flex;
     justify-content: space-between;
     z-index: 999;
@@ -25,7 +25,7 @@
     }
 }
 
-.title {
+.Title {
     @include t.title;
     text-transform: uppercase;
     letter-spacing: 0.2em;
@@ -37,7 +37,7 @@
     }
 }
 
-.menu-items {
+.MenuItems {
     display: flex;
     justify-content: flex-end;
     align-items: center;
@@ -59,14 +59,14 @@
     }
 }
 
-.menu-item {
+.MenuItem {
     @include t.menu;
     text-transform: uppercase;
     color: inherit;
     text-decoration: none;
     position: relative;
 
-    &.active {
+    &.Active {
         &::after {
             content: "";
             position: absolute;
@@ -81,7 +81,7 @@
     }
 }
 
-.divider {
+.Divider {
     width: 2px;
     height: 100%;
     background-color: v.$white;

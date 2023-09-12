@@ -30,11 +30,7 @@ const ToggleMenuMobile: FC<TToggleMenuMobile> = (props) => {
   };
 
   return (
-    <span
-      id="toggleMenuMobile"
-      className={s["menu-mobile"]}
-      onClick={handleClick}
-    >
+    <span id="toggleMenuMobile" className={s.MenuMobile} onClick={handleClick}>
       {State ? close : open}
     </span>
   );
