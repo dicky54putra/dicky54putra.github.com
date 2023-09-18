@@ -3,13 +3,10 @@
 
 @include PageHome.container {
     @include PageHome.title;
-
-    .Portfolio {
+    .Article {
         display: flex;
         flex-direction: column;
         gap: 30px;
-        max-width: 800px;
-        margin-inline: auto;
     }
 
     .Button {

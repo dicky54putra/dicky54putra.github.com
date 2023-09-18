@@ -3,7 +3,7 @@
 .Article {
     padding-inline: 100px;
     display: flex;
-    flex-direction: column;
+    flex-wrap:wrap ;
     gap: 30px;
     margin-block: 60px;
     justify-content: space-between;

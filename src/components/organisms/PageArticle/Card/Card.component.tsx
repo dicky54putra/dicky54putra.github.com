@@ -3,9 +3,24 @@ import s from "./Card.module.scss";
 import { TCard } from "./Card.types";
 
 const Card: FC<TCard> = (props) => {
-  const { isRight, imgUrl, url, title, published, minutes, tag } = props;
+  const {
+    isRight,
+    isGrid = false,
+    imgUrl,
+    url,
+    title,
+    published,
+    minutes,
+    tag,
+  } = props;
   return (
-    <div className={[s.Card, isRight ? s.C__End : s.C__Start].join(" ")}>
+    <div
+      className={[
+        s.Card,
+        isRight ? s.C__End : s.C__Start,
+        isGrid ? s["Card--Grid"] : "",
+      ].join(" ")}
+    >
       <div className={s.Img}>
         <img
           src={imgUrl}

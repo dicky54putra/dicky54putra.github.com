@@ -1,92 +1,104 @@
-@use "src/styles/abstracts/typo-mixins"as t;
-@use "src/styles/abstracts/variables"as v;
-@use "src/styles/abstracts/mixins"as m;
+@use "src/styles/abstracts/typo-mixins" as t;
+@use "src/styles/abstracts/variables" as v;
+@use "src/styles/abstracts/mixins" as m;
 
 .TopMenu {
-    display: flex;
-    justify-content: space-between;
-    z-index: 999;
-    padding: 32px 40px;
-    color: inherit;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    mix-blend-mode: difference;
-    color: v.$white;
+  display: flex;
+  justify-content: space-between;
+  z-index: 999;
+  padding: 32px 40px;
+  color: inherit;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  mix-blend-mode: difference;
+  color: v.$white;
 
-    @supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
-        backdrop-filter: blur(2px);
-        background-color: rgba(255, 255, 255, 0.01);
-    }
+  @supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
+    backdrop-filter: blur(2px);
+    background-color: rgba(255, 255, 255, 0.01);
+  }
 
-    @include m.mobile {
-        padding: 20px;
-    }
+  @include m.mobile {
+    padding: 20px;
+  }
 }
 
 .Title {
-    @include t.title;
-    text-transform: uppercase;
-    letter-spacing: 0.2em;
-    color: inherit;
-    text-decoration: none;
+  @include t.title;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: inherit;
+  text-decoration: none;
 
-    @include m.mobile {
-        letter-spacing: 0em;
-    }
+  @include m.mobile {
+    letter-spacing: 0em;
+  }
 }
 
 .MenuItems {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    gap: 30px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 30px;
 
-    @media (max-width: 1024px) {
-        gap: 20px;
-    }
+  @media (max-width: 1024px) {
+    gap: 20px;
+  }
 
-    @include m.mobile {
-        transform: translateX(-100%);
-        position: fixed;
-        inset: 0;
-        z-index: 19;
-        background-color: v.$white;
-        flex-direction: column;
-        justify-content: center;
-        transition: all 0.3s ease-in-out;
-    }
+  @include m.mobile {
+    transform: translateX(-100%);
+    position: fixed;
+    inset: 0;
+    z-index: 19;
+    background-color: v.$white;
+    flex-direction: column;
+    justify-content: center;
+    transition: all 0.3s ease-in-out;
+  }
 }
 
 .MenuItem {
-    @include t.menu;
-    text-transform: uppercase;
-    color: inherit;
-    text-decoration: none;
-    position: relative;
+  @include t.menu;
+  text-transform: uppercase;
+  color: inherit;
+  text-decoration: none;
+  position: relative;
 
-    &.Active {
-        &::after {
-            content: "";
-            position: absolute;
-            left: 50%;
-            transform: translateX(-50%);
-            bottom: -2px;
-            width: calc(100% + 10px);
-            height: 2px;
-            background: v.$white;
-            transition: width 0.3s ease-in-out;
-        }
+  &.Active {
+    &::after {
+      content: "";
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      bottom: -2px;
+      width: calc(100% + 10px);
+      height: 2px;
+      background: v.$white;
+      transition: width 0.3s ease-in-out;
     }
+  }
 }
 
 .Divider {
-    width: 2px;
-    height: 100%;
-    background-color: v.$white;
+  width: 2px;
+  height: 100%;
+  background-color: v.$white;
 
-    @include m.mobile {
-        display: none;
-    }
+  @include m.mobile {
+    display: none;
+  }
+}
+
+.Search {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  color: v.$white;
+  box-shadow: none;
+  outline: none;
+  border: none;
+  cursor: pointer;
 }

@@ -1,7 +1,7 @@
 import useStore from "@hooks/useStore";
 import Education from "./Education";
 import Intro from "./Intro";
-import Quote from "./Quote/Quote.component";
+import Quote from "./Quote";
 import Skill from "./Skill";
 import WorkExperience from "./WorkExperience";
 

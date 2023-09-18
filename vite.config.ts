@@ -1,9 +1,15 @@
-import react from "@vitejs/plugin-react";
+import react from "@vitejs/plugin-react-swc";
 import * as path from "path";
 import { defineConfig } from "vite";
+import lightningcss from "vite-plugin-lightningcss";
 
 export default defineConfig({
-  plugins: [react()],
+  plugins: [
+    react(),
+    lightningcss({
+      browserslist: "last 2 versions",
+    }),
+  ],
   resolve: {
     alias: [
       { find: "@", replacement: path.resolve(__dirname, "src") },

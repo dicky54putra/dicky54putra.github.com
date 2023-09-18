@@ -1,0 +1,121 @@
+@use "src/styles/abstracts/variables" as v;
+@use "src/styles/abstracts/typo-mixins" as t;
+
+.Wrapper {
+  z-index: 1000;
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding-block: 90px;
+  transition: all ease-in-out 0.3s;
+  transform: scale(0);
+
+  &.Open {
+    transition: all ease-in-out 0.3s;
+    transform: scale(1);
+  }
+
+  @supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
+    backdrop-filter: blur(4px);
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+}
+
+.Overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.Component {
+  z-index: 1;
+  background-color: v.$white;
+  min-width: 600px;
+  border: solid 2px v.$black;
+  box-shadow: 4px 4px 0 v.$black;
+  padding: 12px;
+}
+
+.Head {
+  input {
+    @include t.body;
+    padding: 10px 16px;
+    border: solid 2px v.$black;
+    width: 100%;
+    color: v.$neutral-100;
+
+    &::placeholder {
+      color: v.$neutral-30;
+    }
+
+    &:focus,
+    &:focus-visible,
+    &:focus-within {
+      border-color: v.$neutral-100;
+      outline: none;
+    }
+  }
+}
+
+.Body {
+  padding-block: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  &__404 {
+    text-align: center;
+    padding-block: 30px;
+  }
+
+  &__SearchHits {
+    @include t.body;
+
+    &__Title {
+      font-weight: 600;
+    }
+  }
+
+  &__SearchList {
+    margin: 0;
+    list-style: none;
+    padding: 0;
+
+    &__Item {
+      padding: 4px 12px;
+      border: solid 1px v.$black;
+      box-shadow: 2px 2px 0 v.$black;
+
+      &__Title {
+        @include t.body;
+      }
+
+      &__Attr {
+        padding-left: 12px;
+        font-size: 12px;
+        line-height: 1em;
+        position: relative;
+
+        &::before {
+          content: "";
+          height: 1px;
+          background-color: v.$black;
+          position: absolute;
+          left: 0;
+          width: 10px;
+          top: 50%;
+          transform: translateY(-50%);
+        }
+      }
+    }
+  }
+}
+
+.Foot {
+  @include t.tag-article;
+  .Foot__Credit {
+    text-align: end;
+  }
+}

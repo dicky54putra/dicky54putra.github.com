@@ -13,7 +13,7 @@ const Article = () => {
       <h2 className={s.Title}>Article</h2>
       {dataList?.length && dataList.length > 0 ? (
         <>
-          <div className={s.Portfolio}>
+          <div className={s.Article}>
             {dataList?.map((item, i) => {
               const isRight = i % 2 ? true : false;
               return (

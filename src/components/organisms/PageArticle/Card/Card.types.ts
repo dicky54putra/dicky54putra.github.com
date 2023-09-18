@@ -1,4 +1,5 @@
 export type TCard = {
+  isGrid?: boolean;
   isRight?: boolean;
   imgUrl?: string;
   url?: string;

@@ -7,6 +7,11 @@
     gap: 30px;
     align-items: center;
 
+    &--Grid {
+        flex-direction: column;
+        gap: 16px;
+    }
+
     @include m.mobile {
         gap: 15px;
         flex-direction: column;
@@ -15,15 +20,27 @@
 
 .C__End {
     margin-left: auto;
+    
+    &.Card--Grid {
+        margin-left: 0;
+    }
 }
 
 .C__Start {
     margin-right: auto;
+    
+    &.Card--Grid {
+        margin-right: 0;
+    }
 }
 
 .Content {
     display: flex;
     flex-direction: column;
+
+    .Card--Grid & {
+        width: 282px;
+    }
 }
 
 .Img {
@@ -67,10 +84,18 @@
 .Tag {
     @include t.tag-article;
     margin-bottom: 15px;
+
+    .Card--Grid & {
+        margin-bottom: 8px;
+    }
 }
 
 .Attr {
     @include t.body;
+    
+    .Card--Grid & {
+        @include t.tag-article;
+    }
 
     span {
         font-weight: 600;
