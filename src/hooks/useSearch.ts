@@ -1,5 +1,5 @@
 import Fuse from "fuse.js";
-import { useCallback, useEffect, useState } from "react";
+import { useCallback, useState } from "react";
 
 export type TuseSearch<T> = {
   options: Fuse.IFuseOptions<T>;
@@ -14,11 +14,13 @@ const useSearch = <T>(args: TuseSearch<T>) => {
   const fuse = new Fuse(lists ?? [], options);
   const [result, setResult] = useState<TResult<T>[]>([]);
 
-  let debounceTimeout: NodeJS.Timeout;
-
   const handleSearch = useCallback(
     (keyword: string) => {
-      setResult(fuse.search(keyword));
+      setResult(
+        fuse.search(keyword, {
+          limit: 6,
+        })
+      );
     },
     [setResult, fuse]
   );
@@ -26,17 +28,8 @@ const useSearch = <T>(args: TuseSearch<T>) => {
   const onSearch = (e: React.FormEvent<HTMLInputElement>) => {
     const value = e.currentTarget.value;
 
-    clearTimeout(debounceTimeout);
-    debounceTimeout = setTimeout(() => {
-      handleSearch(value);
-    }, 300);
+    handleSearch(value);
   };
-
-  useEffect(() => {
-    return () => {
-      clearTimeout(debounceTimeout);
-    };
-  }, []);
 
   return {
     result,

@@ -12,26 +12,42 @@ const SearchResult: FC<TSearchResult> = (props) => {
     content: { article, portfolio },
   } = useStore();
 
-  const options = {
-    includeScore: false,
-    keys: [
-      {
-        name: "title",
-        weight: 0.7,
-      },
-      {
-        name: "tag_list",
-        weight: 0.3,
-      },
-    ],
-  };
   const articleSearch = useSearch({
-    options: options,
+    options: {
+      includeScore: false,
+      keys: [
+        {
+          name: "title",
+          weight: 0.7,
+        },
+        {
+          name: "tag_list",
+          weight: 0.3,
+        },
+      ],
+    },
     lists: article ?? [],
+  });
+  const portfolioSearch = useSearch({
+    options: {
+      includeScore: false,
+      keys: [
+        {
+          name: "title",
+          weight: 0.7,
+        },
+        {
+          name: "tech",
+          weight: 0.3,
+        },
+      ],
+    },
+    lists: portfolio?.project ?? [],
   });
 
   const handleSearch = (e: React.FormEvent<HTMLInputElement>) => {
     articleSearch.onSearch(e);
+    portfolioSearch.onSearch(e);
   };
 
   return (
@@ -64,20 +80,32 @@ const SearchResult: FC<TSearchResult> = (props) => {
               </ul>
             </div>
           )}
-          {/* <div className={s.Body__SearchHits}>
-            <p className={s.Body__SearchHits__Title}>Portfolio</p>
-            <ul className={s.Body__SearchList}>
-              <li className={s.Body__SearchList__Item}>
-                <p className={s.Body__SearchList__Item__Title}>
-                  How to Blablabla
-                </p>
-                <p className={s.Body__SearchList__Item__Attr}>JS, Docs</p>
-              </li>
-            </ul>
-          </div> */}
-          {articleSearch.result.length === 0 && (
-            <p className={s.Body__404}>No recent search</p>
+          {portfolioSearch.result.length > 0 && (
+            <div className={s.Body__SearchHits}>
+              <p className={s.Body__SearchHits__Title}>Portfolio</p>
+              <ul className={s.Body__SearchList}>
+                {portfolioSearch.result.map((item) => {
+                  return (
+                    <li
+                      key={item.item.title}
+                      className={s.Body__SearchList__Item}
+                    >
+                      <p className={s.Body__SearchList__Item__Title}>
+                        {item.item.title}
+                      </p>
+                      <p className={s.Body__SearchList__Item__Attr}>
+                        {item.item.tech}
+                      </p>
+                    </li>
+                  );
+                })}
+              </ul>
+            </div>
           )}
+          {articleSearch.result.length === 0 &&
+            portfolioSearch.result.length === 0 && (
+              <p className={s.Body__404}>No recent search</p>
+            )}
         </div>
         <div className={s.Foot}>
           <div className={s.Foot__Credit}>Search by dicky54putra.github.io</div>
