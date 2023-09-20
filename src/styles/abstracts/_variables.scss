@@ -1,14 +1,18 @@
 /* 
 * declare variable for color
 */
+// $black: #000;
+// $white: #fff;
+// $black: #f0f4f8;
+// $white: #0f192a;
 $black: var(--black);
 $white: var(--white);
 
-$neutral-100: #1F1F1F;
-$neutral-75: #4B4B4B;
-$neutral-50: #878787;
-$neutral-30: #B7B7B7;
-$neutral-10: #E9E9E9;
+$neutral-100: var(--neutral-100);
+$neutral-75: var(--neutral-75);
+$neutral-50: var(--neutral-50);
+$neutral-30: var(--neutral-30);
+$neutral-10: var(--neutral-10);
 
 $mobile-down: 600px;
 $mobile-up: 601px;

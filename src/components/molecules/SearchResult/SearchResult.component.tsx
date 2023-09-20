@@ -108,7 +108,7 @@ const SearchResult: FC<TSearchResult> = (props) => {
             )}
         </div>
         <div className={s.Foot}>
-          <div className={s.Foot__Credit}>Search by dicky54putra.github.io</div>
+          <div className={s.Foot__Credit}>Search by dicky54putra</div>
         </div>
       </div>
       <div className={s.Overlay} onClick={() => setIsOpen(false)}></div>

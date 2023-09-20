@@ -25,4 +25,9 @@ export default defineConfig({
       { find: "@styles", replacement: path.resolve(__dirname, "src/styles") },
     ],
   },
+  build: {
+    outDir: "build",
+    cssMinify: "lightningcss",
+    minify: "esbuild",
+  },
 });

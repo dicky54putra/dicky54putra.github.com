@@ -6,7 +6,7 @@ import rootReducer from "./store";
 const persistConfig = {
   key: "root",
   storage,
-  whitelist: ["route"],
+  whitelist: ["route", "theme"],
   version: 1,
 };
 

@@ -3,5 +3,4 @@ export type TTopMenu = {
   title?: string;
   open?: string;
   close?: string;
-  isLangDark?: boolean;
 };

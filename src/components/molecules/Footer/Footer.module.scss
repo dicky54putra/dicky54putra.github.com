@@ -1,27 +1,27 @@
-@use "src/styles/abstracts/typo-mixins"as t;
-@use "src/styles/abstracts/variables"as v;
-@use "src/styles/abstracts/mixins"as m;
+@use "src/styles/abstracts/typo-mixins" as t;
+@use "src/styles/abstracts/variables" as v;
+@use "src/styles/abstracts/mixins" as m;
 
 .Wrapper {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    padding: 20px 40px;
-    background-color: v.$black;
-    width: 100%;
-    margin-top: auto;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 20px 40px;
+  background-color: v.$black;
+  width: 100%;
+  margin-top: auto;
 
-    @include m.mobile {
-        padding-bottom: 48px;
-    }
+  @include m.mobile {
+    padding-bottom: 48px;
+  }
 }
 
 .Footer {
-    margin: 0;
-    color: v.$white;
-    @include t.body;
+  margin: 0;
+  color: v.$white;
+  @include t.body;
 
-    @include m.mobile {
-        text-align: center;
-    }
+  @include m.mobile {
+    text-align: center;
+  }
 }

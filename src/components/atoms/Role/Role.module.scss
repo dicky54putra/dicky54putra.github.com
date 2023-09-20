@@ -1,6 +1,6 @@
-@use "src/styles/abstracts/typo-mixins"as t;
-@use "src/styles/abstracts/mixins"as m;
-@use "src/styles/abstracts/variables"as v;
+@use "src/styles/abstracts/typo-mixins" as t;
+@use "src/styles/abstracts/mixins" as m;
+@use "src/styles/abstracts/variables" as v;
 
 %role_placeholder {
   display: flex;
@@ -51,6 +51,10 @@
 .Title {
   @include t.role;
   color: v.$white;
+
+  body[theme="dark-theme"] & {
+    color: v.$black;
+  }
 
   @include m.mobile {
     font-size: 16px;
