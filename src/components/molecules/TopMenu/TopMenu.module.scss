@@ -74,6 +74,10 @@
   text-decoration: none;
   position: relative;
 
+  @include m.mobile {
+    color: v.$black;
+  }
+
   &.Active {
     &::after {
       content: "";
@@ -123,6 +127,10 @@
     outline: none;
     border: none;
     cursor: pointer;
+
+    @include m.mobile {
+      color: v.$black;
+    }
 
     body[theme="dark-theme"] & {
       color: v.$black;

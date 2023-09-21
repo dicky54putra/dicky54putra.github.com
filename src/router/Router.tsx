@@ -1,3 +1,4 @@
+import useFlashlight from "@hooks/useFlashlight";
 import useStore from "@hooks/useStore";
 import useTheme from "@hooks/useTheme";
 import Home from "@pages/home";
@@ -9,6 +10,7 @@ const Router = () => {
   } = useStore();
 
   useTheme();
+  useFlashlight();
 
   const match = RouterList.filter((item) => {
     return item.name === value;
