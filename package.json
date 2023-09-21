@@ -12,6 +12,7 @@
     "deploy": "gh-pages -d build"
   },
   "dependencies": {
+    "@fastify/static": "^6.11.2",
     "@reduxjs/toolkit": "^1.9.2",
     "clsx": "^1.2.1",
     "fastify": "^4.23.2",

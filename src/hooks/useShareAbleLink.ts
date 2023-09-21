@@ -2,10 +2,11 @@ import { changePortfolioFilterValue } from "@store/portfolioFilter/portfolioFilt
 import { changepath } from "@store/routes/routes";
 import { useEffect } from "react";
 import { useDispatch } from "react-redux";
-import RouterList from "router/router.data";
+import RouterList from "../router/router.data";
+import useParam from "./useParam";
 
 const useShareAbleLink = () => {
-  //   const params = useParam();
+  const params = useParam();
   const routerLists = RouterList;
   const dispatch = useDispatch();
 

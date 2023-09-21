@@ -1,4 +1,5 @@
 import useFlashlight from "@hooks/useFlashlight";
+import useShareAbleLink from "@hooks/useShareAbleLink";
 import useStore from "@hooks/useStore";
 import useTheme from "@hooks/useTheme";
 import Home from "@pages/home";
@@ -11,6 +12,7 @@ const Router = () => {
 
   useTheme();
   useFlashlight();
+  useShareAbleLink();
 
   const match = RouterList.filter((item) => {
     return item.name === value;
