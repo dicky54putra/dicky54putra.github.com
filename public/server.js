@@ -31,10 +31,6 @@ fastify.get("/", (request, reply) => {
   reply.sendFile("index.html");
 });
 
-fastify.get("/portfolio", (request, reply) => {
-  reply.sendFile("index.html");
-});
-
 fastify.get("/sitemap.xml", function (request, reply) {
   reply.send({ hello: "world" });
 });

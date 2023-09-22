@@ -3,20 +3,20 @@ import { changepath } from "@store/routes/routes";
 import { useEffect } from "react";
 import { useDispatch } from "react-redux";
 import RouterList from "../router/router.data";
-import useParam from "./useParam";
+import usePaths from "./usePaths";
 
 const useShareAbleLink = () => {
-  const params = useParam();
+  const paths = usePaths();
   const routerLists = RouterList;
   const dispatch = useDispatch();
 
   // @ts-ignore
-  const page = params.page
+  const page = paths[0]
     ? // @ts-ignore
-      `/${params.page}`
+      `/${paths[0]}`
     : window.localStorage.getItem("path");
   // @ts-ignore
-  const hasFilter = params.filter;
+  const hasFilter = paths[0] ? (paths[1] ? paths[1] : null) : null;
 
   const hasPage = routerLists.filter((item) => {
     return item.name === page;
