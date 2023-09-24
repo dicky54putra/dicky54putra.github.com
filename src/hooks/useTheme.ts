@@ -1,10 +1,8 @@
 import { useEffect } from "react";
-import useStore from "./useStore";
+import { useAppSelector } from "./useAppSelector";
 
 const useTheme = () => {
-  const {
-    theme: { value },
-  } = useStore();
+  const value = useAppSelector((s) => s.theme.value);
 
   useEffect(() => {
     if (value === "dark") {

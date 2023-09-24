@@ -1,10 +1,9 @@
 import Button from "@components/atoms/Button";
-import useStore from "@hooks/useStore";
+import { useAppSelector } from "@hooks/useAppSelector";
 import s from "./Hero.module.scss";
 
 const Hero = () => {
-  const store = useStore();
-  const about = store.content.about;
+  const about = useAppSelector((s) => s.content.about);
 
   return (
     <div className={s.Container}>
@@ -25,8 +24,7 @@ const Hero = () => {
           isLink
           to={about?.quote?.link}
           target={"_blank"}
-          rel="noopener noreferrer"
-        >
+          rel="noopener noreferrer">
           Email Me
         </Button>
         <Button variant="Primary">Download CV</Button>

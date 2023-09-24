@@ -1,4 +1,4 @@
-import useStore from "@hooks/useStore";
+import { useAppSelector } from "@hooks/useAppSelector";
 import Education from "./Education";
 import Intro from "./Intro";
 import Quote from "./Quote";
@@ -6,9 +6,7 @@ import Skill from "./Skill";
 import WorkExperience from "./WorkExperience";
 
 const PageAbout = () => {
-  const {
-    content: { about },
-  } = useStore();
+  const about = useAppSelector((s) => s.content.about);
   return (
     <>
       <Intro image={about?.profile} desc={about?.desc} />

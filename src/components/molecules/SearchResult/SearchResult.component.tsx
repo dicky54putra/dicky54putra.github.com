@@ -1,5 +1,5 @@
+import { useAppSelector } from "@hooks/useAppSelector";
 import useSearch from "@hooks/useSearch";
-import useStore from "@hooks/useStore";
 import clsx from "clsx";
 import { FC } from "react";
 import s from "./SearchResult.module.scss";
@@ -8,9 +8,8 @@ import { TSearchResult } from "./SearchResult.type";
 const SearchResult: FC<TSearchResult> = (props) => {
   const { isOpen, setIsOpen } = props;
 
-  const {
-    content: { article, portfolio },
-  } = useStore();
+  const article = useAppSelector((s) => s.content.article);
+  const portfolio = useAppSelector((s) => s.content.portfolio);
 
   const articleSearch = useSearch({
     options: {
@@ -88,8 +87,7 @@ const SearchResult: FC<TSearchResult> = (props) => {
                   return (
                     <li
                       key={item.item.title}
-                      className={s.Body__SearchList__Item}
-                    >
+                      className={s.Body__SearchList__Item}>
                       <p className={s.Body__SearchList__Item__Title}>
                         {item.item.title}
                       </p>

@@ -1,22 +1,22 @@
 import { useEffect } from "react";
-import useStore from "./useStore";
+import { useAppSelector } from "./useAppSelector";
 
 const useFlashlight = () => {
-  const {
-    theme: { value },
-  } = useStore();
+  const value = useAppSelector((s) => s.theme.value);
   const handleMouseMove = (e: any) => {
     window.document.body.style.setProperty("--cursorX", e.clientX + "px");
     window.document.body.style.setProperty("--cursorY", e.clientY + "px");
   };
 
   useEffect(() => {
-    if (value === "trueDark")
+    if (value === "trueDark") {
       window.addEventListener("mousemove", handleMouseMove);
+    }
 
     return () => {
-      if (value === "trueDark")
+      if (value === "trueDark") {
         window.removeEventListener("mousemove", handleMouseMove);
+      }
     };
   }, [value]);
 };

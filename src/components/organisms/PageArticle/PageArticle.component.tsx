@@ -1,11 +1,9 @@
-import useStore from "@hooks/useStore";
+import { useAppSelector } from "@hooks/useAppSelector";
 import Card from "./Card";
 import s from "./PageArticle.module.scss";
 
 const PageArticle = () => {
-  const {
-    content: { article },
-  } = useStore();
+  const article = useAppSelector((s) => s.content.article);
 
   return (
     <div className={s.Article}>

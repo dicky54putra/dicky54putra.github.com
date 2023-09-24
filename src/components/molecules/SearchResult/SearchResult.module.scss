@@ -1,5 +1,6 @@
 @use "src/styles/abstracts/variables" as v;
 @use "src/styles/abstracts/typo-mixins" as t;
+@use "src/styles/abstracts/mixins" as m;
 
 .Wrapper {
   z-index: 1000;
@@ -40,6 +41,12 @@
   border: solid 2px v.$black;
   box-shadow: 4px 4px 0 v.$black;
   padding: 12px;
+
+  @include m.mobile {
+    min-width: 200px;
+    max-width: calc(100vw - 20px);
+    width: 100%;
+  }
 }
 
 .Head {

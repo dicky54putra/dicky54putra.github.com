@@ -1,12 +1,11 @@
 import PagePortfolio from "@components/organisms/PagePortfolio";
 import Wrapper from "@components/organisms/Wrapper/Wrapper.component";
-import useStore from "@hooks/useStore";
+import { useAppSelector } from "@hooks/useAppSelector";
 import { Suspense, useEffect } from "react";
 
 const Portfolio = () => {
-  const store = useStore();
-  const portfolio = store.content.portfolio;
-  const skills = store.content.about?.skills;
+  const skills = useAppSelector((s) => s.content.about?.skills);
+  const portfolio = useAppSelector((s) => s.content.portfolio);
 
   const tech = skills?.filter((skill) => skill.all_project === false) ?? [];
 

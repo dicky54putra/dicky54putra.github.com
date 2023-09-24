@@ -1,14 +1,12 @@
+import { useAppSelector } from "@hooks/useAppSelector";
 import useFlashlight from "@hooks/useFlashlight";
 import useShareAbleLink from "@hooks/useShareAbleLink";
-import useStore from "@hooks/useStore";
 import useTheme from "@hooks/useTheme";
 import Home from "@pages/home";
 import RouterList from "./router.data";
 
 const Router = () => {
-  const {
-    route: { value },
-  } = useStore();
+  const value = useAppSelector((s) => s.route.value);
 
   useTheme();
   useFlashlight();

@@ -13,7 +13,7 @@ const ToggleMenuMobile: FC<TToggleMenuMobile> = (props) => {
 
     setState((State) => !State);
     if (toggleMenuMobile)
-      toggleMenuMobile.style.color = State ? "#fff" : "#000";
+      toggleMenuMobile.style.color = State ? "var(--white)" : "var(--black)";
     if (menu)
       menu.style.transform = State ? "translateX(-100%)" : "translateX(0%)";
     if (wrapperTopMenu) wrapperTopMenu.style.color = State ? "#fff" : "#000";

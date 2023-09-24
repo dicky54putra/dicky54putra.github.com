@@ -1,6 +1,6 @@
 import Button from "@components/atoms/Button";
 import Select from "@components/atoms/Select";
-import useStore from "@hooks/useStore";
+import { useAppSelector } from "@hooks/useAppSelector";
 import { changePortfolioFilterValue } from "@store/portfolioFilter/portfolioFilter";
 import { FC, useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
@@ -12,9 +12,8 @@ const PagePortfolio: FC<TPagePortfolio> = (props) => {
   const { data, tech } = props;
   const [dataList, setDataList] = useState(data);
 
-  const store = useStore();
   const dispatch = useDispatch();
-  const filter = store.portfolioFilter.value;
+  const filter = useAppSelector((s) => s.portfolioFilter.value);
 
   const handleFilter = (name: string) => (e: any) => {
     const newName = name === "select-version" ? e.target.value : name;
@@ -58,8 +57,7 @@ const PagePortfolio: FC<TPagePortfolio> = (props) => {
             <Button
               key={`${item.name}-${i}`}
               onClick={handleFilter(item.name)}
-              isActive={filter?.toLowerCase() === item.name?.toLowerCase()}
-            >
+              isActive={filter?.toLowerCase() === item.name?.toLowerCase()}>
               {item.name}
             </Button>
           );

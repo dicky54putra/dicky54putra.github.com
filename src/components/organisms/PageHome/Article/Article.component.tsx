@@ -1,11 +1,10 @@
 import Button from "@components/atoms/Button";
 import Card from "@components/organisms/PageArticle/Card";
-import useStore from "@hooks/useStore";
+import { useAppSelector } from "@hooks/useAppSelector";
 import s from "./Article.module.scss";
 
 const Article = () => {
-  const store = useStore();
-  const article = store.content.article;
+  const article = useAppSelector((s) => s.content.article);
   const dataList = article?.slice(0, 3);
 
   return (

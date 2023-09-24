@@ -1,11 +1,10 @@
 import Button from "@components/atoms/Button";
 import Card from "@components/organisms/PagePortfolio/Card";
-import useStore from "@hooks/useStore";
+import { useAppSelector } from "@hooks/useAppSelector";
 import s from "./Portfolio.module.scss";
 
 const Portfolio = () => {
-  const store = useStore();
-  const portfolio = store.content.portfolio;
+  const portfolio = useAppSelector((s) => s.content.portfolio);
   const dataList = portfolio?.project.slice(0, 3);
 
   return (
