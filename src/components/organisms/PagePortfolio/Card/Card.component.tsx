@@ -16,7 +16,7 @@ const Card: FC<TCard> = (props) => {
     <div className={[s.Card, styleType].join(" ")}>
       <div className={s.Img}>
         <img
-          src={`${RAW_IMAGES}${image}`}
+          src={`${RAW_IMAGES}/${image}`}
           loading="lazy"
           alt={title}
           title={title}

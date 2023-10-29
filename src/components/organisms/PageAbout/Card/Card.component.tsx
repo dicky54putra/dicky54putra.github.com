@@ -15,7 +15,12 @@ const Card: FC<TCard> = (props) => {
   return (
     <div className={s.Wrapper}>
       <div className={s.Img}>
-        <img src={`${RAW_IMAGES}${image}`} alt={image} height={80} width={80} />
+        <img
+          src={`${RAW_IMAGES}/${image}`}
+          alt={image}
+          height={80}
+          width={80}
+        />
       </div>
       <div className={s.Content}>
         <h3 className={s.Title}>{title}</h3>

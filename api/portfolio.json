@@ -1,6 +1,14 @@
 {
   "title": "Portfolio",
-  "tech": ["Wordpress", "Yii2", "Reactjs", "Tailwind", "bootstrap"],
+  "tech": [
+    "Wordpress",
+    "PHP",
+    "ReactJS",
+    "Tailwind",
+    "Bootstrap",
+    "Sass",
+    "NextJS"
+  ],
   "project": [
     {
       "title": "Luxspace BWA",

@@ -3,20 +3,20 @@ import { changepath } from "@store/routes/routes";
 import { useEffect } from "react";
 import { useDispatch } from "react-redux";
 import RouterList from "../router/router.data";
-import usePaths from "./usePaths";
+import useParams from "./useParams";
 
 const useShareAbleLink = () => {
-  const paths = usePaths();
+  const params = useParams();
   const routerLists = RouterList;
   const dispatch = useDispatch();
 
   // @ts-ignore
-  const page = paths[0]
+  const page = params.page
     ? // @ts-ignore
-      `/${paths[0]}`
+      `/${params.page}`
     : window.localStorage.getItem("path");
   // @ts-ignore
-  const hasFilter = paths[0] ? (paths[1] ? paths[1] : null) : null;
+  const hasFilter = params.filter ? params.filter : null;
 
   const hasPage = routerLists.filter((item) => {
     return item.name === page;
@@ -24,13 +24,17 @@ const useShareAbleLink = () => {
 
   useEffect(() => {
     if (hasPage.length > 0) {
-      // @ts-ignore
       dispatch(changepath(page));
     }
 
     if (hasFilter !== null) {
       dispatch(changePortfolioFilterValue(hasFilter));
     }
+    window.history.replaceState(
+      { additionalInformation: "Updated the URL with JS" },
+      "Frontend Developer | Dicky54putra",
+      "/",
+    );
   }, [dispatch, hasPage, page, hasFilter]);
 };
 

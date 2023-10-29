@@ -12,7 +12,7 @@ const Intro: FC<TIntro> = (props) => {
     <div className={s.Wrapper}>
       <div className={s.Profile}>
         <img
-          src={`${RAW_IMAGES}${image}`}
+          src={`${RAW_IMAGES}/${image}`}
           alt="Profile"
           height={80}
           width={80}

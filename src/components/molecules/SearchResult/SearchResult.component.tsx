@@ -67,12 +67,14 @@ const SearchResult: FC<TSearchResult> = (props) => {
                 {articleSearch.result.map((item) => {
                   return (
                     <li key={item.item.id} className={s.Body__SearchList__Item}>
-                      <p className={s.Body__SearchList__Item__Title}>
-                        {item.item.title}
-                      </p>
-                      <p className={s.Body__SearchList__Item__Attr}>
-                        {item.item.tags}
-                      </p>
+                      <a href={item.item.url} target="_blank" rel="noopener">
+                        <p className={s.Body__SearchList__Item__Title}>
+                          {item.item.title}
+                        </p>
+                        <p className={s.Body__SearchList__Item__Attr}>
+                          {item.item.tags}
+                        </p>
+                      </a>
                     </li>
                   );
                 })}
@@ -88,12 +90,17 @@ const SearchResult: FC<TSearchResult> = (props) => {
                     <li
                       key={item.item.title}
                       className={s.Body__SearchList__Item}>
-                      <p className={s.Body__SearchList__Item__Title}>
-                        {item.item.title}
-                      </p>
-                      <p className={s.Body__SearchList__Item__Attr}>
-                        {item.item.tech}
-                      </p>
+                      <a
+                        href={`/?page=portfolio&filter=${item.item.tech
+                          .split(", ")[0]
+                          .toString()}`}>
+                        <p className={s.Body__SearchList__Item__Title}>
+                          {item.item.title}
+                        </p>
+                        <p className={s.Body__SearchList__Item__Attr}>
+                          {item.item.tech}
+                        </p>
+                      </a>
                     </li>
                   );
                 })}

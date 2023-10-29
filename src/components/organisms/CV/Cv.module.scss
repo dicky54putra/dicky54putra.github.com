@@ -1,0 +1,33 @@
+@use "src/styles/abstracts/variables" as v;
+.Wrapper {
+  position: relative;
+  padding: 40px;
+
+  @media (max-width: v.$mobile-down) {
+    zoom: 60%;
+  }
+
+  @media (max-width: v.$mobile-down) {
+    zoom: 38%;
+  }
+
+  a {
+    color: rgb(26, 88, 149);
+  }
+
+  ul {
+    margin: 0;
+  }
+
+  blockquote {
+    margin: 0;
+  }
+
+  h2 {
+    margin-top: 30px;
+  }
+
+  hr {
+    margin-top: 30px;
+  }
+}

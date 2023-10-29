@@ -103,6 +103,10 @@
       border: solid 1px v.$black;
       box-shadow: 2px 2px 0 v.$black;
 
+      > a {
+        color: v.$black;
+      }
+
       &__Title {
         @include t.body;
       }
