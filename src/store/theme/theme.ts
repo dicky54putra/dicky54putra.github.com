@@ -29,7 +29,6 @@ export const themeSlice = createSlice({
       } else {
         state.value = "light";
       }
-      console.log(window.matchMedia("(prefers-color-scheme: dark)"));
     },
   },
 });
