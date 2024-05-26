@@ -1,0 +1,46 @@
+@use "src/styles/abstracts/variables" as v;
+@use "src/styles/abstracts/mixins" as m;
+
+._Main {
+  position: absolute;
+  background-color: v.$white;
+  inset: 0;
+  padding: 8px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  &__Title {
+    color: v.$white;
+    font-weight: 900;
+    text-shadow: 0px 0px 64px v.$black, 0px 0px v.$black, 2px 2px v.$black;
+    font-size: 28px;
+    line-height: 32px;
+    padding: 2px 8px;
+    @include m.cutByLine(3);
+  }
+
+  &__Foot {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &__Credit {
+      font-size: 8px;
+    }
+
+    &__Tags {
+      display: flex;
+      align-items: center;
+      gap: 2px;
+
+      span {
+        font-size: 6px;
+        padding: 2px;
+        background-color: v.$black;
+        color: v.$white;
+      }
+    }
+  }
+}
