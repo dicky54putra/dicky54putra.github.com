@@ -1,5 +1,5 @@
 import { FC } from "react";
-import CardImage from "../CardImage/CardImage.component";
+import CardImage from "../CardImage";
 import s from "./Card.module.scss";
 import { TCard } from "./Card.types";
 
